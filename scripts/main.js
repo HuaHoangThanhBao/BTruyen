@@ -1,6 +1,6 @@
 const links = document.getElementsByClassName('nav__link');
 const side_nav = document.getElementById("side-nav");
-const overlay_background = document.getElementById('overlay');
+const overlay_background = document.getElementById('side__nav-overlay');
 
 let side_nav_status = false;
 
