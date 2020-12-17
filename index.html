@@ -8,9 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/slideshow.css">
 </head>
 
 <body>
+    <!--Overlay Background-->
+    <div class="background__overlay"></div>
+
     <div class="wrapper">
         <!--Header-->
         <header class="header">
@@ -48,8 +52,8 @@
         <!--End Header-->
 
         <div class="container">
-            <!--Overlay Background-->
-            <div id="overlay"></div>
+            <!--Overlay Show Up Background-->
+            <div id="side__nav-overlay"></div>
 
 
             <!--Side Menu Bar-->
@@ -142,11 +146,56 @@
                     </ul>
                 </div>
             </div>
+            <!--End Side Nav-->
+
+            <!--Truyện đề cử (Slide show)-->
+            <!--
+            <div class="reco__list">
+                <div class="reco__header">
+                    <h1>Truyện đề cử</h1>
+                </div>
+            </div>
+            -->
             <!--End-->
+            <!-- MULTIPLE ITEMS -->
+            <!-- <div class="example-box">
+                <h2>Multiple Items</h2>
+                <div class="carousel-multiple-items">
+                    <div>
+                        <div class="box">1</div>
+                    </div>
+                    <div>
+                        <div class="box">2</div>
+                    </div>
+                    <div>
+                        <div class="box">3</div>
+                    </div>
+                    <div>
+                        <div class="box">4</div>
+                    </div>
+                    <div>
+                        <div class="box">5</div>
+                    </div>
+                    <div>
+                        <div class="box">6</div>
+                    </div>
+                    <div>
+                        <div class="box">7</div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/slideshow.min.js"></script>
+
+    <script>
+        new ElderCarousel('.carousel-single-item', { items: 1, infinite: false })
+
+        new ElderCarousel('.carousel-multiple-items', { items: 5, play: true })
+
+    </script>
 </body>
 
 </html>
