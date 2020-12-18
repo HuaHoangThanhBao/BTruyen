@@ -50,7 +50,6 @@ i {
 }
 
 /*Header*/
-
 .header {
     display: flex;
     justify-content: center;
@@ -91,7 +90,7 @@ i {
     width: 100%;
 }
 
-.nav__search__group input {
+.nav__search__group .search {
     width: 90%;
     float: left;
     border: none;
@@ -103,7 +102,7 @@ i {
     border-bottom: 1px solid var(--white);
 }
 
-.nav__search__group button {
+.nav__search__group i {
     height: 30px;
     font-size: var(--text-size);
     background-color: transparent;
@@ -128,11 +127,10 @@ i {
     font-size: var(--text-size);
     color: var(--white);
 }
-
 /*End Header*/
 
-/*Side nav*/
 
+/*Side nav*/
 .side__nav {
     height: 100%;
     width: 0;
@@ -157,8 +155,8 @@ i {
     color: var(--dark);
 }
 
-/*Top Header*/
 
+/*Top Header*/
 .side__header {
     width: 100%;
     margin: 0;
@@ -171,21 +169,21 @@ i {
 
 .side__header-block:nth-child(1) {
     width: 95%;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: 18px;
 }
 
 .side__header-block:nth-child(2) {
     width: 5%;
-    padding-right: 2rem;
 }
 
 .side__nav .close__btn {
     font-size: 30px;
 }
 
-/*Block Content*/
 
+/*Block Content*/
 .side__body {
     color: var(--dark);
     width: 100%;
@@ -207,8 +205,8 @@ i {
 }
 
 .side__body ul li {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.65rem;
+    margin-bottom: 0.65rem;
     transition: 0.3s;
 }
 
@@ -233,14 +231,22 @@ i {
 .side__body ul li i {
     width: 5%;
 }
-
 /*End Side Nav*/
 
-/*Container*/
-.container {
+
+/*Fluid Container*/
+.container-fluid{
     margin: 0;
     padding: 0;
-    background-color: transparent;
+}
+
+
+/*Side Container*/
+.side__container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: red;
 }
 
 #side__nav-overlay {
@@ -257,11 +263,10 @@ i {
 }
 
 /*Danh sách truyện*/
-.list__grid--flex {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.list__grid {
+    margin-top: 2rem;
+    padding-left: 1.8rem;
+    padding-right: 0.8rem;
     color: var(--dark);
 }
 
@@ -271,6 +276,7 @@ i {
     color: var(--white);
 }
 
+/*ul*/
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +285,8 @@ i {
     padding: 0;
 }
 
-.cards__item {
+/*li*/
+.cards__item{
     display: flex;
     padding-right: 1rem;
     padding-top: 1rem;
@@ -297,13 +304,41 @@ i {
 
 .card__content {
     display: flex;
-    flex: 1 1 auto;
+    flex-wrap: wrap;
     flex-direction: column;
     padding: 1rem;
 }
 
-.card__content p{
-    font-size: 14px;
+/*ul*/
+.card__des{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+/*li*/
+.card__chap{
+    display: flex;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    width: 50%;
+}
+
+.card__chap a{
+    width: 100%;
+}
+
+.card__chap:nth-child(odd) a{
+    text-align: left;
+    color: #55acee;
+}
+
+.card__chap:nth-child(even) a{
+    text-align: right;
+    color: #f99a0c;
 }
 
 .card__image {
@@ -318,6 +353,21 @@ i {
     transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.card__image .card__image--detail{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    color: var(--white);
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.card__image .card__image--detail i span{
+    padding-left: 0.25rem;
 }
 
 .card__title {
@@ -386,13 +436,30 @@ i {
         padding: 0;
         padding-left: 1rem;
     }
-    .nav__search__group input {
+    .nav__search__group .search {
         width: 80%;
+    }
+
+    
+    .cards__item {
+        width: 33.3333%;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 638px) {
+    .cards__item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .cards__item {
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 769px) {
-    .nav__link:nth-child(5) {
+    .nav__item:last-child {
         display: none;
     }
 }
@@ -410,10 +477,12 @@ i {
     .nav__item:first-child {
         display: block;
     }
-    .nav__link:nth-child(5) {
+    .nav__item:last-child {
         position: absolute;
-        right: 4rem;
-        font-size: 25px;
+        right: 1rem;
         display: block;
+    }
+    .nav__item:last-child i{
+        font-size: 25px;
     }
 }
