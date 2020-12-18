@@ -5,25 +5,20 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
     font-family: "Lato", sans-serif;
     line-height: 1;
     font-weight: 400;
     color: var(--white);
     background-color: var(--pink);
-    background: linear-gradient(90deg, #6747d1 29px, transparent) center, 
-                linear-gradient(#6747d1 29px, transparent) center, var(--white);
-     background-size: 30px 30px;
+    background: linear-gradient(90deg, #6747d1 29px, transparent) center, linear-gradient(#6747d1 29px, transparent) center, var(--white);
+    background-size: 30px 30px;
 }
 
 :root {
     --white: #ffffff;
     --pink: #6747d1;
-    --pink-transparent: #6747d100; 
+    --pink-transparent: #6747d100;
     --dark: black;
     --text-size: 20px;
 }
@@ -34,7 +29,7 @@ body {
     height: 100%;
 }
 
-.background__overlay{
+.background__overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -46,11 +41,11 @@ body {
     z-index: 0;
 }
 
-input::placeholder{
+input::placeholder {
     color: var(--white);
 }
 
-i{
+i {
     cursor: pointer;
 }
 
@@ -62,8 +57,8 @@ i{
 }
 
 .nav {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 1rem;
+    width: 100%;
 }
 
 .nav__list {
@@ -75,13 +70,21 @@ i{
 }
 
 .nav__item {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: 1rem;
     position: relative;
 }
 
+.nav__item:nth-child(1) {
+    width: 15%;
+}
 .nav__item:nth-child(2) {
-    width: 50rem;
+    width: 65%;
+}
+.nav__item:nth-child(3) {
+    width: 10%;
+}
+.nav__item:nth-child(4) {
+    width: 10%;
 }
 
 .nav__search__group {
@@ -94,6 +97,7 @@ i{
     border: none;
     outline: none;
     height: 30px;
+    font-size: 15px;
     color: var(--text);
     background-color: transparent;
     border-bottom: 1px solid var(--white);
@@ -116,7 +120,7 @@ i{
     text-transform: none;
     color: var(--white);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -154,7 +158,8 @@ i{
 }
 
 /*Top Header*/
-.side__header{
+
+.side__header {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -164,13 +169,13 @@ i{
     background-color: whitesmoke;
 }
 
-.side__header-block:nth-child(1){
+.side__header-block:nth-child(1) {
     width: 95%;
     padding: 0.5rem;
     font-size: 18px;
 }
 
-.side__header-block:nth-child(2){
+.side__header-block:nth-child(2) {
     width: 5%;
     padding-right: 2rem;
 }
@@ -180,13 +185,14 @@ i{
 }
 
 /*Block Content*/
-.side__body{
+
+.side__body {
     color: var(--dark);
     width: 100%;
     height: 100%;
 }
 
-.side__body ul{
+.side__body ul {
     list-style: none;
     height: 100%;
     overflow: auto;
@@ -194,50 +200,50 @@ i{
     margin: 0;
 }
 
-.side__body .side_content_seperator{
+.side__body .side_content_seperator {
     height: 1px;
     width: 100%;
     background-color: #D5DBDB;
 }
 
-.side__body ul li{
+.side__body ul li {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     transition: 0.3s;
 }
 
-.side__body ul li a{
+.side__body ul li a {
     display: flex;
     font-size: 15px;
     padding: 1rem;
 }
 
-.side__body ul li a:hover{
+.side__body ul li a:hover {
     background-color: #EAEDED;
 }
 
-.side__body ul li h1{
+.side__body ul li h1 {
     padding: 1rem;
 }
 
-.side__body ul li div{
+.side__body ul li div {
     width: 95%;
 }
 
-.side__body ul li i{
+.side__body ul li i {
     width: 5%;
 }
+
 /*End Side Nav*/
 
-
 /*Container*/
-.container{
+.container {
     margin: 0;
     padding: 0;
     background-color: transparent;
 }
 
-#side__nav-overlay{
+#side__nav-overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -250,23 +256,135 @@ i{
     z-index: 1;
 }
 
-/*Truyện đề cử*/
-.reco__list{
+/*Danh sách truyện*/
+.list__grid--flex {
+    height: 100%;
     width: 100%;
-    height: auto;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
 }
 
-.reco__header{
+.list__grid--header{
+    width: 100%;
+    font-size: 15px;
     color: var(--white);
-    padding-left: 3rem;
 }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards__item {
+    display: flex;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 22px 40px -22px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card__content p{
+    font-size: 14px;
+}
+
+.card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.card__title {
+    color: grey;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.card__image--fence {
+    background-image: url(../images/chester-wade.jpg);
+}
+
+.card__image--flowers {
+    background-image: url(../images/fabien-bazanegue.jpg);
+}
+
+.card__image--river {
+    background-image: url(../images/julie.jpeg);
+}
+
+.card__image--record {
+    background-image: url(../images/mark-finn.jpg);
+}
+
 /*End Container*/
 
-
 /*Responsive Query*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+@media(min-width: 40rem) {
+    .cards__item {
+        width: 50%;
+    }
+    .card__image {
+        padding-top: 8rem;
+    }
+}
+
+@media(min-width: 56rem) {
+    .cards__item {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1125px) {
+    .nav__item:nth-child(1) {
+        width: 20%;
+    }
     .nav__item:nth-child(2) {
-        width: 35rem;
+        width: 50%;
+    }
+    .nav__item:nth-child(3) {
+        width: 15%;
+    }
+    .nav__item:nth-child(4) {
+        width: 15%;
+        padding: 0;
+        padding-left: 1rem;
     }
     .nav__search__group input {
         width: 80%;
@@ -284,7 +402,7 @@ i{
         width: 100%;
     }
     .nav__list {
-        padding-top: 1rem;
+        padding-top: 0.45rem;
     }
     .nav__item:not(last-child) {
         display: none;
