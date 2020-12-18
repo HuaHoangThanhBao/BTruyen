@@ -287,7 +287,9 @@ i {
 
 /*li*/
 .cards__item{
-    display: flex;
+    display: inline-block;
+    min-width: 25%;
+    flex: 1;
     padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -368,6 +370,7 @@ i {
 
 .card__image .card__image--detail i span{
     padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .card__title {
@@ -407,17 +410,8 @@ i {
 /*Responsive Query*/
 
 @media(min-width: 40rem) {
-    .cards__item {
-        width: 50%;
-    }
     .card__image {
         padding-top: 8rem;
-    }
-}
-
-@media(min-width: 56rem) {
-    .cards__item {
-        width: 25%;
     }
 }
 
@@ -446,14 +440,16 @@ i {
     }
 }
 
-@media screen and (min-width: 361px) and (max-width: 638px) {
+@media screen and (min-width: 361px) and (max-width: 768px) {
     .cards__item {
+        flex: 1 1 auto;
         width: 50%;
     }
 }
 
 @media screen and (max-width: 360px) {
     .cards__item {
+        flex: 1 1 auto;
         width: 100%;
     }
 }
@@ -461,6 +457,13 @@ i {
 @media screen and (min-width: 769px) {
     .nav__item:last-child {
         display: none;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1125px) {
+    .cards__item {
+        flex: 1 1 auto;
+        min-width: 25%;
     }
 }
 
