@@ -50,6 +50,7 @@ i {
 }
 
 /*Header*/
+
 .header {
     display: flex;
     justify-content: center;
@@ -76,12 +77,15 @@ i {
 .nav__item:nth-child(1) {
     width: 15%;
 }
+
 .nav__item:nth-child(2) {
     width: 65%;
 }
+
 .nav__item:nth-child(3) {
     width: 10%;
 }
+
 .nav__item:nth-child(4) {
     width: 10%;
 }
@@ -127,10 +131,11 @@ i {
     font-size: var(--text-size);
     color: var(--white);
 }
+
 /*End Header*/
 
-
 /*Side nav*/
+
 .side__nav {
     height: 100%;
     width: 0;
@@ -155,8 +160,8 @@ i {
     color: var(--dark);
 }
 
-
 /*Top Header*/
+
 .side__header {
     width: 100%;
     margin: 0;
@@ -182,8 +187,8 @@ i {
     font-size: 30px;
 }
 
-
 /*Block Content*/
+
 .side__body {
     color: var(--dark);
     width: 100%;
@@ -231,14 +236,8 @@ i {
 .side__body ul li i {
     width: 5%;
 }
+
 /*End Side Nav*/
-
-
-/*Fluid Container*/
-.container-fluid{
-    margin: 0;
-    padding: 0;
-}
 
 
 /*Side Container*/
@@ -261,47 +260,63 @@ i {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+/*End Container*/
 
-/*Danh sách truyện*/
-.list__grid {
-    margin-top: 2rem;
-    padding-left: 1.8rem;
-    padding-right: 0.8rem;
-    color: var(--dark);
-}
-
-.list__grid--header{
-    width: 100%;
-    font-size: 15px;
-    color: var(--white);
-}
-
-/*ul*/
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+/*Fluid Container*/
+.container-fluid {
     margin: 0;
     padding: 0;
 }
 
+/*Danh sách truyện*/
+.list__grid {
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+}
+
+.list__grid--header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.list__grid--title{
+    font-size: 15px;
+    padding: 1rem;
+    color: var(--dark);
+}
+
+/*ul*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
 /*li*/
-.cards__item{
+
+.cards__item {
     display: inline-block;
     min-width: 25%;
     flex: 1;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
 }
 
 .card {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 0.25rem;
-    box-shadow: 0 22px 40px -22px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.14);
 }
 
 .card__content {
@@ -312,7 +327,8 @@ i {
 }
 
 /*ul*/
-.card__des{
+
+.card__des {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -321,7 +337,8 @@ i {
 }
 
 /*li*/
-.card__chap{
+
+.card__chap {
     display: flex;
     font-size: 0.875rem;
     line-height: 1.5;
@@ -329,16 +346,16 @@ i {
     width: 50%;
 }
 
-.card__chap a{
+.card__chap a {
     width: 100%;
 }
 
-.card__chap:nth-child(odd) a{
+.card__chap:nth-child(odd) a {
     text-align: left;
     color: #55acee;
 }
 
-.card__chap:nth-child(even) a{
+.card__chap:nth-child(even) a {
     text-align: right;
     color: #f99a0c;
 }
@@ -357,7 +374,7 @@ i {
     padding-bottom: 5rem;
 }
 
-.card__image .card__image--detail{
+.card__image .card__image--detail {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -368,7 +385,7 @@ i {
     padding-bottom: 0.3rem;
 }
 
-.card__image .card__image--detail i span{
+.card__image .card__image--detail i span {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
 }
@@ -405,7 +422,57 @@ i {
     background-image: url(../images/mark-finn.jpg);
 }
 
-/*End Container*/
+
+/*Pages Navigation*/
+.pages__nav{
+    padding: 1rem;
+}
+
+.pages__nav-container{
+    width: 100%;
+}
+
+.pages__nav-container ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pages__nav-container ul li{
+    display: flex;
+    flex-direction: column;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    line-height: 2.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid #444;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    color: #333;
+    cursor: pointer;
+}
+
+.pages__nav-container ul li:not(:first-child):not(:last-child):hover{
+    background-color: #1A1B1F;
+    color: var(--white);
+    border: 2px solid #1A1B1F;
+}
+
+.pages__nav-container ul li:first-child, .pages__nav-container ul li:last-child{
+    border: 2px solid #9c9c9c;
+    background-color: #9c9c9c;
+    color: var(--white);
+}
+
+.pages__nav-container ul li:first-child:hover, .pages__nav-container ul li:last-child:hover{
+    color: black;
+    color: #333;
+}
+
+/*End Container Fluid*/
 
 /*Responsive Query*/
 
@@ -433,8 +500,6 @@ i {
     .nav__search__group .search {
         width: 80%;
     }
-
-    
     .cards__item {
         width: 33.3333%;
     }
@@ -444,6 +509,10 @@ i {
     .cards__item {
         flex: 1 1 auto;
         width: 50%;
+    }
+
+    .list__grid{
+        padding: 0.15rem;
     }
 }
 
@@ -463,7 +532,7 @@ i {
 @media screen and (min-width: 769px) and (max-width: 1125px) {
     .cards__item {
         flex: 1 1 auto;
-        min-width: 25%;
+        max-width: 33.3333%;
     }
 }
 
@@ -485,7 +554,7 @@ i {
         right: 1rem;
         display: block;
     }
-    .nav__item:last-child i{
+    .nav__item:last-child i {
         font-size: 25px;
     }
 }
