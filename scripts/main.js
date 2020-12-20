@@ -28,6 +28,6 @@ function activeNav() {
         if (window.innerWidth <= 768)
             side_nav.style.width = window.innerWidth + "px";
         else
-            side_nav.style.width = "35rem";
+            side_nav.style.width = "25rem";
     }
 }

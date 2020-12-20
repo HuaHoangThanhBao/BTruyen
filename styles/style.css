@@ -29,18 +29,6 @@ body {
     height: 100%;
 }
 
-.background__overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--pink-transparent);
-    z-index: 0;
-}
-
 input::placeholder {
     color: var(--white);
 }
@@ -239,8 +227,8 @@ i {
 
 /*End Side Nav*/
 
-
 /*Side Container*/
+
 .side__container {
     margin: 0;
     padding: 0;
@@ -260,20 +248,172 @@ i {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
 /*End Container*/
 
 /*Fluid Container*/
+
 .container-fluid {
     margin: 0;
     padding: 0;
 }
 
-/*Danh sách truyện*/
-.list__grid {
-    margin: 1.5rem;
-    padding: 1rem;
+.container__box:first-child {
+    width: 70%;
+    float: left;
+}
+
+.container__box:last-child {
+    width: 30%;
+    float: left;
+}
+
+/*Side Bar*/
+
+.side__bar {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
     background-color: var(--white);
-    border-radius: 0.5rem;
+}
+
+.side__bar--group {
+    padding: 0;
+    margin: 0;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+}
+
+.tabs button {
+    height: 2.5rem;
+    background-color: inherit;
+    border: none;
+    font-size: 14px;
+    width: 33.3333%;
+    /* display: flex; */
+    float: left;
+    background-color: wheat;
+    cursor: pointer;
+    outline: none;
+}
+
+.tabs button span {
+    padding-left: 0.2rem;
+}
+
+.tabs button:hover{
+    background-color: #553620;
+    color: var(--white);
+}
+
+.tabs__group {
+    padding: 0;
+    margin: 0;
+}
+
+.tabs__list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.tab__item {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.tab {
+    height: auto;
+    color: black;
+    display: flex;
+}
+
+.tab__block {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 16px;
+    padding-right: 1rem;
+}
+
+.tab__des--center {
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3A9BDE;
+}
+
+.tab_block--inside {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.tab__block--title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    top: 0.15rem;
+}
+
+.tab__block--des {
+    position: absolute;
+    bottom: 0.15rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tab__des--content {
+    flex: 1;
+    flex-direction: column;
+    width: 50%;
+}
+
+.tab__des--content:first-child {
+    padding-right: 2rem;
+}
+
+.tab__block:not(:first-child) {
+    width: 20%;
+}
+
+.tab__block:last-child {
+    width: 70%;
+}
+
+.tab__block:first-child {
+    width: 10%;
+}
+
+.tab .tab__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.1rem;
+    filter: contrast(70%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    background-image: url(../images/chester-wade.jpg);
+}
+
+/*Danh sách truyện*/
+
+.list__grid {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background-color: var(--white);
 }
 
 .list__grid--header {
@@ -282,10 +422,25 @@ i {
     padding: 0;
 }
 
-.list__grid--title{
+.list__grid--title {
     font-size: 15px;
-    padding: 1rem;
+    padding-left: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
     color: var(--dark);
+}
+
+/*ul start*/
+.star__group{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.star__group li{
+    color: #FFD900;
 }
 
 /*ul*/
@@ -303,12 +458,11 @@ i {
     display: inline-block;
     min-width: 25%;
     flex: 1;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .card {
     background-color: var(--white);
-    border-radius: 0.25rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     display: flex;
     flex-direction: column;
@@ -422,23 +576,26 @@ i {
     background-image: url(../images/mark-finn.jpg);
 }
 
-
 /*Pages Navigation*/
-.pages__nav{
-    padding: 1rem;
+
+.pages__nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
-.pages__nav-container{
+.pages__nav-container {
     width: 100%;
 }
 
-.pages__nav-container ul{
+.pages__nav-container ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
-.pages__nav-container ul li{
+.pages__nav-container ul li {
     display: flex;
     flex-direction: column;
     width: 2.5rem;
@@ -455,19 +612,19 @@ i {
     cursor: pointer;
 }
 
-.pages__nav-container ul li:not(:first-child):not(:last-child):hover{
+.pages__nav-container ul li:not(:first-child):not(:last-child):hover {
     background-color: #1A1B1F;
     color: var(--white);
     border: 2px solid #1A1B1F;
 }
 
-.pages__nav-container ul li:first-child, .pages__nav-container ul li:last-child{
+.pages__nav-container ul li:first-child, .pages__nav-container ul li:last-child {
     border: 2px solid #9c9c9c;
     background-color: #9c9c9c;
     color: var(--white);
 }
 
-.pages__nav-container ul li:first-child:hover, .pages__nav-container ul li:last-child:hover{
+.pages__nav-container ul li:first-child:hover, .pages__nav-container ul li:last-child:hover {
     color: black;
     color: #333;
 }
@@ -475,6 +632,40 @@ i {
 /*End Container Fluid*/
 
 /*Responsive Query*/
+
+@media screen and (min-width: 993px) and (max-width: 1125px) {
+    .tab__block {
+        min-width: 40%;
+    }
+    .tab__block:first-child {
+        min-width: 15%;
+    }
+    .tab__block--des {
+        position: relative;
+        padding-top: 1rem;
+    }
+    .tab__des--content {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .tab .tab__image {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container__box:first-child, .container__box:last-child {
+        width: 100%;
+        float: none;
+    }
+    .list__grid {
+        margin-right: 1.5rem;
+    }
+    .side__bar {
+        margin: 1.5rem;
+    }
+}
 
 @media(min-width: 40rem) {
     .card__image {
@@ -510,8 +701,7 @@ i {
         flex: 1 1 auto;
         width: 50%;
     }
-
-    .list__grid{
+    .list__grid {
         padding: 0.15rem;
     }
 }

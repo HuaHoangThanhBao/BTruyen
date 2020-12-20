@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Story Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -12,9 +12,6 @@
 </head>
 
 <body>
-    <!--Overlay Background-->
-    <div class="background__overlay"></div>
-
     <div class="wrapper">
         <!--Header-->
         <header class="header">
@@ -57,178 +54,431 @@
 
         <!--Body Container-->
         <div class="container-fluid">
-            <!--Danh sách truyện-->
-            <div class="list__grid">
-                <div class="list__grid--header">
-                    <div class="list__grid--title">
-                        <h1>Truyện mới cập nhật</h1>
+            <!--Cột trái-->
+            <div class="container__box">
+                <!--Danh sách truyện-->
+                <div class="list__grid">
+                    <div class="list__grid--header">
+                        <div class="list__grid--title">
+                            <h1>Truyện mới cập nhật</h1>
+                        </div>
                     </div>
-                </div>
-                <ul class="cards">
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--fence" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                    <ul class="cards">
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--fence" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--flowers" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--flowers" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 1</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 1</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--river" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--river" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 2</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 2</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--record" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--record" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 3</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 3</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--record" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--record" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 3</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 3</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--record" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--record" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 3</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 3</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--record" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--record" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 3</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 3</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="card">
-                            <a class="card__image card__image--record" href="javascript:void(0)">
-                                <div class="card__image--detail">
-                                    <i class="fa fa-eye"><span>10,151,555</span></i>
+                        </li>
+                        <li class="cards__item">
+                            <div class="card">
+                                <a class="card__image card__image--record" href="javascript:void(0)">
+                                    <div class="card__image--detail">
+                                        <i class="fa fa-eye"><span>10,151,555</span></i>
+                                    </div>
+                                </a>
+                                <div class="card__content">
+                                    <ul class="star__group">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="card__title">Flex 3</div>
+                                    <ul class="card__des">
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                        <li class="card__chap"><a>Chapter 125</a></li>
+                                        <li class="card__chap"><a>6 giờ trước</a></li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div class="card__content">
-                                <div class="card__title">Flex 3</div>
-                                <ul class="card__des">
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                    <li class="card__chap"><a>Chapter 125</a></li>
-                                    <li class="card__chap"><a>6 giờ trước</a></li>
-                                </ul>
                             </div>
+                        </li>
+                    </ul>
+    
+                    <!--Redirect Pages Navigation-->
+                    <div class="pages__nav">
+                        <div class="pages__nav-container">
+                            <ul>
+                                <li><a><i class="fa fa-angle-double-left"></i></a></li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li><a><i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
                         </div>
-                    </li>
-                </ul>
-
-                <!--Redirect Pages Navigation-->
-                <div class="pages__nav">
-                    <div class="pages__nav-container">
-                        <ul>
-                            <li><a><i class="fa fa-angle-double-left"></i></a></li>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li><a><i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
                     </div>
+                    <!--End Menu Pages Navigation-->
+    
                 </div>
-                <!--End Menu Pages Navigation-->
-
+                <!--End Danh sách truyện-->
             </div>
-            <!--End Danh sách truyện-->
+            <!--End Cội Trái-->
+
+            <!--Side Bar-->
+            <div class="container__box">
+                <div class="side__bar">
+                    <div class="list__grid--header">
+                        <div class="list__grid--title">
+                            <h1>Xếp hạng</h1>
+                        </div>
+                    </div>
+                    <div class="side__bar--group">
+                        <div class="tabs">
+                            <button class="tabs_link"><i class="fa fa-beer"><span>Top ngày</span></i></button>
+                            <button class="tabs_link"><i class="fa fa-check"><span>Top tuần</span></i></button>
+                            <button class="tabs_link"><i class="fa fa-book"><span>Top tháng</span></i></button>
+                        </div>
+                        <div class="tabs__group">
+                            <ul class="tabs__list">
+                                <li class="tab__item">
+                                    <div class="tab">
+                                        <div class="tab__block">
+                                            <div class="tab__des--center">
+                                                <p>01</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab__block">
+                                            <a class="tab__image" href="javascript:void(0)"></a>
+                                        </div>
+                                        <div class="tab__block">
+                                            <div class="tab_block--inside">
+                                                <div class="tab__block--title">
+                                                    <p>Tôi là thần y</p>
+                                                </div>
+                                                <div class="tab__block--des">
+                                                    <div class="tab__des--content">
+                                                        <p>Chapter 154</p>
+                                                    </div>
+                                                    <div class="tab__des--content">
+                                                        <i class="fa fa-eye"><span>10,000,000</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="tab__item">
+                                    <div class="tab">
+                                        <div class="tab__block">
+                                            <div class="tab__des--center">
+                                                <p>01</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab__block">
+                                            <a class="tab__image" href="javascript:void(0)"></a>
+                                        </div>
+                                        <div class="tab__block">
+                                            <div class="tab_block--inside">
+                                                <div class="tab__block--title">
+                                                    <p>Tôi là thần y</p>
+                                                </div>
+                                                <div class="tab__block--des">
+                                                    <div class="tab__des--content">
+                                                        <p>Chapter 154</p>
+                                                    </div>
+                                                    <div class="tab__des--content">
+                                                        <i class="fa fa-eye"><span>10,000,000</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs__group">
+                            <ul class="tabs__list">
+                                <li class="tab__item">
+                                    <div class="tab">
+                                        <div class="tab__block">
+                                            <div class="tab__des--center">
+                                                <p>01</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab__block">
+                                            <a class="tab__image" href="javascript:void(0)"></a>
+                                        </div>
+                                        <div class="tab__block">
+                                            <div class="tab_block--inside">
+                                                <div class="tab__block--title">
+                                                    <p>Yêu anh</p>
+                                                </div>
+                                                <div class="tab__block--des">
+                                                    <div class="tab__des--content">
+                                                        <p>Chapter 154</p>
+                                                    </div>
+                                                    <div class="tab__des--content">
+                                                        <i class="fa fa-eye"><span>15,000,000</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="tab__item">
+                                    <div class="tab">
+                                        <div class="tab__block">
+                                            <div class="tab__des--center">
+                                                <p>01</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab__block">
+                                            <a class="tab__image" href="javascript:void(0)"></a>
+                                        </div>
+                                        <div class="tab__block">
+                                            <div class="tab_block--inside">
+                                                <div class="tab__block--title">
+                                                    <p>Nhớ</p>
+                                                </div>
+                                                <div class="tab__block--des">
+                                                    <div class="tab__des--content">
+                                                        <p>Chapter 154</p>
+                                                    </div>
+                                                    <div class="tab__des--content">
+                                                        <i class="fa fa-eye"><span>5,000,000</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs__group">
+                            <ul class="tabs__list">
+                                <li class="tab__item">
+                                    <div class="tab">
+                                        <div class="tab__block">
+                                            <div class="tab__des--center">
+                                                <p>01</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab__block">
+                                            <a class="tab__image" href="javascript:void(0)"></a>
+                                        </div>
+                                        <div class="tab__block">
+                                            <div class="tab_block--inside">
+                                                <div class="tab__block--title">
+                                                    <p>Người ơi</p>
+                                                </div>
+                                                <div class="tab__block--des">
+                                                    <div class="tab__des--content">
+                                                        <p>Chapter 154</p>
+                                                    </div>
+                                                    <div class="tab__des--content">
+                                                        <i class="fa fa-eye"><span>15,000,000</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="tab__item">
+                                    <div class="tab">
+                                        <div class="tab__block">
+                                            <div class="tab__des--center">
+                                                <p>01</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab__block">
+                                            <a class="tab__image" href="javascript:void(0)"></a>
+                                        </div>
+                                        <div class="tab__block">
+                                            <div class="tab_block--inside">
+                                                <div class="tab__block--title">
+                                                    <p>Mong</p>
+                                                </div>
+                                                <div class="tab__block--des">
+                                                    <div class="tab__des--content">
+                                                        <p>Chapter 154</p>
+                                                    </div>
+                                                    <div class="tab__des--content">
+                                                        <i class="fa fa-eye"><span>5,000,000</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Side Bar-->
         </div>
         <!--End Body Container-->
 
@@ -332,6 +582,7 @@
     </div>
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/tabs.js"></script>
     <script src="./scripts/slideshow.min.js"></script>
 
     <script>
