@@ -354,11 +354,35 @@ i {
     width: 100%;
 }
 
-.tab__block--title {
+.tab__image {
+    position: relative;
+    display: inline-block;
+    filter: contrast(90%);
+    height: 5rem;
+    width: 100%;
+}
+
+.tab__image--block{
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.tab__image--block img{
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+}
+
+.tab__block--title {
     position: absolute;
     display: inline-block;
+    width: 100%;
+    height: 100%;
     top: 0.15rem;
 }
 
@@ -376,34 +400,21 @@ i {
     width: 50%;
 }
 
-.tab__des--content:first-child {
-    padding-right: 2rem;
+.tab__des--content:last-child {
+    text-align: right;
 }
 
 .tab__block:not(:first-child) {
-    width: 20%;
+    width: 30%;
 }
 
 .tab__block:last-child {
-    width: 70%;
+    width: 60%;
+    padding: 0;
 }
 
 .tab__block:first-child {
     width: 10%;
-}
-
-.tab .tab__image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.1rem;
-    filter: contrast(70%);
-    overflow: hidden;
-    position: relative;
-    transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
-    padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
-    background-image: url(../images/chester-wade.jpg);
 }
 
 /*Danh sách truyện*/
@@ -515,17 +526,24 @@ i {
 }
 
 .card__image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    filter: contrast(70%);
-    overflow: hidden;
+    filter: contrast(90%);
     position: relative;
-    transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    display: inline-block;
+    height: 12rem;
+}
+
+.card__image--block{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.card__image--block img{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
 }
 
 .card__image .card__image--detail {
@@ -558,22 +576,6 @@ i {
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;
-}
-
-.card__image--fence {
-    background-image: url(../images/chester-wade.jpg);
-}
-
-.card__image--flowers {
-    background-image: url(../images/fabien-bazanegue.jpg);
-}
-
-.card__image--river {
-    background-image: url(../images/julie.jpeg);
-}
-
-.card__image--record {
-    background-image: url(../images/mark-finn.jpg);
 }
 
 /*Pages Navigation*/
@@ -651,6 +653,80 @@ i {
     .tab .tab__image {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .tab__des--content:last-child {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .tab__image{
+        height: 4rem;
+    }
+    .tab__block:first-child{
+        width: 5%;
+    }
+    .tab__block:not(:first-child){
+        width: 10%;
+    }
+    .tab__block:last-child{
+        width: 85%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px){
+    .tab__image{
+        height: 4rem;
+    }
+    .tab__block:first-child{
+        width: 10%;
+    }
+    .tab__block:not(:first-child){
+        width: 15%;
+    }
+    .tab__block:last-child{
+        width: 75%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px){
+    .tab__image{
+        height: 4rem;
+    }
+    .tab__block:first-child{
+        width: 10%;
+    }
+    .tab__block:not(:first-child){
+        width: 15%;
+    }
+    .tab__block:last-child{
+        width: 75%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .tab__image{
+        height: 4rem;
+    }
+    .tab__block:first-child{
+        width: 15%;
+    }
+    .tab__block:not(:first-child){
+        width: 50%;
+    }
+    .tab__des--content{
+        width: 100%;
+    }
+    .tab__des--content:last-child{
+        text-align: left;
+        margin-top: 0.25rem;
+    }
+    .tab__block:last-child{
+        width: 60%;
+        padding: 0;
     }
 }
 
