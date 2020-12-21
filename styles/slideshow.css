@@ -1,107 +1,52 @@
-
-    .container {
-        max-width: 700px;
-        margin: 0 auto;
-      }
-      .carousel {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-  
-      img {
-        max-width: 100%;
-        display: block;
-        padding: .5em;
-      }
-      .example-box {
-        margin-bottom: 50px;
-        /* box-shadow: 0 2px 5px rgba(0,0,0,.4); */
-        padding: 1em;
-        border-radius: 12px;
-        border: 1px solid #DFDFDF;
-      }
-      .example-box h2 {
-        margin: 0 0 20px !important;
-      }
-      .box {
-        font-family: Arial, Helvetica, sans-serif;
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: linear-gradient(to bottom right, #2193b0, #6dd5ed);
-        border: 3px solid #FFF;
-        border-radius: 8px;
-        color: #FFF;
-        font-size: 26px;
-      }
-      .text-center {
-        text-align: center;
-      }
-      
-.ec {
-    position: relative
+.slide__show--container{
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  background-color: white;
 }
 
-.ec .ec__holder {
-    overflow: hidden
+.splide__slide--image{
+  position: relative;
+  height: 16rem;
 }
 
-.ec .ec__track {
-    will-change: transform
+
+.splide__slide--image a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
-.ec .ec__track:after {
-    content: '';
-    display: table;
-    clear: both
+.splide__slide--image img {
+	width : 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.ec .ec__item {
-    float: left;
-    overflow: hidden
+.splide__slide--block{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.ec .ec__pagination {
-    text-align: center;
-    margin-top: 10px
+
+.splide__slide--content{
+  display: flex;
 }
 
-.ec .ec__pagination .pagination__dot {
-    width: 8px;
-    height: 8px;
-    background-color: transparent;
-    display: inline-block;
-    border: 1px solid #000;
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer
+.splide__slide--des{
+  flex-direction: column;
+  flex: 1 auto;
 }
 
-.ec .ec__pagination .pagination__dot--active {
-    background-color: #000
-}
-
-.ec .ec__nav {
-    position: absolute;
-    bottom: 10px;
-    border-top: 2px solid #000;
-    border-right: 2px solid #000;
-    width: 8px;
-    height: 8px;
-    cursor: pointer
-}
-
-.ec .ec__nav:before {
-    content: ''
-}
-
-.ec .ec__nav--prev {
-    transform: rotate(-135deg);
-    left: 1em
-}
-
-.ec .ec__nav--next {
-    transform: rotate(45deg);
-    right: 1em
+.splide__slide--block span{
+  padding-left: 0.15rem;
 }

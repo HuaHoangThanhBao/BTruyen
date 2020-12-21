@@ -421,7 +421,7 @@ i {
 
 .list__grid {
     margin-top: 1.5rem;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     margin-bottom: 1.5rem;
     padding: 0.5rem;
     background-color: var(--white);
@@ -736,7 +736,7 @@ i {
         float: none;
     }
     .list__grid {
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
     .side__bar {
         margin: 1.5rem;
