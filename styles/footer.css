@@ -1,7 +1,7 @@
 .container__footer{
     margin-top: 5rem;
     height: 15rem;
-    background-image: linear-gradient(0deg, #430B6A 0%, #520690 100%) !important;
+    background-image: linear-gradient(180deg, #661b9c 0%, #34005e 100%) !important;
     color: white;
     font-size: 20px;
 }
@@ -17,6 +17,10 @@
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
+}
+
+.container__f--block form{
+    width: 100%;
 }
 
 .container__f--block .send-block{
@@ -36,7 +40,7 @@
     padding-left: 2rem;
     color: white;
     outline: none;
-    background-color: #52177C;
+    background-color: #34005e;
 }
 
 .container__f--block input:focus{
@@ -52,6 +56,16 @@
     width: 6rem;
     color: white;
     cursor: pointer;
+}
+
+.footer__copy--right{
+    height: 3rem;
+    background-color: #370958;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #8A6AA1;
 }
 
 .container__f--block button:hover{
