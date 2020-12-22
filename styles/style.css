@@ -10,9 +10,7 @@ body {
     line-height: 1;
     font-weight: 400;
     color: var(--white);
-    background-color: var(--pink);
-    background: linear-gradient(90deg, #6747d1 29px, transparent) center, linear-gradient(#6747d1 29px, transparent) center, var(--white);
-    background-size: 30px 30px;
+    background-image: linear-gradient(180deg,#9A23E9 0%,#8f17df 100%) !important;
 }
 
 :root {
@@ -271,17 +269,16 @@ i {
 /*Side Bar*/
 
 .side__bar {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    padding: 0.5rem;
-    background-color: var(--white);
 }
 
 .side__bar--group {
     padding: 0;
     margin: 0;
+    margin-top: 0.5rem;
 }
 
 .tabs {
@@ -289,17 +286,20 @@ i {
     display: flex;
 }
 
-.tabs button {
+.tabs .tabs--link {
     height: 2.5rem;
+    flex: 1 auto;
     background-color: inherit;
     border: none;
     font-size: 14px;
-    width: 33.3333%;
-    /* display: flex; */
-    float: left;
-    background-color: wheat;
+    background: linear-gradient(to bottom, #ffd79d, #ffd79d);
+    color: #320d3e;
     cursor: pointer;
     outline: none;
+}
+
+.tabs--link:not(:last-child){
+    border-right: 1px solid black;
 }
 
 .tabs button span {
@@ -307,8 +307,9 @@ i {
 }
 
 .tabs button:hover{
-    background-color: #553620;
+    background: linear-gradient(to bottom, #553620, #2e1d11);
     color: var(--white);
+    border-right: none;
 }
 
 .tabs__group {
@@ -344,7 +345,7 @@ i {
     margin: auto;
     font-size: 20px;
     font-weight: bold;
-    color: #3A9BDE;
+    color: var(--white);
 }
 
 .tab_block--inside {
@@ -384,6 +385,7 @@ i {
     width: 100%;
     height: 100%;
     top: 0.15rem;
+    color: var(--white);
 }
 
 .tab__block--des {
@@ -398,6 +400,7 @@ i {
     flex: 1;
     flex-direction: column;
     width: 50%;
+    color: var(--white);
 }
 
 .tab__des--content:last-child {
@@ -424,7 +427,6 @@ i {
     margin-left: 1rem;
     margin-bottom: 1.5rem;
     padding: 0.5rem;
-    background-color: var(--white);
 }
 
 .list__grid--header {
@@ -438,7 +440,7 @@ i {
     padding-left: 0.25rem;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
-    color: var(--dark);
+    color: var(--white)
 }
 
 /*ul start*/
@@ -606,11 +608,11 @@ i {
     line-height: 2.3rem;
     margin-right: 0.5rem;
     border-radius: 50%;
-    border: 2px solid #444;
+    border: 2px solid #d3d3d5;
     text-align: center;
     vertical-align: middle;
     position: relative;
-    color: #333;
+    color: #ffb20a;
     cursor: pointer;
 }
 
@@ -621,14 +623,15 @@ i {
 }
 
 .pages__nav-container ul li:first-child, .pages__nav-container ul li:last-child {
-    border: 2px solid #9c9c9c;
-    background-color: #9c9c9c;
-    color: var(--white);
+    border: 2px solid yellow;
+    background-color: yellow;
+    color: #1A1B1F;
 }
 
 .pages__nav-container ul li:first-child:hover, .pages__nav-container ul li:last-child:hover {
-    color: black;
-    color: #333;
+    color: var(--white);
+    border: 2px solid #ffb20a;
+    background-color: #ffb20a;
 }
 
 /*End Container Fluid*/
@@ -741,6 +744,10 @@ i {
     .side__bar {
         margin: 1.5rem;
     }
+    .pages__nav-container ul li{
+        margin-top: 0.5rem;
+        max-width: 3rem;
+    }
 }
 
 @media(min-width: 40rem) {
@@ -779,6 +786,18 @@ i {
     }
     .list__grid {
         padding: 0.15rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .list__grid {
+        margin: 0;
+        padding: 0;
+    }
+    .side__bar{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin: 0;
     }
 }
 

@@ -5,7 +5,6 @@
   margin-bottom: 1.5rem;
   padding: 0.5rem;
   padding-bottom: 2rem;
-  background-color: white;
 }
 
 .splide__slide--image{
@@ -49,4 +48,13 @@
 
 .splide__slide--block span{
   padding-left: 0.15rem;
+}
+
+
+@media screen and (max-width: 480px){
+  .slide__show--container{
+    margin: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
