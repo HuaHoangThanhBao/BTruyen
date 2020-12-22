@@ -231,7 +231,6 @@ i {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: red;
 }
 
 #side__nav-overlay {
@@ -254,6 +253,17 @@ i {
 .container-fluid {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+.container__cover{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
 }
 
 .container__box:first-child {
@@ -734,8 +744,12 @@ i {
 }
 
 @media screen and (max-width: 992px) {
+    .container__cover {
+        display: block;
+        position: relative;
+    }
     .container__box:first-child, .container__box:last-child {
-        width: 100%;
+        min-width: 100%;
         float: none;
     }
     .list__grid {
