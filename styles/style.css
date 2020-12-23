@@ -21,6 +21,11 @@ body {
     --text-size: 20px;
 }
 
+/*Gọi class này bên chang-theme.js để đổi chế độ tối*/
+.dark-mode{
+    background-image: linear-gradient(180deg, #232123 0%, #1A191A 100%) !important;
+}
+
 .wrapper {
     max-width: 160rem;
     margin: 0 auto;
@@ -60,15 +65,85 @@ i {
     position: relative;
 }
 
+/*Button toggle đổi màu nền*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch input:checked+.slider {
+    background-color: #ffb20a;
+    color: var(--white);
+}
+
+.switch input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*End Button toggle đổi màu nền*/
+
 .nav__item:nth-child(1) {
     width: 15%;
 }
 
 .nav__item:nth-child(2) {
-    width: 65%;
+    width: 55%;
 }
 
 .nav__item:nth-child(3) {
+    width: 10%;
+}
+
+.nav__item:nth-child(4) {
     width: 10%;
 }
 
@@ -868,15 +943,20 @@ i {
         width: 20%;
     }
     .nav__item:nth-child(2) {
-        width: 50%;
+        width: 40%;
     }
     .nav__item:nth-child(3) {
         width: 15%;
     }
     .nav__item:nth-child(4) {
+        width: 10%;
+        padding: 0;
+        padding-left: 0.5rem;
+    }
+    .nav__item:nth-child(5) {
         width: 15%;
         padding: 0;
-        padding-left: 1rem;
+        text-align: right;
     }
     .nav__search__group .search {
         width: 80%;
@@ -893,18 +973,6 @@ i {
     }
     .list__grid {
         padding: 0.15rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .list__grid {
-        margin: 0;
-        padding: 0;
-    }
-    .side__bar {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        margin: 0;
     }
 }
 
@@ -928,7 +996,7 @@ i {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
     .nav {
         width: 100%;
     }
@@ -941,9 +1009,56 @@ i {
     .nav__item:first-child {
         display: block;
     }
+    .nav__item:nth-child(4) {
+        display: block;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
     .nav__item:last-child {
         position: absolute;
         right: 1rem;
+        display: block;
+    }
+    .nav__item:last-child i {
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .list__grid {
+        margin: 0;
+        padding: 0;
+    }
+    .side__bar {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin: 0;
+    }
+    .nav {
+        width: 100%;
+        padding-left: 0.5rem;
+    }
+    .nav__list {
+        padding-top: 0.45rem;
+    }
+    .nav__item:not(last-child) {
+        display: none;
+    }
+    .nav__item:first-child {
+        display: block;
+        padding: 0;
+    }
+    .nav__item:nth-child(4) {
+        display: block;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav__item:last-child {
+        position: absolute;
+        right: 0rem;
         display: block;
     }
     .nav__item:last-child i {

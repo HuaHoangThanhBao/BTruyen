@@ -9,7 +9,7 @@
 .container__cover {
     width: 80%;
     border-radius: 2rem;
-    box-shadow: 0 0 50px rgb(184, 184, 184);
+    box-shadow: 0 0 15px rgb(184, 184, 184);
 }
 
 .container__cover--block {
