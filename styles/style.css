@@ -18,12 +18,16 @@ body {
     --pink: #6747d1;
     --pink-transparent: #6747d100;
     --dark: black;
+    --dark-brown: #1A1B1F;
+    --yellow: yellow;
+    --dark-yellow: #ffb20a;
     --text-size: 20px;
 }
 
 /*Gọi class này bên chang-theme.js để đổi chế độ tối*/
 .dark-mode{
     background-image: linear-gradient(180deg, #232123 0%, #1A191A 100%) !important;
+    --dark-brown: var(--white);
 }
 
 .wrapper {
@@ -105,7 +109,7 @@ i {
 }
 
 .switch input:checked+.slider {
-    background-color: #ffb20a;
+    background-color: var(--dark-yellow);
     color: var(--white);
 }
 
@@ -206,7 +210,6 @@ i {
     left: 0;
     background-color: var(--white);
     overflow: hidden;
-    transition: 0.5s;
 }
 
 .side__nav a {
@@ -227,21 +230,48 @@ i {
     width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
+    position: relative;
+}
+
+.side__form{
+    display: block;
+    width: 100%;
     padding: 1rem;
     color: var(--dark);
     background-color: whitesmoke;
 }
 
-.side__header-block:nth-child(1) {
-    width: 95%;
+.side__form:nth-child(1){
+    width: 100%;
+    display: flex;
+}
+
+.side__form .nav__link .search{
+    width: 90%;
+    border-bottom: 1px solid grey;
+}
+
+.side__form .nav__link i{
+    border-bottom: 1px solid grey;
+}
+
+.side__form .nav__link .search::placeholder{
+    color: grey;
+}
+
+.side__nav .side__form:nth-child(2){
+    display: none;
+} 
+
+.side__form:nth-child(1) .side__header-block:nth-child(1) {
+    width: 93%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 18px;
 }
 
-.side__header-block:nth-child(2) {
-    width: 5%;
+.side__form:nth-child(1) .side__header-block:nth-child(2) {
+    width: 7%;
 }
 
 .side__nav .close__btn {
@@ -784,26 +814,25 @@ i {
     text-align: center;
     vertical-align: middle;
     position: relative;
-    color: #ffb20a;
+    color: var(--dark-yellow);
     cursor: pointer;
 }
 
 .pages__nav-container ul li:not(:first-child):not(:last-child):hover {
-    background-color: #1A1B1F;
-    color: var(--white);
-    border: 2px solid #1A1B1F;
+    background-color: var(--dark-brown);
+    border: 2px solid var(--dark-brown);
 }
 
 .pages__nav-container ul li:first-child, .pages__nav-container ul li:last-child {
-    border: 2px solid yellow;
-    background-color: yellow;
+    border: 2px solid var(--yellow);
+    background-color: var(--yellow);
     color: #1A1B1F;
 }
 
 .pages__nav-container ul li:first-child:hover, .pages__nav-container ul li:last-child:hover {
     color: var(--white);
-    border: 2px solid #ffb20a;
-    background-color: #ffb20a;
+    border: 2px solid var(--dark-yellow);
+    background-color: var(--dark-yellow);
 }
 
 /*End Container Fluid*/
@@ -938,6 +967,41 @@ i {
     }
 }
 
+@media screen and (max-width: 320px){
+    .nav__search__group{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+    }
+    .nav__search__group form{
+        width: 100%;
+    }
+    .nav__search__group .search {
+        width: 100%;
+        flex: 1 auto;
+        flex-direction: column;
+    }
+    .nav__search__group i{
+        flex: 1 auto;
+        width: 10%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .nav__item:nth-child(4) {
+        display: block;
+        width: 85%;
+        padding-left: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .side__nav .side__form:nth-child(2){
+        display: block;
+    } 
+}
+
 @media screen and (min-width: 769px) and (max-width: 1125px) {
     .nav__item:nth-child(1) {
         width: 20%;
@@ -947,11 +1011,6 @@ i {
     }
     .nav__item:nth-child(3) {
         width: 15%;
-    }
-    .nav__item:nth-child(4) {
-        width: 10%;
-        padding: 0;
-        padding-left: 0.5rem;
     }
     .nav__item:nth-child(5) {
         width: 15%;
@@ -1009,12 +1068,6 @@ i {
     .nav__item:first-child {
         display: block;
     }
-    .nav__item:nth-child(4) {
-        display: block;
-        width: 80%;
-        display: flex;
-        justify-content: center;
-    }
     .nav__item:last-child {
         position: absolute;
         right: 1rem;
@@ -1049,12 +1102,6 @@ i {
     .nav__item:first-child {
         display: block;
         padding: 0;
-    }
-    .nav__item:nth-child(4) {
-        display: block;
-        width: 80%;
-        display: flex;
-        justify-content: center;
     }
     .nav__item:last-child {
         position: absolute;

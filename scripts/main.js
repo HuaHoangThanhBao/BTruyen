@@ -4,15 +4,19 @@ const overlay_background = document.getElementById('side__nav-overlay');
 
 let side_nav_status = false;
 
-links[2].addEventListener('click', function () {
+links[2].addEventListener('click', () => {
     activeNav();
 });
 
-links[4].addEventListener('click', function () {
+links[5].addEventListener('click', () => {
     activeNav();
 });
 
-document.getElementById('close_side_nav').addEventListener('click', function () {
+overlay_background.addEventListener('click', () =>{
+    activeNav();
+});
+
+document.getElementById('close_side_nav').addEventListener('click', () => {
     activeNav();
 });
 
