@@ -837,6 +837,13 @@ i {
 
 /*End Container Fluid*/
 
+/*Space*/
+.small-space{
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+}
+
 /*Responsive Query*/
 
 @media screen and (min-width: 993px) and (max-width: 1125px) {
