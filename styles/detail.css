@@ -285,6 +285,103 @@
     width: 30%;
 }
 
+/*Phần hộp thoại bình luận*/
+.box__ads{
+    margin-top: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.box__ads textarea{
+    margin-top: 1rem;
+    width: 100%;
+    height: 7rem;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid white;
+    background-color: inherit;
+}
+
+.box__ads textarea::placeholder{
+    color: white;
+}
+
+.box__ads textarea:focus{
+    border: 3px solid white;
+}
+/*End hộp thoại*/
+
+
+/*Danh sách bình luận*/
+.box__comment{
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.box__comment--block{
+    width: 100%;
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.box__comment--image{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.box__comment--image a{
+    width: 100%;
+    height: 100%;
+}
+
+.box__comment--image a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.box__comment--content{
+    margin-left: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(245, 245, 245, 0.459);
+}
+
+.box__comment--title{
+    width: 100%;
+}
+
+.box__comment--title span{
+    color: white;
+    padding-right: 1rem;
+}
+
+.box__comment--title span i{
+    padding-right: 0.25rem;
+}
+
+.box__comment--detail {
+    padding-top: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.box__comment--detail p{
+    word-break: break-all;
+}
+/*End danh sách*/
+
+
 @media screen and (max-width: 600px) {
     .box-header {
         text-align: center;
