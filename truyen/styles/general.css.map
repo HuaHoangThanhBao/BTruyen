@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAA;ECGV,aAAa,EDFa,GAAG,CAAE,KAAK,CAAE,KAAK;CAC9C",
+    "sources": [
+        "general.scss",
+        "func.scss"
+    ],
+    "names": [],
+    "file": "general.css"
+}

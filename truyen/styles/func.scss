@@ -1,0 +1,7 @@
+@mixin noneOutLine() {
+    outline: none;
+}
+
+@mixin borderBottomOnly($size, $style, $color) {
+    border-bottom: $size $style $color;
+}
