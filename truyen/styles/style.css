@@ -28,6 +28,16 @@
   margin: 0;
 }
 
+h2 {
+  font-size: 25px;
+}
+
+@media (max-width: 399px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
 h3 {
   font-size: 16px;
   line-height: 1.3;
@@ -40,6 +50,42 @@ button {
 
 a {
   cursor: pointer;
+}
+
+.title-overflow {
+  position: relative;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.title-overflow .title-overflow-content {
+  display: table-cell;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.title-overflow .title-overflow-content b {
+  font-size: 16px;
+}
+
+.pad-bot-25 {
+  padding-bottom: 25px;
+}
+
+@media (max-width: 400px) {
+  .pad-bot-25 {
+    padding-bottom: 10px;
+  }
+}
+
+.pad-bot-10 {
+  padding-bottom: 10px;
+}
+
+.txt-italic {
+  font-style: italic;
 }
 
 .border_bottom {
@@ -267,12 +313,12 @@ body {
 .main-container .body-container {
   width: 100%;
   height: auto;
-  padding-top: 50px;
 }
 
 .main-container .body-container .body-cover {
   width: 100%;
   height: 100%;
+  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -281,6 +327,14 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 399px) {
+  .main-container .body-container .body-cover {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  }
 }
 
 .main-container .body-container .body-cover .body-left-side {
@@ -330,6 +384,8 @@ body {
   border-radius: 8px;
   /*Phần Xếp hạng*/
   /*End Xếp hạng*/
+  /*Bình Luận*/
+  /*End Bình Luận*/
 }
 
 .main-container .body-container .body-cover .body-box .title-header {
@@ -383,6 +439,12 @@ body {
 .main-container .body-container .body-cover .body-box .title-header .btn-group .gr-btn .btn.active {
   background-color: #64d075;
   color: #ffffff;
+}
+
+@media (max-width: 399px) {
+  .main-container .body-container .body-cover .body-box .title-header .btn-group .gr-btn .btn {
+    font-size: 12px;
+  }
 }
 
 .main-container .body-container .body-cover .body-box .body__list-container {
@@ -575,32 +637,111 @@ body {
   position: relative;
 }
 
-.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-title {
-  position: relative;
-  padding-bottom: 25px;
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-}
-
-.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-title .rank-title-content {
-  display: table-cell;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-title .rank-title-content b {
-  font-size: 16px;
-}
-
 .main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info {
   width: 100%;
   font-size: 14px;
 }
 
-.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info span:last-child {
+@media (max-width: 360px) {
+  .main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info span {
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+  }
+}
+
+@media (min-width: 361px) {
+  .main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info span {
+    float: right !important;
+  }
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list {
+  list-style: none;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item {
+  width: 100%;
+  display: block;
+  padding-bottom: 25px;
+  margin-top: 25px;
+  border: 1px solid #e2e2e2;
+  border-width: 0px 0px 1px 0px;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item:last-child {
+  border-width: 0px;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b {
+  width: 100%;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b span {
   float: right !important;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:nth-child(2) {
+  font-size: 14px;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-u-img {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-u-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-des {
+  width: calc(100% - 50px);
+  float: left;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-des .comment-des-container {
+  width: 80%;
+  padding-left: 5px;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-des .comment-des-container .comment-des-title {
+  border: 1px solid #e3e2e2;
+  border-width: 1px 1px 0px 1px;
+  padding: 10px 5px 10px 10px;
+  background-color: #f5f5f5;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-des .comment-des-container .comment-des-title .comment-name {
+  line-height: 1.2;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.main-container .body-container .body-cover .body-box .chap__comment-panel .comment-list .comment-item .comment-b:last-child .comment-des .comment-des-container .comment-des-content {
+  border: 1px solid #e3e2e2;
+  font-size: 16px;
+  padding: 10px 5px 10px 10px;
+  line-height: 1.2;
 }
 
 /*End Main Container*/
