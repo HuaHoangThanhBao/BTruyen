@@ -246,7 +246,7 @@ body {
 
       .body-box {
         width: 100%;
-        height: 100%;
+        height: auto;
         background-color: $white;
         border-radius: 8px;
 
@@ -327,39 +327,39 @@ body {
                   }
                 }
               }
-              
-              &{
-                @media (min-width: 520px) and (max-width: 767px){
+
+              & {
+                @media (min-width: 520px) and (max-width: 767px) {
                   width: 33.33333%;
                 }
-                @media (min-width: 400px) and (max-width: 519px){
+                @media (min-width: 400px) and (max-width: 519px) {
                   width: 50%;
                 }
-                @media (max-width: 399px){
+                @media (max-width: 399px) {
                   width: 100%;
                 }
               }
 
-              &:nth-child(4n + 1){
+              &:nth-child(4n + 1) {
                 @media (min-width: 768px) {
                   clear: both;
                 }
               }
 
-              &:nth-child(3n + 1){
-                @media (min-width: 520px) and (max-width: 767px){
+              &:nth-child(3n + 1) {
+                @media (min-width: 520px) and (max-width: 767px) {
                   clear: both;
                 }
               }
 
-              &:nth-child(2n + 1){
-                @media (min-width: 400px) and (max-width: 519px){
+              &:nth-child(2n + 1) {
+                @media (min-width: 400px) and (max-width: 519px) {
                   clear: both;
                 }
               }
-              
-              &:nth-child(n + 1){
-                @media (max-width: 400px){
+
+              &:nth-child(n + 1) {
+                @media (max-width: 400px) {
                   clear: both;
                 }
               }
@@ -400,12 +400,101 @@ body {
             }
           }
 
-          .pagination{
+          .pagination {
             background-color: red;
             height: 50px;
             margin-top: 20px;
           }
         }
+
+        /*Phần Xếp hạng*/
+        .story__ranking {
+          width: 100%;
+          height: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 20px;
+
+          .story__ranking-panel {
+            width: 100%;
+            height: 100%;
+
+            .rank-list {
+              list-style: none;
+              height: auto;
+              width: 100%;
+              margin-top: 20px;
+              display: block;
+
+              .rank-item {
+                height: 60px;
+                margin-bottom: 30px;
+              }
+
+              .rank-b:first-child {
+                width: 35px;
+                height: 100%;
+                float: left;
+                display: flex;
+                align-items: center;
+
+                p{
+                  font-size: 18px;
+                }
+              }
+
+              .rank-b:nth-child(2) {
+                width: 55px;
+                height: 100%;
+                float: left;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 5px;
+                }
+              }
+
+              .rank-b:last-child {
+                width: calc(100% - 90px);
+                float: left;
+                padding-left: 15px;
+                height: 100%;
+                position: relative;
+
+                .rank-title {
+                  position: relative;
+                  padding-bottom: 25px;
+                  width: 100%;
+                  display: table;
+                  table-layout: fixed;
+
+                  .rank-title-content {
+                    display: table-cell;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+
+                    b{
+                      font-size: 16px;
+                    }
+                  }
+                }
+
+                .rank-info{
+                  width: 100%;
+                  font-size: 14px;
+
+                  span:last-child{
+                    float: right !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        /*End Xếp hạng*/
       }
     }
   }

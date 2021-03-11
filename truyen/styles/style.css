@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .icon {
   width: 10%;
   height: 25px;
@@ -47,6 +48,10 @@ a {
 
 .n-highL:hover {
   border-bottom: 3px solid #64d075;
+}
+
+.mar-top-20 {
+  margin-top: 20px;
 }
 
 *,
@@ -320,9 +325,11 @@ body {
 
 .main-container .body-container .body-cover .body-box {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #ffffff;
   border-radius: 8px;
+  /*Phần Xếp hạng*/
+  /*End Xếp hạng*/
 }
 
 .main-container .body-container .body-cover .body-box .title-header {
@@ -502,6 +509,98 @@ body {
   background-color: red;
   height: 50px;
   margin-top: 20px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking {
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list {
+  list-style: none;
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-item {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:first-child {
+  width: 35px;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:first-child p {
+  font-size: 18px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:nth-child(2) {
+  width: 55px;
+  height: 100%;
+  float: left;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child {
+  width: calc(100% - 90px);
+  float: left;
+  padding-left: 15px;
+  height: 100%;
+  position: relative;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-title {
+  position: relative;
+  padding-bottom: 25px;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-title .rank-title-content {
+  display: table-cell;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-title .rank-title-content b {
+  font-size: 16px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info {
+  width: 100%;
+  font-size: 14px;
+}
+
+.main-container .body-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info span:last-child {
+  float: right !important;
 }
 
 /*End Main Container*/
