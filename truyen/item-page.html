@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/item-page.style.css">
+</head>
+
+<body>
+    <header class="header container-fluid">
+        <nav class="nav">
+            <ul id="top__nav" class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link logo">
+                        <img src="./images/logo.png">
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a id="catagory-dropdown" class="nav__link n-highL">
+                        Danh mục
+                    </a>
+                    <div class="catagory-content">
+                        <a href="#">Action</a>
+                        <a href="#">Adult</a>
+                        <a href="#">Adventure</a>
+                    </div>
+                </li>
+                <li class="nav__item"><a class="nav__link n-highL">Theo Dõi</a></li>
+                <li class="nav__item"><a class="nav__link n-highL">Lịch sử</a></li>
+                <li class="nav__item"><a class="nav__link n-highL">Đăng nhập</a></li>
+                <li class="nav__item">
+                    <form class="search__box">
+                        <div class="search__box-input border_bottom">
+                            <input type="text" placeholder="Tìm kiếm...">
+                        </div>
+                        <div class="icon border_bottom">
+                            <img src="./images/loupe.svg" class="search-icon"></img>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav__item">
+                    <a id="catagory-dropdown" class="nav__link" onclick="showMenuOnTablet()">
+                        <div class="toggle__button">
+                            <img src="./images/menu-bar.png">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container container-fluid">
+            <div class="banner-container">
+                <div class="banner img-fade"></div>
+            </div>
+            <div class="body-container">
+                <div class="overlay__panel">
+                    <div class="overlay__panel-container">
+                        <div class="box-container">
+                            <div class="panel-side">
+                                <div class="image-outer">
+                                    <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg">
+                                </div>
+                            </div>
+                            <div class="panel-side">
+                                <div class="truyen__detail-container">
+                                    <div class="truyen__detail-title">
+                                        <h1>Bạn Trai Được Gió Lớn Thổi Tới</h1>
+                                    </div>
+                                    <div class="truyen__detail-box">
+                                        <div class="truyen__detail-txt">
+                                            <p>Tác giả: <span>Yên Hỏa Nhân Gia</span></p>
+                                        </div>
+                                        <div class="truyen__detail-txt">
+                                            <p>Tình trạng：<span>Đang Tiến Hành</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="truyen__detail-box">
+                                        <div class="truyen__detail-txt">
+                                            <p>Lượt xem: <span>31.000.789</span></p>
+                                        </div>
+                                        <div class="truyen__detail-txt">
+                                            <p>Thể loại:
+                                                <span>
+                                                    <a>Action</a> - <a>Cổ Đại</a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="truyen__detail-box">
+                                        <div class="truyen__detail-txt">
+                                            <p>Lượt theo dõi: <span>71.000</span></p>
+                                        </div>
+                                        <div class="truyen__detail-txt">
+                                            <div>
+                                                <span>Đánh giá:</span>
+                                                <span class="star"><img src="./images/star-on.png"></span>
+                                                <span class="star"><img src="./images/star-on.png"></span>
+                                                <span class="star"><img src="./images/star-on.png"></span>
+                                                <span class="star"><img src="./images/star-on.png"></span>
+                                                <span class="star"><img src="./images/star-on.png"></span>
+                                                <span>3.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="truyen__detail-box">
+                                        <div class="btn-detail-group">
+                                            <button class="btn-social">Theo Dõi</button>
+                                            <button class="btn-social">Like</button>
+                                            <button class="btn-social">Share</button>
+                                        </div>
+                                    </div>
+                                    <div class="truyen__detail-box">
+                                        <div class="btn-detail-group">
+                                            <button class="btn-reading">Đọc từ đầu</button>
+                                            <button class="btn-reading">Đọc mới nhất</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-container">
+                            <div class="story-content-panel">
+                                <div class="story-content-header">
+                                    <h2>Nội Dung</h2>
+                                </div>
+                                <hr>
+                                <div class="box__detail--content">
+                                    <div class="content">
+                                        <p class="js-excerpt excerpt-hidden">Nàng, Ẩn môn chủ của thời hiện đại, tinh
+                                            thông y độc, giỏi ám sát, trong mắt thế nhân là một cái thiên tài biến thái,
+                                            một lần ngoài ý muốn bỏ mình, lại trọng sinh vào một cái thiếu nữ bị hủy
+                                            dung! Thân phận bị hoán đổi? Không thể trở về gia tộc? Thân phận có thể
+                                            không có! Nhà có thể không về! Nhưng lại hại người của nàng, tại sao lại
+                                            không thể báo thù rửa hận ... thất vọng về Quỷ Y? Một khi phong vân quật
+                                            khởi, quần hùng tranh bá! Lại nhìn xem nàng một thân hồng y mà ngao du thiên
+                                            hạ, gương sáng xưng vương nơi trời cao!</p>
+                                    </div>
+                                    <a role="button" href="#" class="js-show-more">
+                                        <span id="expand-text">Xem thêm</span>
+                                        <!-- <i class="fa fa-angle-right"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-container">
+                            <div class="story-content-panel">
+                                <div class="story-content-header">
+                                    <h2>Danh Sách Chương</h2>
+                                </div>
+                                <hr>
+                                <div class="chap__list-container">
+                                    <div class="chap__list-header">
+                                        <div class="chap__list-heading">
+                                            <p>Số chương</p>
+                                        </div>
+                                        <div class="chap__list-heading">
+                                            <p>Cập nhật</p>
+                                        </div>
+                                        <div class="chap__list-heading">
+                                            <p>Lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="chap__list-box">
+                                        <ul>
+                                            <li>
+                                                <p>Chap 1445.5</p>
+                                                <p>23 ngày trước</p>
+                                                <p>10.000.000</p>
+                                            </li>
+                                            <li>
+                                                <p>Chap 14</p>
+                                                <p>23 ngày trước</p>
+                                                <p>10.000.000</p>
+                                            </li>
+                                            <li>
+                                                <p>Chap 14</p>
+                                                <p>23 ngày trước</p>
+                                                <p>10.000.000</p>
+                                            </li>
+                                            <li>
+                                                <p>Chap 14</p>
+                                                <p>23 ngày trước</p>
+                                                <p>10.000.000</p>
+                                            </li>
+                                            <li>
+                                                <p>Chap 14</p>
+                                                <p>23 ngày trước</p>
+                                                <p>10.000.000</p>
+                                            </li>
+                                            <li>
+                                                <p>Chap 14</p>
+                                                <p>23 ngày trước</p>
+                                                <p>10.000.000</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const Utils = {
+
+            addClass: function (element, theClass) {
+                element.classList.add(theClass);
+            },
+
+            removeClass: function (element, theClass) {
+                element.classList.remove(theClass);
+            },
+
+            showMore: function (element, excerpt) {
+                element.addEventListener("click", event => {
+                    const linkText = event.target.textContent.trim().toLowerCase();
+                    const text = document.getElementById('expand-text');
+                    event.preventDefault();
+
+                    if (linkText == "xem thêm") {
+                        text.textContent = "Rút gọn";
+                        this.removeClass(excerpt, "excerpt-hidden");
+                        this.addClass(excerpt, "excerpt-visible");
+                    } else {
+                        text.textContent = "Xem thêm";
+                        this.removeClass(excerpt, "excerpt-visible");
+                        this.addClass(excerpt, "excerpt-hidden");
+                    }
+                });
+            }
+        };
+
+        const ExcerptWidget = {
+            showMore: function (showMoreLinksTarget, excerptTarget) {
+                const showMoreLinks = document.querySelectorAll(showMoreLinksTarget);
+
+                showMoreLinks.forEach(function (link) {
+                    const excerpt = link.previousElementSibling.querySelector(excerptTarget);
+                    Utils.showMore(link, excerpt);
+                });
+            }
+        };
+
+        ExcerptWidget.showMore('.js-show-more', '.js-excerpt');
+
+        // const catBut = document.getElementById('catagory-dropdown');
+        // catBut.addEventListener('click', function(){
+        //     showMenuOnTablet();
+        // });
+
+        function showMenuOnTablet() {
+            var x = document.getElementById("top__nav");
+            if (x.className === "nav__list") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav__list";
+            }
+        }
+    </script>
+</body>
+
+</html>
