@@ -208,6 +208,200 @@ body {
 }
 /*End Main Container*/
 
+/*Bình Luận*/
+.chap__comment-panel {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  .comment-writing-container {
+    width: 100%;
+    margin-top: 20px;
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid black;
+      outline: none;
+      border-radius: 5px;
+      background-color: $primaryColor;
+      color: black;
+
+      &::placeholder {
+        color: black;
+      }
+    }
+  }
+
+  .comment-list {
+    list-style: none;
+
+    .comment-item {
+      width: 100%;
+      display: block;
+      padding-bottom: 25px;
+      margin-top: 25px;
+      border: 1px solid #e2e2e2;
+      border-width: 0px 0px 1px 0px;
+
+      &:last-child {
+        border-width: 0px;
+      }
+
+      .comment-b {
+        width: 100%;
+
+        span {
+          float: right !important;
+        }
+
+        &:nth-child(2) {
+          font-size: 14px;
+        }
+
+        &:last-child {
+          padding-top: 20px;
+          display: flex;
+
+          .comment-u-img {
+            height: 50px;
+            width: 50px;
+            float: left;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .comment-des {
+            width: calc(100% - 50px);
+            float: left;
+
+            .comment-des-container {
+              width: 80%;
+              padding-left: 5px;
+
+              .comment-des-title {
+                border: 1px solid #e3e2e2;
+                border-width: 1px 1px 0px 1px;
+                padding: 10px 5px 10px 10px;
+                background-color: #f5f5f5;
+
+                .comment-name {
+                  line-height: 1.2;
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+              }
+
+              .comment-des-content {
+                border: 1px solid #e3e2e2;
+                font-size: 16px;
+                padding: 10px 5px 10px 10px;
+                line-height: 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*End Bình Luận*/
+
+/*Footer*/
+footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+
+  .footer__container {
+    width: 100%;
+    background-color: #e7e8ed;
+    color: #66686d;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+
+    @media (max-width: 799px) {
+      padding: 20px 10px 20px 10px;
+    }
+
+    .footer-side {
+      width: 50%;
+      font-size: 18px;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+
+      &:last-child {
+        @media (max-width: 599px) {
+          padding-top: 20px;
+        }
+      }
+
+      .footer-info-list {
+        list-style: none;
+
+        .footer-info-item {
+          padding-bottom: 20px;
+
+          .icon-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .icon-item {
+              display: flex;
+              position: relative;
+
+              &:first-child {
+                padding: 8px;
+                border-radius: 50%;
+                background-color: white;
+                margin-right: 10px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+              }
+
+              span {
+                font-size: 15px;
+              }
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-content {
+        width: 100%;
+        padding-bottom: 20px;
+
+        h5 {
+          font-size: 25px;
+          color: black;
+        }
+
+        .f-description {
+          font-size: 15px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+/*End Footer*/
+
 /*Chữ tràn*/
 .title-overflow {
   position: relative;
@@ -266,13 +460,17 @@ body {
 }
 /*End Button*/
 
-.star{
-  img{
+.star {
+  img {
     height: 100%;
     padding-bottom: 5px;
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.flex {
+  display: flex;
 }
 
 .img-fade {
@@ -305,6 +503,22 @@ button {
 
 a {
   cursor: pointer;
+}
+
+.mar-bot-50 {
+  margin-bottom: 50px;
+}
+
+.pad-0 {
+  padding: 0;
+}
+
+.pad-top-10 {
+  padding-top: 10px;
+}
+
+.pad-top-20 {
+  padding-top: 20px;
 }
 
 .pad-bot-25 {
