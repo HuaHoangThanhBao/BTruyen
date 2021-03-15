@@ -466,6 +466,19 @@ footer .footer__container .footer-side .footer-content .f-description {
 }
 
 /*End Chữ tràn*/
+.sticky {
+  position: fixed;
+  display: block;
+  top: 75px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#d3c5c5), to(#ad9d9d));
+  background-image: linear-gradient(to top right, #d3c5c5, #ad9d9d);
+  z-index: 2;
+  padding: 10px;
+}
+
 /*Các button ở trang Detail Truyện*/
 .btn-detail-group {
   width: 100%;

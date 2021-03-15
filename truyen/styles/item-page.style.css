@@ -489,6 +489,12 @@ footer .footer__container .footer-side .footer-content .f-description {
 }
 
 /*End Chữ tràn*/
+.sticky {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+}
+
 /*Các button ở trang Detail Truyện*/
 .btn-detail-group {
   width: 100%;
