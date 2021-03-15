@@ -1,0 +1,136 @@
+@import "./icon.scss";
+@import "./func.scss";
+@import "./general.scss";
+
+.rd__panel {
+  width: 100%;
+  height: auto;
+  padding: 0px 40px 0px 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 799px){
+      padding: 0px 10px 0px 10px;
+  }
+
+  .rd__panel-container {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 20px 0px 20px 0px;
+    max-width: 1300px;
+
+    .box-container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        background-color: $white;
+    }
+
+    .rd__title {
+      width: 100%;
+      text-align: center;
+
+      .rd__title-item {
+        padding: 10px 0px 10px 0px;
+      }
+
+      .chap__nav {
+        width: 100%;
+        display: block;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        .chap__nav-list {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          justify-content: center;
+
+          .chap__nav-item {
+            padding: 5px;
+            border-radius: 50%;
+
+            &:nth-child(6){
+                width: 250px;
+            }
+
+            @media (max-width: 519px){
+                &:nth-child(4){
+                    width: 100%;
+                }
+                &:nth-child(6){
+                    width: calc(100% - 100px);
+                }
+            }
+
+            .chap__nav-select-box {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              select {
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border-radius: 5px;
+              }
+            }
+
+            .chap__nav-item-box {
+              width: 100%;
+              height: 100%;
+
+              .chap__nav-item-icon {
+                border-radius: 50%;
+                padding: 8px;
+                background-color: $white;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+                  0 3px 6px rgba(0, 0, 0, 0.23);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 17px;
+                  height: 17px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .rd__body {
+      width: 100%;
+      display: block;
+      position: relative;
+
+      .rd__body-list {
+        width: 100%;
+        list-style: none;
+
+        .rd__image-box {
+          width: 100%;
+          display: block;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.story-content-panel{
+    background-color: $white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
