@@ -188,7 +188,9 @@ body {
 .main-container {
   .body-container {
     width: 100%;
+    display: flex;
     height: auto;
+    justify-content: center;
   }
 
   .banner-container {
@@ -524,6 +526,15 @@ a {
 .pad-top-20 {
   padding-top: 20px;
 }
+
+.pad-bot-20 {
+  padding-bottom: 20px;
+}
+
+.pad-bot-10 {
+  padding-bottom: 20px;
+}
+
 
 .pad-bot-25 {
   padding-bottom: 25px;

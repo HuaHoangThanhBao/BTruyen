@@ -2,270 +2,277 @@
 @import "./func.scss";
 @import "./general.scss";
 
-.overlay__panel {
+.body-cover {
   width: 100%;
-  height: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  height: 100%;
+  display: block;
   position: relative;
+  max-width: 1300px;
 
-  @media (max-width: 599px) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .overlay__panel-container {
+  .overlay__panel {
     width: 100%;
-    height: 100%;
-    background-color: $white;
-    border-radius: 20px;
-    z-index: 2;
-    margin-top: -250px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
 
-    .box-container {
+    @media (max-width: 599px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .overlay__panel-container {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding-bottom: 20px;
+      height: 100%;
+      background-color: $white;
+      border-radius: 20px;
+      z-index: 2;
+      margin-top: -250px;
 
-      .panel-side:first-child {
-        width: 250px;
+      .box-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
 
-        @media (max-width: 799px) {
-          display: block;
-          width: 100%;
-        }
+        .panel-side:first-child {
+          width: 250px;
 
-        .image-outer {
-          width: 100%;
-          height: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
-
-          img {
-            height: 300px;
+          @media (max-width: 799px) {
+            display: block;
             width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-            margin-top: -40px;
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-              0 10px 10px rgba(0, 0, 0, 0.22);
+          }
 
-            @media (max-width: 799px) {
-              width: 250px;
+          .image-outer {
+            width: 100%;
+            height: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            img {
+              height: 300px;
+              width: 100%;
+              border-radius: 10px;
+              object-fit: cover;
+              margin-top: -40px;
+              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
+
+              @media (max-width: 799px) {
+                width: 250px;
+              }
             }
           }
         }
-      }
 
-      .panel-side:nth-child(2) {
-        width: calc(100% - 250px);
+        .panel-side:nth-child(2) {
+          width: calc(100% - 250px);
 
-        @media (max-width: 799px) {
-          display: block;
-          width: 100%;
-        }
-
-        .truyen__detail-container {
-          width: 100%;
-          padding: 20px;
-
-          .truyen__detail-title {
-            margin-bottom: 20px;
+          @media (max-width: 799px) {
+            display: block;
+            width: 100%;
           }
 
-          .truyen__detail-box {
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 20px;
+          .truyen__detail-container {
+            width: 100%;
+            padding: 20px;
 
-            .truyen__detail-txt {
-              width: 50%;
-              font-size: 15px;
-              line-height: 1.5;
+            .truyen__detail-title {
+              margin-bottom: 20px;
+            }
 
-              @media (max-width: 599px) {
-                width: 100%;
-              }
+            .truyen__detail-box {
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+              margin-top: 20px;
 
-              &:nth-child(even) {
-                padding-left: 10px;
+              .truyen__detail-txt {
+                width: 50%;
+                font-size: 15px;
+                line-height: 1.5;
 
                 @media (max-width: 599px) {
-                  padding-left: 0;
-                  padding-top: 20px;
+                  width: 100%;
+                }
+
+                &:nth-child(even) {
+                  padding-left: 10px;
+
+                  @media (max-width: 599px) {
+                    padding-left: 0;
+                    padding-top: 20px;
+                  }
                 }
               }
             }
           }
         }
-      }
 
-      .story-content-panel {
-        width: 100%;
-        padding-left: 20px;
-        padding-top: 20px;
-        padding-right: 20px;
-
-        .story-content-header {
-          padding-bottom: 10px;
-        }
-
-        /*Nút read more cho nội dung*/
-        .box__detail--content {
-          .content {
-            margin: 0;
-            padding: 0;
-            padding-bottom: 1rem;
-            position: relative;
-            padding-top: 20px;
-            line-height: 1.2;
-
-            .js-excerpt::after {
-              content: "";
-              display: block;
-              position: absolute;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              height: 30px;
-              background: linear-gradient(rgba(255, 255, 255, 0), white);
-            }
-          }
-        }
-
-        .js-show-more {
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          font-size: 15px;
-          text-decoration: none;
-
-          &:hover {
-            color: tomato;
-            text-decoration: underline;
-          }
-        }
-
-        .excerpt-hidden {
-          height: 3.5rem;
-          overflow: hidden;
-          position: relative;
-
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 64px;
-          }
-        }
-
-        .excerpt-visible {
-          height: auto;
-          overflow: auto;
-        }
-        /*End nút read more*/
-      }
-
-      /*Danh sách chương*/
-      .chap__list-container {
-        width: 100%;
-
-        .chap__list-header {
+        .story-content-panel {
           width: 100%;
-          display: flex;
+          padding-left: 20px;
           padding-top: 20px;
-          padding-bottom: 15px;
-          border: 1px dashed lightgrey;
-          border-width: 0px 0px 1px 0px;
+          padding-right: 20px;
 
-          .chap__list-heading {
-            width: 50%;
-            padding-right: 5px;
-            font-weight: bold;
+          .story-content-header {
+            padding-bottom: 10px;
+          }
 
-            @media (max-width: 400px) {
-              font-size: 14px;
+          /*Nút read more cho nội dung*/
+          .box__detail--content {
+            .content {
+              margin: 0;
+              padding: 0;
+              padding-bottom: 1rem;
+              position: relative;
+              padding-top: 20px;
+              line-height: 1.2;
+
+              .js-excerpt::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 30px;
+                background: linear-gradient(rgba(255, 255, 255, 0), white);
+              }
             }
           }
+
+          .js-show-more {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 15px;
+            text-decoration: none;
+
+            &:hover {
+              color: tomato;
+              text-decoration: underline;
+            }
+          }
+
+          .excerpt-hidden {
+            height: 3.5rem;
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 64px;
+            }
+          }
+
+          .excerpt-visible {
+            height: auto;
+            overflow: auto;
+          }
+          /*End nút read more*/
         }
 
-        .chap__list-box {
+        /*Danh sách chương*/
+        .chap__list-container {
           width: 100%;
 
-          ul{
+          .chap__list-header {
             width: 100%;
-            display: block;
-            list-style: none;
-            margin-top: 15px;
-            position: relative;
-            max-height: 270px;
-            overflow: hidden;
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 15px;
+            border: 1px dashed lightgrey;
+            border-width: 0px 0px 1px 0px;
 
-            li {
-              display: flex;
-              margin-bottom: 15px;
-              padding-bottom: 15px;
-              border: 1px dashed lightgrey;
-              border-width: 0px 0px 1px 0px;
+            .chap__list-heading {
+              width: 50%;
+              padding-right: 5px;
+              font-weight: bold;
 
-              &:last-child {
-                border-width: 0px;
-                margin-bottom: 0px;
-              }
-
-              p {
-                width: 33.33333%;
-                padding-right: 5px;
-
-                &:first-child:hover {
-                  color: $green;
-                }
-
-                @media (max-width: 400px) {
-                  line-height: 1.4;
-                  font-size: 12px;
-                }
+              @media (max-width: 400px) {
+                font-size: 14px;
               }
             }
           }
 
-          .expand-bottom {
+          .chap__list-box {
             width: 100%;
-            height: 2.5rem;
-            display: block !important;
-            position: relative;
 
-            &.active::before{
-              height: 0;
-              top: 0;
-            }
-            
-            &::before {
-              content: "";
-              display: block;
-              position: absolute;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              top: -50px;
-              height: 50px;
-              background: linear-gradient(rgba(255, 255, 255, 0.322),white);
-            }
-
-            button {
+            ul {
               width: 100%;
-              height: 100%;
-              border-radius: 0.15rem;
-              border: none;
-              outline: none;
-              cursor: pointer;
+              display: block;
+              list-style: none;
+              margin-top: 15px;
+              position: relative;
+              max-height: 270px;
+              overflow: hidden;
 
-              &:hover {
-                background-color: rgb(221, 221, 221);
+              li {
+                display: flex;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border: 1px dashed lightgrey;
+                border-width: 0px 0px 1px 0px;
+
+                &:last-child {
+                  border-width: 0px;
+                  margin-bottom: 0px;
+                }
+
+                p {
+                  width: 33.33333%;
+                  padding-right: 5px;
+
+                  &:first-child:hover {
+                    color: $green;
+                  }
+
+                  @media (max-width: 400px) {
+                    line-height: 1.4;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+
+            .expand-bottom {
+              width: 100%;
+              height: 2.5rem;
+              display: block !important;
+              position: relative;
+
+              &.active::before {
+                height: 0;
+                top: 0;
+              }
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: -50px;
+                height: 50px;
+                background: linear-gradient(rgba(255, 255, 255, 0.322), white);
+              }
+
+              button {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.15rem;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: rgb(221, 221, 221);
+                }
               }
             }
           }

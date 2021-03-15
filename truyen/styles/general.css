@@ -198,7 +198,13 @@ body {
 /*Main Container*/
 .main-container .body-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-container .banner-container {
@@ -566,6 +572,14 @@ a {
 
 .pad-top-20 {
   padding-top: 20px;
+}
+
+.pad-bot-20 {
+  padding-bottom: 20px;
+}
+
+.pad-bot-10 {
+  padding-bottom: 20px;
 }
 
 .pad-bot-25 {
