@@ -3,20 +3,17 @@
 @import "./general.scss";
 
 .body-cover {
-  width: 100%;
-  height: 100%;
+  max-width: $max-scale-width;
+  @include SetWidthHeight(100%, 100%);
   display: block;
   position: relative;
-  max-width: 1300px;
 }
 
 .rd__panel {
-  width: 100%;
-  height: auto;
+  @include SetWidthHeight(100%, auto);
+  @include Flex($isHorizontally: true, $isVertically: false, $isWrap: false);
   padding: 0px 40px 0px 40px;
   position: relative;
-  display: flex;
-  justify-content: center;
 
   @media (max-width: 799px){
       padding: 0px 10px 0px 10px;
@@ -29,15 +26,14 @@
     max-width: 1300px;
 
     .box-container{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        padding-bottom: 20px;
-        background-color: $white;
+      @include SetWidthHeight(100%, auto);
+      @include Flex($isHorizontally: false, $isVertically: false, $isWrap: true);
+      padding-bottom: 20px;
+      background-color: $white;
     }
 
     .rd__title {
-      width: 100%;
+      @include SetWidthHeight(100%, auto);
       text-align: center;
 
       .rd__title-item {
@@ -45,16 +41,15 @@
       }
 
       .chap__nav {
-        width: 100%;
+        @include SetWidthHeight(100%, auto);
         display: block;
         position: relative;
         padding-top: 20px;
         padding-bottom: 40px;
 
         .chap__nav-list {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
+          @include SetWidthHeight(100%, auto);
+          @include Flex($isHorizontally: false, $isVertically: false, $isWrap: true);
           list-style: none;
           justify-content: center;
 
@@ -63,49 +58,41 @@
             border-radius: 50%;
 
             &:nth-child(6){
-                width: 250px;
+              @include SetWidthHeight(250px, auto);
             }
 
             @media (max-width: 519px){
                 &:nth-child(4){
-                    width: 100%;
+                  @include SetWidthHeight(100%, auto);
                 }
                 &:nth-child(6){
-                    width: calc(100% - 100px);
+                  width: calc(100% - 100px);
                 }
             }
 
             .chap__nav-select-box {
-              height: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              @include SetWidthHeight(100%, 100%);
+              @include Flex($isHorizontally: true, $isVertically: true, $isWrap: true);
 
               select {
-                height: 100%;
-                width: 100%;
-                outline: none;
+                @include SetWidthHeight(100%, 100%);
+                @include noneOutLine($isNoneOutLine: true, $isNoneBorder: false);
                 border-radius: 5px;
               }
             }
 
             .chap__nav-item-box {
-              width: 100%;
-              height: 100%;
+              @include SetWidthHeight(100%, 100%);
 
               .chap__nav-item-icon {
+                @include Flex($isHorizontally: true, $isVertically: true, $isWrap: true);
                 border-radius: 50%;
                 padding: 8px;
                 background-color: $white;
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-                  0 3px 6px rgba(0, 0, 0, 0.23);
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
                 img {
-                  width: 17px;
-                  height: 17px;
+                  @include SetWidthHeight(17px, 17px);
                 }
               }
             }
@@ -115,20 +102,18 @@
     }
 
     .rd__body {
-      width: 100%;
+      @include SetWidthHeight(100%, auto);
       display: block;
       position: relative;
 
       .rd__body-list {
-        width: 100%;
         list-style: none;
 
         .rd__image-box {
-          width: 100%;
           display: block;
 
           img {
-            width: 100%;
+            @include SetWidthHeight(100%, auto);
           }
         }
       }
@@ -136,6 +121,7 @@
   }
 }
 
+//Config lại section này
 .story-content-panel{
     background-color: $white;
     padding: 20px;

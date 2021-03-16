@@ -40,6 +40,12 @@ body {
 
 /*Header && Navigation Bar*/
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
   top: 0;
   position: fixed;
@@ -49,7 +55,11 @@ body {
 }
 
 .header .nav {
+  max-width: 1300px;
   width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 }
 
 .header .nav .nav__list {
@@ -115,7 +125,6 @@ body {
   height: 100%;
   padding-right: 10px;
   font-size: 1rem;
-  outline: none;
 }
 
 .header .nav .nav__list .nav__item .catagory-content {
@@ -491,8 +500,15 @@ footer .footer__container .footer-side .footer-content .f-description {
 /*End Chữ tràn*/
 .sticky {
   position: fixed;
+  display: block;
   top: 75px;
+  left: 0;
+  right: 0;
   width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#d3c5c5), to(#ad9d9d));
+  background-image: linear-gradient(to top right, #d3c5c5, #ad9d9d);
+  z-index: 2;
+  padding: 10px;
 }
 
 /*Các button ở trang Detail Truyện*/
@@ -643,18 +659,18 @@ a {
 
 /*Main Container*/
 .main-container .body-cover {
+  max-width: 1300px;
   width: 100%;
   height: 100%;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1300px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 399px) {
@@ -666,7 +682,8 @@ a {
 }
 
 .main-container .body-cover .body-left-side {
-  width: 66.66666667%;
+  width: 66.66667%;
+  height: auto;
 }
 
 .main-container .body-cover .body-left-side.right-padding {
@@ -682,11 +699,13 @@ a {
 @media (max-width: 999px) {
   .main-container .body-cover .body-left-side {
     width: 100%;
+    height: auto;
   }
 }
 
 .main-container .body-cover .body-right-side {
-  width: 33.33333333%;
+  width: 33.33333%;
+  height: 100%;
 }
 
 .main-container .body-cover .body-right-side.left-padding {
@@ -702,6 +721,7 @@ a {
 @media (max-width: 999px) {
   .main-container .body-cover .body-right-side {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -715,8 +735,8 @@ a {
 }
 
 .main-container .body-cover .body-box .title-header {
-  height: 65px;
   width: 100%;
+  height: 65px;
   padding: 20px;
 }
 
@@ -729,8 +749,8 @@ a {
 }
 
 .main-container .body-cover .body-box .title-header .btn-group .gr-btn {
+  width: 33.33333%;
   height: 100%;
-  width: 33.33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,6 +760,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main-container .body-cover .body-box .title-header .btn-group .gr-btn:first-child {
@@ -751,8 +773,8 @@ a {
 }
 
 .main-container .body-cover .body-box .title-header .btn-group .gr-btn .btn {
-  height: 100%;
   width: 100%;
+  height: 100%;
   outline: none;
   border: none;
   border-radius: 20px;
@@ -800,13 +822,13 @@ a {
 }
 
 .main-container .body-cover .body-box .body__list-container .list-area .list-item .image-box {
-  height: 250px;
   width: 100%;
+  height: 250px;
 }
 
 .main-container .body-cover .body-box .body__list-container .list-area .list-item .image-box .image-link img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3px;
@@ -815,18 +837,21 @@ a {
 @media (min-width: 520px) and (max-width: 767px) {
   .main-container .body-cover .body-box .body__list-container .list-area .list-item {
     width: 33.33333%;
+    height: auto;
   }
 }
 
 @media (min-width: 400px) and (max-width: 519px) {
   .main-container .body-cover .body-box .body__list-container .list-area .list-item {
     width: 50%;
+    height: auto;
   }
 }
 
 @media (max-width: 399px) {
   .main-container .body-cover .body-box .body__list-container .list-area .list-item {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -855,22 +880,24 @@ a {
 }
 
 .main-container .body-cover .body-box .body__list-container .list-area .list_info {
+  width: 100%;
+  height: auto;
   position: relative;
   display: block;
-  width: 100%;
   margin-top: 10px;
 }
 
 .main-container .body-cover .body-box .body__list-container .list-area .list_info .newest-chapters {
   width: 100%;
+  height: auto;
   margin-top: 10px;
 }
 
 .main-container .body-cover .body-box .body__list-container .list-area .list_info .newest-chapters a {
-  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 5px;
 }
 
 .main-container .body-cover .body-box .body__list-container .list-area .list_info .newest-chapters a span {
@@ -913,9 +940,9 @@ a {
 }
 
 .main-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list {
-  list-style: none;
-  height: auto;
   width: 100%;
+  height: auto;
+  list-style: none;
   margin-top: 20px;
   display: block;
 }
@@ -926,15 +953,15 @@ a {
 }
 
 .main-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:first-child {
-  width: 35px;
-  height: 100%;
-  float: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 35px;
+  height: 100%;
+  float: left;
 }
 
 .main-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:first-child p {
@@ -957,14 +984,15 @@ a {
 
 .main-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child {
   width: calc(100% - 90px);
+  height: 100%;
   float: left;
   padding-left: 15px;
-  height: 100%;
   position: relative;
 }
 
 .main-container .body-cover .body-box .story__ranking .story__ranking-panel .rank-list .rank-b:last-child .rank-info {
   width: 100%;
+  height: auto;
   font-size: 14px;
 }
 

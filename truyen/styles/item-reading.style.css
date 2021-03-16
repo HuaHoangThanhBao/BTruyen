@@ -40,6 +40,12 @@ body {
 
 /*Header && Navigation Bar*/
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
   top: 0;
   position: fixed;
@@ -49,7 +55,11 @@ body {
 }
 
 .header .nav {
+  max-width: 1300px;
   width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 }
 
 .header .nav .nav__list {
@@ -115,7 +125,6 @@ body {
   height: 100%;
   padding-right: 10px;
   font-size: 1rem;
-  outline: none;
 }
 
 .header .nav .nav__list .nav__item .catagory-content {
@@ -649,24 +658,24 @@ a {
 }
 
 .body-cover {
+  max-width: 1300px;
   width: 100%;
   height: 100%;
   display: block;
   position: relative;
-  max-width: 1300px;
 }
 
 .rd__panel {
   width: 100%;
   height: auto;
-  padding: 0px 40px 0px 40px;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px 40px 0px 40px;
+  position: relative;
 }
 
 @media (max-width: 799px) {
@@ -684,6 +693,7 @@ a {
 
 .rd__panel .rd__panel-container .box-container {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,6 +705,7 @@ a {
 
 .rd__panel .rd__panel-container .rd__title {
   width: 100%;
+  height: auto;
   text-align: center;
 }
 
@@ -704,6 +715,7 @@ a {
 
 .rd__panel .rd__panel-container .rd__title .chap__nav {
   width: 100%;
+  height: auto;
   display: block;
   position: relative;
   padding-top: 20px;
@@ -712,6 +724,7 @@ a {
 
 .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -730,11 +743,13 @@ a {
 
 .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item:nth-child(6) {
   width: 250px;
+  height: auto;
 }
 
 @media (max-width: 519px) {
   .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item:nth-child(4) {
     width: 100%;
+    height: auto;
   }
   .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item:nth-child(6) {
     width: calc(100% - 100px);
@@ -742,21 +757,24 @@ a {
 }
 
 .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item .chap__nav-select-box {
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item .chap__nav-select-box select {
-  height: 100%;
   width: 100%;
+  height: 100%;
   outline: none;
   border-radius: 5px;
 }
@@ -767,20 +785,22 @@ a {
 }
 
 .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item .chap__nav-item-box .chap__nav-item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-radius: 50%;
   padding: 8px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .rd__panel .rd__panel-container .rd__title .chap__nav .chap__nav-list .chap__nav-item .chap__nav-item-box .chap__nav-item-icon img {
@@ -790,22 +810,22 @@ a {
 
 .rd__panel .rd__panel-container .rd__body {
   width: 100%;
+  height: auto;
   display: block;
   position: relative;
 }
 
 .rd__panel .rd__panel-container .rd__body .rd__body-list {
-  width: 100%;
   list-style: none;
 }
 
 .rd__panel .rd__panel-container .rd__body .rd__body-list .rd__image-box {
-  width: 100%;
   display: block;
 }
 
 .rd__panel .rd__panel-container .rd__body .rd__body-list .rd__image-box img {
   width: 100%;
+  height: auto;
 }
 
 .story-content-panel {

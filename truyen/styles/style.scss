@@ -7,15 +7,13 @@
 .main-container {
 
   .body-cover {
-    width: 100%;
-    height: 100%;
+    max-width: $max-scale-width;
+    @include SetWidthHeight(100%, 100%);
+    @include Flex($isHorizontally: false, $isVertically: false, $isWrap: true);
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1300px;
 
     @media (max-width: 399px) {
       padding-left: 5px;
@@ -24,7 +22,7 @@
     }
 
     .body-left-side {
-      width: 66.66666667%;
+      @include SetWidthHeight(66.66666667%, auto);
 
       &.right-padding {
         padding-right: 5px;
@@ -35,11 +33,11 @@
       }
 
       @media (max-width: 999px) {
-        width: 100%;
+        @include SetWidthHeight(100%, auto);
       }
     }
     .body-right-side {
-      width: 33.33333333%;
+      @include SetWidthHeight(33.33333333%, 100%);
 
       &.left-padding {
         padding-left: 5px;
@@ -50,32 +48,26 @@
       }
 
       @media (max-width: 999px) {
-        width: 100%;
+        @include SetWidthHeight(100%, auto);
       }
     }
 
     .body-box {
-      width: 100%;
-      height: auto;
+      @include SetWidthHeight(100%, auto);
       background-color: $white;
       border-radius: 8px;
 
       .title-header {
-        height: 65px;
-        width: 100%;
+        @include SetWidthHeight(100%, 65px);
         padding: 20px;
 
         .btn-group {
-          width: 100%;
-          height: 100%;
-          display: flex;
+          @include SetWidthHeight(100%, 100%);
+          @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
 
           .gr-btn {
-            height: 100%;
-            width: 33.33%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include SetWidthHeight(33.33333333%, 100%);
+            @include Flex($isHorizontally: true, $isVertically: true, $isWrap: true);
 
             &:first-child {
               padding-right: 5px;
@@ -85,10 +77,8 @@
             }
 
             .btn {
-              height: 100%;
-              width: 100%;
-              outline: none;
-              border: none;
+              @include SetWidthHeight(100%, 100%);
+              @include noneOutLine($isNoneOutLine: true, $isNoneBorder: true);
               border-radius: 20px;
               background-color: inherit;
               padding: 2px;
@@ -112,30 +102,24 @@
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
-        width: 100%;
-        height: auto;
+        @include SetWidthHeight(100%, auto);
 
         .list-area {
-          width: 100%;
-          height: auto;
-          display: flex;
-          flex-wrap: wrap;
+          @include SetWidthHeight(100%, auto);
+          @include Flex($isHorizontally: false, $isVertically: false, $isWrap: true);
 
           .list-item {
-            width: 25%;
-            height: auto;
+            @include SetWidthHeight(25%, auto);
             display: block;
             float: left;
             padding: 5px;
 
             .image-box {
-              height: 250px;
-              width: 100%;
+              @include SetWidthHeight(100%, 250px);
 
               .image-link {
                 img {
-                  height: 100%;
-                  width: 100%;
+                  @include SetWidthHeight(100%, 100%);
                   object-fit: cover;
                   border-radius: 3px;
                 }
@@ -144,13 +128,13 @@
 
             & {
               @media (min-width: 520px) and (max-width: 767px) {
-                width: 33.33333%;
+                @include SetWidthHeight(33.33333333%, auto);
               }
               @media (min-width: 400px) and (max-width: 519px) {
-                width: 50%;
+                @include SetWidthHeight(50%, auto);
               }
               @media (max-width: 399px) {
-                width: 100%;
+                @include SetWidthHeight(100%, auto);
               }
             }
 
@@ -180,18 +164,18 @@
           }
 
           .list_info {
+            @include SetWidthHeight(100%, auto);
             position: relative;
             display: block;
-            width: 100%;
             margin-top: 10px;
 
             .newest-chapters {
-              width: 100%;
+              @include SetWidthHeight(100%, auto);
               margin-top: 10px;
 
               a {
+                @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
                 margin-bottom: 5px;
-                display: flex;
 
                 span {
                   font-size: 12px;
@@ -223,20 +207,17 @@
 
       /*Phần Xếp hạng*/
       .story__ranking {
-        width: 100%;
-        height: auto;
+        @include SetWidthHeight(100%, auto);
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
 
         .story__ranking-panel {
-          width: 100%;
-          height: 100%;
+          @include SetWidthHeight(100%, 100%);
 
           .rank-list {
+            @include SetWidthHeight(100%, auto);
             list-style: none;
-            height: auto;
-            width: 100%;
             margin-top: 20px;
             display: block;
 
@@ -246,11 +227,9 @@
             }
 
             .rank-b:first-child {
-              width: 35px;
-              height: 100%;
+              @include Flex($isHorizontally: false, $isVertically: true, $isWrap: false);
+              @include SetWidthHeight(35px, 100%);
               float: left;
-              display: flex;
-              align-items: center;
 
               p {
                 font-size: 18px;
@@ -258,13 +237,11 @@
             }
 
             .rank-b:nth-child(2) {
-              width: 55px;
-              height: 100%;
+              @include SetWidthHeight(55px, 100%);
               float: left;
 
               img {
-                width: 100%;
-                height: 100%;
+                @include SetWidthHeight(100%, 100%);
                 object-fit: cover;
                 border-radius: 5px;
               }
@@ -272,13 +249,13 @@
 
             .rank-b:last-child {
               width: calc(100% - 90px);
+              height: 100%;
               float: left;
               padding-left: 15px;
-              height: 100%;
               position: relative;
 
               .rank-info {
-                width: 100%;
+                @include SetWidthHeight(100%, auto);
                 font-size: 14px;
 
                 span {

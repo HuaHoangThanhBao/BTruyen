@@ -40,6 +40,12 @@ body {
 
 /*Header && Navigation Bar*/
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
   top: 0;
   position: fixed;
@@ -49,7 +55,11 @@ body {
 }
 
 .header .nav {
+  max-width: 1300px;
   width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 }
 
 .header .nav .nav__list {
@@ -115,7 +125,6 @@ body {
   height: 100%;
   padding-right: 10px;
   font-size: 1rem;
-  outline: none;
 }
 
 .header .nav .nav__list .nav__item .catagory-content {
@@ -491,8 +500,15 @@ footer .footer__container .footer-side .footer-content .f-description {
 /*End Chữ tràn*/
 .sticky {
   position: fixed;
+  display: block;
   top: 75px;
+  left: 0;
+  right: 0;
   width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#d3c5c5), to(#ad9d9d));
+  background-image: linear-gradient(to top right, #d3c5c5, #ad9d9d);
+  z-index: 2;
+  padding: 10px;
 }
 
 /*Các button ở trang Detail Truyện*/
@@ -642,11 +658,11 @@ a {
 }
 
 .body-cover {
+  max-width: 1300px;
   width: 100%;
   height: 100%;
   display: block;
   position: relative;
-  max-width: 1300px;
 }
 
 .body-cover .overlay__panel {
@@ -675,6 +691,7 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,12 +703,14 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:first-child {
   width: 250px;
+  height: auto;
 }
 
 @media (max-width: 799px) {
   .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:first-child {
-    display: block;
     width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
@@ -703,8 +722,8 @@ a {
 }
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:first-child .image-outer img {
-  height: 300px;
   width: 100%;
+  height: 300px;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -716,6 +735,7 @@ a {
 @media (max-width: 799px) {
   .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:first-child .image-outer img {
     width: 250px;
+    height: auto;
   }
 }
 
@@ -727,11 +747,13 @@ a {
   .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:nth-child(2) {
     display: block;
     width: 100%;
+    height: auto;
   }
 }
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:nth-child(2) .truyen__detail-container {
   width: 100%;
+  height: auto;
   padding: 20px;
 }
 
@@ -751,6 +773,7 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:nth-child(2) .truyen__detail-container .truyen__detail-box .truyen__detail-txt {
   width: 50%;
+  height: auto;
   font-size: 15px;
   line-height: 1.5;
 }
@@ -758,6 +781,7 @@ a {
 @media (max-width: 599px) {
   .body-cover .overlay__panel .overlay__panel-container .box-container .panel-side:nth-child(2) .truyen__detail-container .truyen__detail-box .truyen__detail-txt {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -840,10 +864,12 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container {
   width: 100%;
+  height: auto;
 }
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-header {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,6 +881,7 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-header .chap__list-heading {
   width: 50%;
+  height: auto;
   padding-right: 5px;
   font-weight: bold;
 }
@@ -867,10 +894,12 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-box {
   width: 100%;
+  height: auto;
 }
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-box ul {
   width: 100%;
+  height: auto;
   display: block;
   list-style: none;
   margin-top: 15px;
@@ -896,6 +925,7 @@ a {
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-box ul li p {
   width: 33.33333%;
+  height: auto;
   padding-right: 5px;
 }
 
@@ -938,10 +968,9 @@ a {
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-box .expand-bottom button {
   width: 100%;
   height: 100%;
-  border-radius: 0.15rem;
-  border: none;
   outline: none;
-  cursor: pointer;
+  border: none;
+  border-radius: 0.15rem;
 }
 
 .body-cover .overlay__panel .overlay__panel-container .box-container .chap__list-container .chap__list-box .expand-bottom button:hover {

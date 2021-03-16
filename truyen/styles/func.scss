@@ -1,7 +1,33 @@
-@mixin noneOutLine() {
+@mixin Flex($isHorizontally: false, $isVertically: false, $isWrap: false) {
+  display: flex;
+
+  @if $isHorizontally {
+    justify-content: center;
+  }
+
+  @if $isVertically {
+    align-items: center;
+  }
+
+  @if $isWrap {
+    flex-wrap: wrap;
+  }
+}
+
+@mixin SetWidthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin noneOutLine($isNoneOutLine: false, $isNoneBorder: false) {
+  @if $isNoneOutLine {
     outline: none;
+  }
+  @if $isNoneBorder{
+      border: none;
+  }
 }
 
 @mixin borderBottomOnly($size, $style, $color) {
-    border-bottom: $size $style $color;
+  border-bottom: $size $style $color;
 }
