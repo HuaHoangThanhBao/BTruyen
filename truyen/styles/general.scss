@@ -428,22 +428,21 @@ footer {
 }
 /*End Chữ tràn*/
 
-.sticky{
+.sticky {
   position: fixed;
   display: block;
   top: 75px;
   left: 0;
   right: 0;
   width: 100%;
-  background-image:
-    linear-gradient(
-      to top right, 
-      rgb(211, 197, 197), rgb(173, 157, 157)
-    );
+  background-image: linear-gradient(
+    to top right,
+    rgb(211, 197, 197),
+    rgb(173, 157, 157)
+  );
   z-index: 2;
   padding: 10px;
 }
-
 
 /*Các button ở trang Detail Truyện*/
 .btn-detail-group {
@@ -482,6 +481,46 @@ footer {
   }
 }
 /*End Button*/
+
+.pagination-container {
+  @include SetWidthHeight(100%, auto);
+  @include Flex($isHorizontally: true, $isVertically: false, $isWrap: false);
+  margin: 20px 0px 0px 0px;
+
+  .pagination {
+    display: block;
+    position: relative;
+
+    a,
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      width: 22px;
+      color: #7d7d7d;
+      text-align: center;
+      padding: 3px 0 2px 0;
+    }
+
+    a {
+      margin: 0 5px 5px 5px;
+      border-radius: 50%;
+      box-shadow: inset 0 1px 0 0 #fff, 0 1px 2px #666;
+      text-shadow: 0 1px 1px #fff;
+      background-color: #e6e6e6;
+      height: 33px;
+      width: 33px;
+      font-size: 17px;
+      line-height: 1.8;
+      user-select: none;
+
+      &.current {
+        box-shadow: 0 1px 1px #999;
+        background-color: #1d1e22;
+        color: $white;
+      }
+    }
+  }
+}
 
 .star {
   img {
@@ -555,7 +594,6 @@ a {
 .pad-bot-10 {
   padding-bottom: 20px;
 }
-
 
 .pad-bot-25 {
   padding-bottom: 25px;

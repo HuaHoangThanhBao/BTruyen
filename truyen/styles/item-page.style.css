@@ -551,6 +551,26 @@ footer .footer__container .footer-side .footer-content .f-description {
 }
 
 /*End Button*/
+.pagination {
+  background-color: red;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
 .star img {
   height: 100%;
   padding-bottom: 5px;

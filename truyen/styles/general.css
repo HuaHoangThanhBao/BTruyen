@@ -528,6 +528,57 @@ footer .footer__container .footer-side .footer-content .f-description {
 }
 
 /*End Button*/
+.pagination-container {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0px 0px 0px;
+}
+
+.pagination-container .pagination {
+  display: block;
+  position: relative;
+}
+
+.pagination-container .pagination a,
+.pagination-container .pagination i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  color: #7d7d7d;
+  text-align: center;
+  padding: 3px 0 2px 0;
+}
+
+.pagination-container .pagination a {
+  margin: 0 5px 5px 5px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 1px 0 0 #fff, 0 1px 2px #666;
+          box-shadow: inset 0 1px 0 0 #fff, 0 1px 2px #666;
+  text-shadow: 0 1px 1px #fff;
+  background-color: #e6e6e6;
+  height: 33px;
+  width: 33px;
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.pagination-container .pagination a.current {
+  -webkit-box-shadow: 0 1px 1px #999;
+          box-shadow: 0 1px 1px #999;
+  background-color: #1d1e22;
+  color: #ffffff;
+}
+
 .star img {
   height: 100%;
   padding-bottom: 5px;
