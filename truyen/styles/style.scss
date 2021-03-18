@@ -2,9 +2,62 @@
 @import "./func.scss";
 @import "./general.scss";
 
-
 /*Main Container*/
 .main-container {
+  .caro-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+
+    .caro-box {
+      background-color: white;
+      border-radius: 5px;
+
+      .title-header {
+        @include SetWidthHeight(100%, 65px);
+        padding: 20px;
+      }
+
+      .caro-body {
+        @include SetWidthHeight(100%, auto);
+        padding-bottom: 20px;
+
+        .splide{
+          @include SetWidthHeight(100%, auto);
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .splide__list{
+            display: flex;
+  
+            .splide__slide{
+              margin: 10px;
+
+              .caro-info{
+                @include SetWidthHeight(100%, auto);
+                padding: 10px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.675));
+
+                .caro-txt{
+                  @include SetWidthHeight(100%, 100%);
+                  display: flex;
+                  font-size: 15px;
+                  color: $white;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   .body-cover {
     max-width: $max-scale-width;
@@ -56,6 +109,7 @@
       @include SetWidthHeight(100%, auto);
       background-color: $white;
       border-radius: 8px;
+      margin-bottom: 20x;
 
       .title-header {
         @include SetWidthHeight(100%, 65px);
@@ -63,11 +117,19 @@
 
         .btn-group {
           @include SetWidthHeight(100%, 100%);
-          @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
+          @include Flex(
+            $isHorizontally: false,
+            $isVertically: false,
+            $isWrap: false
+          );
 
           .gr-btn {
             @include SetWidthHeight(33.33333333%, 100%);
-            @include Flex($isHorizontally: true, $isVertically: true, $isWrap: true);
+            @include Flex(
+              $isHorizontally: true,
+              $isVertically: true,
+              $isWrap: true
+            );
 
             &:first-child {
               padding-right: 5px;
@@ -106,7 +168,11 @@
 
         .list-area {
           @include SetWidthHeight(100%, auto);
-          @include Flex($isHorizontally: false, $isVertically: false, $isWrap: true);
+          @include Flex(
+            $isHorizontally: false,
+            $isVertically: false,
+            $isWrap: true
+          );
 
           .list-item {
             @include SetWidthHeight(25%, auto);
@@ -174,7 +240,11 @@
               margin-top: 10px;
 
               a {
-                @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
+                @include Flex(
+                  $isHorizontally: false,
+                  $isVertically: false,
+                  $isWrap: false
+                );
                 margin-bottom: 5px;
 
                 span {
@@ -221,7 +291,11 @@
             }
 
             .rank-b:first-child {
-              @include Flex($isHorizontally: false, $isVertically: true, $isWrap: false);
+              @include Flex(
+                $isHorizontally: false,
+                $isVertically: true,
+                $isWrap: false
+              );
               @include SetWidthHeight(35px, 100%);
               float: left;
 
@@ -274,4 +348,3 @@
   }
 }
 /*End Main Container*/
-
