@@ -24,7 +24,7 @@
       background-color: $white;
       border-radius: 20px;
       z-index: 2;
-      margin-top: -250px;
+      margin-top: -450px;
 
       .box-container {
         @include SetWidthHeight(100%, auto);
@@ -53,8 +53,7 @@
               border-radius: 10px;
               object-fit: cover;
               margin-top: -40px;
-              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-                0 10px 10px rgba(0, 0, 0, 0.22);
+              box-shadow: 10px 10px 25px rgba(black, .20);
 
               @media (max-width: 799px) {
                 @include SetWidthHeight(250px, auto);

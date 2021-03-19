@@ -6,7 +6,7 @@ new Splide("#splide", {
   cover: true,
   drag: true,
   pagination: false,
-  lazyLoad: "nearby",
+  //lazyLoad: "nearby",
   padding: {
     left: 0,
     right: "1rem",
