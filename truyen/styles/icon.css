@@ -3,7 +3,6 @@
   height: 25px;
   float: left;
 }
-
 .icon .search-icon {
   height: 100%;
   width: 100%;
@@ -15,9 +14,7 @@
   margin-left: auto;
   margin-right: 0;
 }
-
 .toggle__button img {
   height: 100%;
   width: 100%;
-}
-/*# sourceMappingURL=icon.css.map */
+}/*# sourceMappingURL=icon.css.map */
