@@ -354,6 +354,50 @@ body {
 }
 /*End Bình Luận*/
 
+/*Carousel Hình ảnh*/
+.caro-body {
+  @include SetWidthHeight(100%, auto);
+  padding-bottom: 20px;
+
+  .splide {
+    @include SetWidthHeight(100%, auto);
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .splide__list {
+      display: flex;
+
+      .splide__slide {
+        margin: 10px;
+
+        .caro-info {
+          @include SetWidthHeight(100%, auto);
+          padding: 10px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-image: linear-gradient(
+            rgba(0, 0, 0, 0.753),
+            rgba(0, 0, 0, 0.675)
+          );
+
+          .caro-txt {
+            @include SetWidthHeight(100%, 100%);
+            display: flex;
+            font-size: 15px;
+            color: $white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+/*End Carousel*/
+
 /*Footer*/
 footer {
   width: 100%;
