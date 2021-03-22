@@ -1,0 +1,19 @@
+@import './general.scss';
+
+.image-box {
+    position: relative;
+    background-color: red;
+
+    .image-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.541));
+        color: $white;
+    }
+}
