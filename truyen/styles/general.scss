@@ -645,8 +645,13 @@ a {
   cursor: pointer;
 }
 
+/*Margin + Padding*/
 .mar-bot-50 {
   margin-bottom: 50px;
+}
+
+.mar-top-20 {
+  margin-top: 20px;
 }
 
 .pad-0 {
@@ -684,6 +689,7 @@ a {
 .pad-bot-10 {
   padding-bottom: 10px;
 }
+/*End Margin + Padding*/
 
 .txt-italic {
   font-style: italic;
@@ -699,6 +705,20 @@ a {
   }
 }
 
-.mar-top-20 {
-  margin-top: 20px;
+/*Background color*/
+.bg-red{
+  background-color: #d92550;
 }
+.bg-blueAquua{
+  background-color: #64C5BD;
+}
+.bg-orange{
+  background-color: #FFA800;
+}
+.bg-blue{
+  background-color: #3699FF;
+}
+.bg-purple{
+  background-color: #8950FC;
+}
+/*End Background color*/
