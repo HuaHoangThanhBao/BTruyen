@@ -1515,12 +1515,14 @@ a {
 }
 
 .modal-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.411)), to(rgba(0, 0, 0, 0.116)));
-  background: linear-gradient(rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0.116));
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.466);
   z-index: 3;
   display: none;
 }
@@ -1533,6 +1535,15 @@ a {
   width: 100%;
   height: 100%;
   padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-container .modal-wrapper .modal-box {
@@ -1591,6 +1602,14 @@ a {
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row:first-child .modal-col {
   height: 350px;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .add-chap-btn {
+  height: 35px;
+  width: 250px;
+  background-color: #64d075;
+  color: #ffffff;
+  border: none;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-col {
@@ -1662,6 +1681,10 @@ a {
   height: 30px;
 }
 
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info.select {
+  height: auto;
+}
+
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col {
   height: 100%;
   display: -webkit-box;
@@ -1691,6 +1714,18 @@ a {
   -webkit-box-shadow: 0 0.15rem 1rem 0 rgba(58, 59, 69, 0.15);
           box-shadow: 0 0.15rem 1rem 0 rgba(58, 59, 69, 0.15);
   padding: 0px 10px 0px 10px;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col .img-select-box {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col .img-select-box .img-select {
+  padding: 10px 0px 10px 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row.btn-func-group {
