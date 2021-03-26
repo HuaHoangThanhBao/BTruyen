@@ -80,89 +80,58 @@
         </nav>
     </header>
     <!--End Header Menu-->
- <!--Login Area-->
- <main>
-    <div class="main-container container-fluid">
-        <div class="banner-container">
-            <div class="banner"></div>
-        </div>
-        <div class="body-container">
-            <div class="container-fluid">
-                <div class="containner__login">
-                    <div class="container__cover">
-                        <div class="container__cover--block">
-                            <div class="container__side">
-                                <div class="form__content">
-                                    <h1>Đăng nhập</h1>
-                                </div>
-                                <div class="form__content">
-                                    <p>Đăng nhập để xem thỏa thích!!</p>
-                                </div>
-                                <div class="form__social--group">
-                                    <ul>
-                                        <li>
-                                            <button><i class="fa fa-facebook"></i></button>
-                                        </li>
-                                        <li>
-                                            <button><i class="fa fa-google"></i></button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form__input--group">
-                                    <div class="form__input">
-                                        <input placeholder="Email">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Mật khẩu">
-                                    </div>
-                                    <div class="form__input">
-                                        <button class="orange" type="submit">Đăng nhập</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container__side">
-                                <div class="form__content">
-                                    <h1>Tạo tài khoản</h1>
-                                </div>
-                                <div class="form__content">
-                                    <p>Đăng ký nhanh nào các bạn ơi!!</p>
-                                </div>
-                                <div class="form__social--group">
-                                    <ul>
-                                        <li>
-                                            <button><i class="fa fa-facebook"></i></button>
-                                        </li>
-                                        <li>
-                                            <button><i class="fa fa-google"></i></button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form__input--group">
-                                    <div class="form__input">
-                                        <input placeholder="Họ">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Tên">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Email">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Mật khẩu">
-                                    </div>
-                                    <div class="form__input">
-                                        <button type="submit">Đăng ký</button>
-                                    </div>
-                                </div>
-                            </div>
+
+   <!--Login Area-->
+    <main>
+        <div class="main-container container-fluid">
+            <div class="banner-container">
+                <div class="banner"></div>
+            </div>
+            <div class="wrapper">
+                <div class="form-container">
+                        <div class="slide-controls">
+                            <input type="radio" name="slide" id="login" checked>
+                            <input type="radio" name="slide" id="signup">
+                            <label for="login" class="slide login">Login</label>
+                            <label for="signup" class="slide signup">Signup</label>
+                            <div class="slider-tab"></div>
                         </div>
+                    <div class="form-inner">
+                        <form action="#" class="login">
+                            <div class="field">
+                                <input type="text" placeholder="Email Address" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Password" required>
+                        </div>
+                            <div class="pass-link">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                            <input type="submit" value="Login"></div>
+                            <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+                        </form>
+                        <form action="#" class="signup">
+                            <div class="field">
+                                <input type="text" placeholder="Email Address" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Confirm password" required>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Signup">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-         </div>
-    </div>
- </main>
-     
+        </div>
+    </main>     
 <!--End Login Area-->
     <!--Footer-->
     <footer>
@@ -260,5 +229,23 @@
     <!--End Footer-->
 </body>
 
-
+<script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    signupBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "-50%";
+      loginText.style.marginLeft = "-50%";
+    });
+    loginBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "0%";
+      loginText.style.marginLeft = "0%";
+    });
+    signupLink.onclick = (()=>{
+      signupBtn.click();
+      return false;
+    });
+  </script>
  
