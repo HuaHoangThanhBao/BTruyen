@@ -1,7 +1,12 @@
-.main-container .banner-container{
-	width: auto;
-	height: 0px;
-}
+.main-container{
+	&.container-fluid {
+		padding: 120px;
+	}	
+	&.banner-container {
+		width: auto;
+		height: 0px;
+	}
+} 
 .wrapper {
 	overflow: hidden;
 	@media (min-width:1024px) and (max-width:1920px) {
