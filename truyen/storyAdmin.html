@@ -231,72 +231,89 @@
         <!--Truyện Update Modal Container-->
         <div id="modal-update" class="modal-container">
             <div class="modal-wrapper">
-                <div class="modal-box">
+                <div class="modal-outline">
                     <div class="close-box">
                         <button id="closeBtnUpdate" class="close-btn">X</button>
                     </div>
-                    <div class="modal-body">
-                        <div class="modal-row">
-                            <div class="modal-col">
-                                <input type="file" id="default-file" hidden="hidden" />
-                                <img class="modal-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-col">
+                                    <img class="modal-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
+                                </div>
+                                <div class="modal-col">
+                                    <h3>Chọn ảnh thay thế</h3>
+                                    <br>
+                                   <input id="replace-img" type="file">
+                                </div>
                             </div>
-                            <div class="modal-col">
-                                <div class="preview_holder">
-                                    <div id="preview" class="preview">
-                                        <img src="" id="preview_img" class="preview_img" />
-                                        <span id="preview_text" class="preview_text">Image Preview</span>
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tác giả:</p>
                                     </div>
-                                    <div class="upload-btn-box">
-                                        <span id="custom-space" class="file-name">Chưa có file</span>
-                                        <button id="custom-btn" type="button" class="custom-btn">Chọn file</button>
+                                    <div class="info-col">
+                                        <select>
+                                            <option value="Albanda John">Albanda John</option>
+                                            <option value="Albanda John1">Albanda John1</option>
+                                            <option value="Albanda John2">Albanda John2</option>
+                                            <option value="Albanda John3">Albanda John3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Lượt xem:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="14.000.000"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tình trạng:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="Chờ duyệt"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Mô tả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input
+                                            value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info disable-height">
+                                    <div class="info-col align-top">
+                                        <p>Phụ lục:</p>
+                                    </div>
+                                    <div class="info-col-group">
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Action">
+                                            <label>Action</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Phiêu lưu">
+                                            <label>Phiêu lưu</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Kiếm hiệp">
+                                            <label>Kiếm hiệp</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Tình cảm">
+                                            <label>Tình cảm</label><br>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-row">
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Tác giả:</p>
-                                </div>
-                                <div class="info-col">
-                                    <select>
-                                        <option value="Albanda John">Albanda John</option>
-                                        <option value="Albanda John1">Albanda John1</option>
-                                        <option value="Albanda John2">Albanda John2</option>
-                                        <option value="Albanda John3">Albanda John3</option>
-                                    </select>
-                                </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Cập nhật</button>
+                                <button class="btn-func bg-red">Xóa</button>
                             </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Lượt xem:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input value="14.000.000"></input>
-                                </div>
-                            </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Tình trạng:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input value="Chờ duyệt"></input>
-                                </div>
-                            </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Mô tả:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input
-                                        value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-row btn-func-group">
-                            <button class="btn-func bg-blue">Cập nhật</button>
-                            <button class="btn-func bg-red">Xóa</button>
                         </div>
                     </div>
                 </div>
@@ -307,81 +324,93 @@
         <!--Truyện Add Modal Container-->
         <div id="modal-add" class="modal-container">
             <div class="modal-wrapper">
-                <div class="modal-box">
+                <div class="modal-outline">
                     <div class="close-box">
                         <button id="closeBtnAdd" class="close-btn">X</button>
                     </div>
-                    <div class="modal-body">
-                        <div class="modal-row">
-                            <div class="modal-col">
-                                <input type="file" id="default-file" hidden="hidden" />
-                                <div class="preview_holder">
-                                    <div id="preview" class="preview">
-                                        <!-- <img src="" id="preview_img" class="preview_img" />
-                                        <span id="preview_text" class="preview_text">Image Preview</span> -->
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-col">
+                                    <input type="file" id="default-file" hidden="hidden" />
+                                    <div class="preview_holder">
+                                        <div id="preview" class="preview">
+                                            <img src="" id="preview_img" class="preview_img" />
+                                            <span id="preview_text" class="preview_text">Image Preview</span>
+                                        </div>
+                                        <div class="upload-btn-box">
+                                            <span id="custom-space" class="file-name">Chưa có file</span>
+                                            <button id="custom-btn" type="button" class="custom-btn">Chọn file</button>
+                                        </div>
                                     </div>
-                                    <div class="upload-btn-box">
-                                        <span id="custom-space" class="file-name">Chưa có file</span>
-                                        <button id="custom-btn" type="button" class="custom-btn">Chọn file</button>
+                                </div>
+                            </div>
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tác giả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <select>
+                                            <option value="Albanda John">Albanda John</option>
+                                            <option value="Albanda John1">Albanda John1</option>
+                                            <option value="Albanda John2">Albanda John2</option>
+                                            <option value="Albanda John3">Albanda John3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Lượt xem:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="14.000.000"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tình trạng:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="Chờ duyệt"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Mô tả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input
+                                            value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info disable-height">
+                                    <div class="info-col">
+                                        <p>Phụ lục:</p>
+                                    </div>
+                                    <div class="info-col-group">
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Action">
+                                            <label>Action</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Phiêu lưu">
+                                            <label>Phiêu lưu</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Kiếm hiệp">
+                                            <label>Kiếm hiệp</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Tình cảm">
+                                            <label>Tình cảm</label><br>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-row">
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Tác giả:</p>
-                                </div>
-                                <div class="info-col">
-                                    <select>
-                                        <option value="Albanda John">Albanda John</option>
-                                        <option value="Albanda John1">Albanda John1</option>
-                                        <option value="Albanda John2">Albanda John2</option>
-                                        <option value="Albanda John3">Albanda John3</option>
-                                    </select>
-                                </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Lưu</button>
                             </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Lượt xem:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input value="14.000.000"></input>
-                                </div>
-                            </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Tình trạng:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input value="Chờ duyệt"></input>
-                                </div>
-                            </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Mô tả:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input
-                                        value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
-                                </div>
-                            </div>
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Phụ lục:</p>
-                                </div>
-                                <div class="info-col">
-                                    <select>
-                                        <option value="Action">Action</option>
-                                        <option value="Phiêu lưu">Phiêu lưu</option>
-                                        <option value="Kiếm hiệp">Kiếm hiệp</option>
-                                        <option value="Tình cảm">Tình cảm</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-row btn-func-group">
-                            <button class="btn-func bg-blue">Lưu</button>
                         </div>
                     </div>
                 </div>
@@ -392,44 +421,99 @@
         <!--Nội dung truyện Add Modal Container-->
         <div id="modal-ndt-add" class="modal-container">
             <div class="modal-wrapper">
-                <div class="modal-box">
+                <div class="modal-outline">
                     <div class="close-box">
                         <button id="closeBtnNDTAdd" class="close-btn">X</button>
                     </div>
-                    <div class="modal-body">
-                        <div class="modal-row">
-                            <div class="modal-col">
-                                <input type="file" id="default-file" hidden="hidden" />
-                                <img class="modal-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
-                            </div>
-                        </div>
-                        <div class="modal-row">
-                            <button class="add-chap-btn">Nhập mới Chap</button>
-                        </div>
-                        <div class="modal-row">
-                            <div class="modal-info">
-                                <div class="info-col">
-                                    <p>Tên chap:</p>
-                                </div>
-                                <div class="info-col">
-                                    <input value="Chap 145.5"></input>
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-col">
+                                    <input type="file" id="default-file" hidden="hidden" />
+                                    <img class="modal-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
                                 </div>
                             </div>
-                            <div class="modal-info select">
-                                <div class="info-col">
-                                    <p>List hình ảnh:</p>
+                            <div class="modal-row">
+                                <button class="add-chap-btn">Nhập mới Chap</button>
+                            </div>
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tên chap:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input></input>
+                                    </div>
                                 </div>
-                                <div class="info-col">
-                                    <div class="img-select-box">
-                                        <input class="img-select" type="file">
-                                        <input class="img-select" type="file">
-                                        <input class="img-select" type="file">
+                                <div class="modal-info select">
+                                    <div class="info-col">
+                                        <p>List ảnh:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <div class="img-select-box">
+                                            <input class="img-select" type="file">
+                                            <input class="img-select" type="file">
+                                            <input class="img-select" type="file">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-row btn-func-group">
-                            <button class="btn-func bg-blue">Lưu</button>
+                            <div class="modal-row modal-table">
+                                <div class="table-container">
+                                    <div class="table-wrapper">
+                                        <div class="table-header">
+                                            <div class="table-h-col">
+                                                <h5>Danh Sách Chapter</h5>
+                                            </div>
+                                            <!-- <div class="table-h-col">
+                                                <p>Tìm kiếm:</p>
+                                                <input placeholder="Tìm kiếm">
+                                            </div> -->
+                                        </div>
+                                        <div class="table-area">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tên chap</th>
+                                                        <th>Thời gian cập nhật cuối</th>
+                                                        <th>Lượt xem</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Lưu</button>
+                            </div>
                         </div>
                     </div>
                 </div>

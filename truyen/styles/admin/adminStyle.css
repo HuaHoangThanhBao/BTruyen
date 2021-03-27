@@ -1473,7 +1473,7 @@ a {
 }
 
 .table-container .table-wrapper .table-area table tbody td .control-btn {
-  background-color: #8950FC;
+  background-color: #8950fc;
   color: #ffffff;
   width: 100px;
   height: 35px;
@@ -1534,16 +1534,33 @@ a {
 .modal-container .modal-wrapper {
   width: 100%;
   height: 100%;
+  position: relative;
   padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.modal-container .modal-wrapper .modal-outline {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modal-container .modal-wrapper .close-box {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  height: 30px;
+  width: 30px;
+}
+
+.modal-container .modal-wrapper .close-box .close-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: red;
+  color: #ffffff;
 }
 
 .modal-container .modal-wrapper .modal-box {
@@ -1563,23 +1580,6 @@ a {
           align-items: center;
 }
 
-.modal-container .modal-wrapper .modal-box .close-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 40px;
-  width: 40px;
-}
-
-.modal-container .modal-wrapper .modal-box .close-box .close-btn {
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 25px;
-  font-weight: bold;
-}
-
 .modal-container .modal-wrapper .modal-box .modal-body {
   width: 100%;
   height: 100%;
@@ -1594,6 +1594,14 @@ a {
       flex-wrap: wrap;
   padding: 10px;
   position: relative;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row.modal-table {
+  padding: 0;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row.modal-table .table-container {
+  padding: 0;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row:first-child {
@@ -1681,35 +1689,38 @@ a {
   height: 30px;
 }
 
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info.disable-height {
+  height: auto;
+}
+
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info.select {
   height: auto;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:first-child {
-  width: 150px;
+  width: 100px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 3px 0px 0px 0px;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child {
-  width: calc(100% - 150px);
+  width: calc(100% - 100px);
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child input,
-.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child p, .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child select {
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child p,
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child select {
   width: 100%;
   height: 100%;
 }
 
-.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child input, .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child select {
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child input,
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child select {
   border: none;
   -webkit-box-shadow: 0 0.15rem 1rem 0 rgba(58, 59, 69, 0.15);
           box-shadow: 0 0.15rem 1rem 0 rgba(58, 59, 69, 0.15);
@@ -1719,13 +1730,22 @@ a {
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col .img-select-box {
   display: block;
   width: 100%;
-  padding: 5px;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col .img-select-box .img-select {
   padding: 10px 0px 10px 0px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col-group {
+  width: calc(100% - 100px);
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col-group .info-input-row {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row.btn-func-group {
