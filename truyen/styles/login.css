@@ -2,7 +2,7 @@
   padding: 120px;
 }
 
-.main-container .banner-container {
+.main-container.banner-container {
   width: auto;
   height: 0px;
 }

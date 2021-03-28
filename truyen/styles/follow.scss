@@ -1,0 +1,52 @@
+@import './general.scss';
+
+.image-box {
+    position: relative;
+    background-color: red;
+
+    .image-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        height: 35px;
+        background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.541));
+        color: $white;
+        .image-viewnum{
+            padding-left: 7px;
+            color: hotpink;
+        }
+        .image-commentnum{
+            position: absolute;
+            padding-right: 7px;
+            right: 0;
+            color: greenyellow;   
+        }
+    }
+}
+
+.list-action{
+    margin-bottom: 5px;
+    .list-btn-1{
+        position: absolute;
+        right: 0;        
+        font-size: 13px;    
+        color: red;
+    }
+    
+    .list-btn-2{
+        color: green;
+        font-size: 13px;        
+    }
+    
+    .list-lbl:hover{
+        text-decoration: underline;
+    }
+}
+
+.list-num{
+    font-size: 11px;
+    font-style: italic;
+}
