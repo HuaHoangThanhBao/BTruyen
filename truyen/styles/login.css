@@ -1,8 +1,8 @@
 .main-container.container-fluid {
-  padding: 120px;
+  padding: 25px;
 }
 
-.main-container.banner-container {
+.main-container .banner-container {
   width: auto;
   height: 0px;
 }
@@ -24,9 +24,15 @@
   }
 }
 
-@media (min-width: 200px) and (max-width: 1020) {
+@media (min-width: 768px) and (max-width: 1020px) {
   .wrapper {
     max-width: 87%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 786px) {
+  .wrapper {
+    max-width: 100%;
   }
 }
 
