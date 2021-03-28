@@ -808,7 +808,7 @@ a {
 
 /*End Background color*/
 .nav__sidebar-fixed {
-  z-index: 999;
+  z-index: 3;
   position: fixed;
   height: 100%;
   top: 0;
@@ -1505,6 +1505,11 @@ a {
   margin-right: 10px;
 }
 
+.table-container .table-wrapper .table-area table tbody td .image-box .image-outline.st-image {
+  width: 120px;
+  height: 150px;
+}
+
 .table-container .table-wrapper .table-area table tbody td .image-box .image-outline img {
   width: 100%;
   height: 100%;
@@ -1523,7 +1528,7 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.466);
-  z-index: 3;
+  z-index: 4;
   display: none;
 }
 
@@ -1565,7 +1570,6 @@ a {
 
 .modal-container .modal-wrapper .modal-box {
   height: 100%;
-  max-width: 1500px;
   background-color: white;
   overflow-y: auto;
   position: relative;
@@ -1584,6 +1588,12 @@ a {
   width: 100%;
   height: 100%;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-container .modal-wrapper .modal-box .modal-body {
+    padding: 0px;
+  }
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row {
@@ -1623,6 +1633,10 @@ a {
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-col {
   width: 250px;
   margin: 10px;
+}
+
+.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-col.height-auto {
+  height: auto;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-col .modal-img {
@@ -1680,13 +1694,13 @@ a {
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 20px;
-  height: 30px;
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info.disable-height {
@@ -1698,18 +1712,22 @@ a {
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col {
-  height: 100%;
+  height: 30px;
 }
 
-.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:first-child {
-  width: 100px;
-  font-weight: bold;
-  line-height: 1.5;
-  padding: 3px 0px 0px 0px;
+@media (min-width: 769px) {
+  .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:first-child {
+    width: 100px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 3px 0px 0px 0px;
+  }
 }
 
-.modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child {
-  width: calc(100% - 100px);
+@media (min-width: 769px) {
+  .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child {
+    width: calc(100% - 100px);
+  }
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col:last-child input,
@@ -1727,6 +1745,12 @@ a {
   padding: 0px 10px 0px 10px;
 }
 
+@media (max-width: 768px) {
+  .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col {
+    width: 100%;
+  }
+}
+
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col .img-select-box {
   display: block;
   width: 100%;
@@ -1740,6 +1764,12 @@ a {
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col-group {
   width: calc(100% - 100px);
+}
+
+@media (max-width: 768px) {
+  .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col-group {
+    width: 100%;
+  }
 }
 
 .modal-container .modal-wrapper .modal-box .modal-body .modal-row .modal-info .info-col-group .info-input-row {
