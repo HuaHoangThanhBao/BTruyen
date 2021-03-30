@@ -1,110 +1,399 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale">
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="./styles/admin/adminStyle.css">
-        <title>Sidebar menu responsive</title>
-    </head>
-    <body>
-        <div class="container-fluid">
-            <!--Side Bar menu-->
-            <nav id="nav-sidebar-fixed" class="nav__sidebar-fixed">
-                <div class="nav__sidebar-container">
-                    <a class="sidebar-brand">Story Dashboard</a>
-                    <ul class="nav__bar-fixed-list">
-                        <li class="nav__bar-fixed-header">
-                            Pages
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt active">Dashboard Personal</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt dropdown">Dashboard</a>
-                            <div class="mega-menu-dropdown">
-                                <div class="container-fluid">
-                                    <ul class="mega-menu-subs">
-                                        <li class="mega-menu-item">
-                                            <a>PHP Frameworks</a>
-                                        </li>
-                                        <li class="mega-menu-item">
-                                            <a>PHP Frameworks</a>
-                                        </li>
-                                        <li class="mega-menu-item">
-                                            <a>PHP Frameworks</a>
-                                        </li>
-                                    </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/admin/adminStyle.css">
+    <title>Truyen Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Side Bar menu-->
+        <nav id="nav-sidebar-fixed" class="nav__sidebar-fixed">
+            <div class="nav__sidebar-container">
+                <a class="sidebar-brand" href="./admin.html">Story Dashboard</a>
+                <ul class="nav__bar-fixed-list">
+                    <li class="nav__bar-fixed-header">
+                        Danh mục
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./storyAdmin.html">Truyện</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./theLoaiAdmin.html">Thể loại</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./tacGiaAdmin.html">Tác giả</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt dropdown">Biểu đồ</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="container-fluid">
+                                <ul class="mega-menu-subs">
+                                    <li class="mega-menu-item">
+                                        <a>Ngày</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Tháng</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Quý</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__bar-fixed-header">
+                        Quyền
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt">Phân quyền</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--End Side Bar Menu-->
+
+        <!--Content Continer-->
+        <div id="page-wrapper" class="page__content-wrapper">
+            <div class="page__content-container">
+                <div class="container-fluid">
+                    <!--Top nav-->
+                    <nav class="nav__bar-expand">
+                        <div id="nav_fixed-toggle" class="nav__bar-bt-collapsed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="nav__bar-expand-list">
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/bell.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/mail.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <div class="admin-info">
+                                        <p>Hua Hoang Thanh Bao</p>
+                                        <div class="admin-image">
+                                            <img src="./images/boy.svg">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--End top nav-->
+
+                    <!--Cards-->
+                    <div class="header-title">
+                        <h1>Dashboard</h1>
+                        <a class="download-report-btn">
+                            <img src="./images/direct-download.svg">
+                            Generate Report
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="gutter">
+                                    <h3>EARNINGS</h3>
+                                    <p>$40,000</p>
+                                </div>
+                                <div class="gutter">
+                                    <img src="./images/calendar.svg">
                                 </div>
                             </div>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-header">
-                            Pages
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                        <li class="nav__bar-fixed-item">
-                            <a class="nav__bar-fixed-txt">Dashboard</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!--End Side Bar Menu-->
-
-            <!--Content Continer-->
-            <div id="page-wrapper" class="page__content-wrapper">
-                <div class="page__content-container">
-                    <div class="container-fluid">
-                        <nav class="nav__bar-expand">
-                            <div id="nav_fixed-toggle" class="nav__bar-bt-collapsed">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="gutter">
+                                    <h3>EARNINGS</h3>
+                                    <p>$40,000</p>
+                                </div>
+                                <div class="gutter">
+                                    <img src="./images/calendar.svg">
+                                </div>
                             </div>
-                            <ul class="nav__bar-expand-list">
-                                <li class="nav__bar-expand-item">
-                                    <a>
-                                        <img src="./images/bell.svg">
-                                    </a>
-                                </li>
-                                <li class="nav__bar-expand-item">
-                                    <a>
-                                        <img src="./images/mail.svg">
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="gutter">
+                                    <h3>EARNINGS</h3>
+                                    <p>$40,000</p>
+                                </div>
+                                <div class="gutter">
+                                    <img src="./images/calendar.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="gutter">
+                                    <h3>EARNINGS</h3>
+                                    <p>$40,000</p>
+                                </div>
+                                <div class="gutter">
+                                    <img src="./images/calendar.svg">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!--End Cards-->
+
+
+                    <!--Timeline Container-->
+                    <div class="timeline-container">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-box">
+                                <div class="header-title">
+                                    <h1>Phần trăm theo dõi</h1>
+                                </div>
+                                <div class="percent-box">
+                                    <div class="percent-ouline">
+                                        <h3>75%</h3>
+                                    </div>
+                                </div>
+                                <div class="percent-text">
+                                    Notes: Current sprint requires stakeholders
+                                    to approve newly amended policies
+                                </div>
+                            </div>
+                            <div class="timeline-box">
+                                <div class="header-title">
+                                    <h1>Timeline bình luận</h1>
+                                </div>
+                                <!--Timeline-->
+                                <div class="timeline-area">
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-red"></span>
+                                            <div class="timeline-txt impor">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-orange"></span>
+                                            <div class="timeline-txt">
+                                                <p>Indulging in poorly driving and keep structure keep great</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-blue"></span>
+                                            <div class="timeline-txt impor">
+                                                <p>Outlines keep and you honest. Indulging in poorly driving</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-purple"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-red"></span>
+                                            <div class="timeline-txt impor">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-orange"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-blue"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-purple"></span>
+                                            <div class="timeline-txt impor">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-red"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-orange"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-blue"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-time">08:00 PM</div>
+                                            <span class="bounce-btn bg-purple"></span>
+                                            <div class="timeline-txt">
+                                                <p>All Hands Meeting</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Timeline-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Timeline Container-->
+
+
+                    <!--Table Container-->
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <div class="table-header">
+                                <div class="table-h-col">
+                                    <h4>Top Theo Dõi Trong ngày</h4>
+                                    <h5>Danh Sách Lượt Theo Dõi</h5>
+                                </div>
+                                <div class="table-h-col">
+                                    <p>Tìm kiếm:</p>
+                                    <input placeholder="Tìm kiếm">
+                                </div>
+                            </div>
+                            <div class="table-area">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Tên Truyện</th>
+                                            <th>Ngày</th>
+                                            <th>Thời gian</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline">
+                                                        <img src="./images/boy.svg">
+                                                    </div>
+                                                    <p>Hua Hoang Thanh Bao</p>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>25/01/2021</td>
+                                            <td>15:00 PM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Table Container-->
                 </div>
             </div>
-            <!--End Content Continer-->
         </div>
+        <!--End Content Continer-->
+    </div>
 
-        <script src="./js/admin.js"></script>
-    </body>
+    <script src="./js/admin.js"></script>
+</body>
+
 </html>

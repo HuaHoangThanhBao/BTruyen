@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/admin/adminStyle.css">
+    <link rel="stylesheet" href="./styles/admin/storyAdmin.css">
+    <title>Truyen Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Side Bar menu-->
+        <nav id="nav-sidebar-fixed" class="nav__sidebar-fixed">
+            <div class="nav__sidebar-container">
+                <a class="sidebar-brand" href="./admin.html">Story Dashboard</a>
+                <ul class="nav__bar-fixed-list">
+                    <li class="nav__bar-fixed-header">
+                        Danh mục
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt active">Truyện</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./theLoaiAdmin.html">Thể loại</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./tacGiaAdmin.html">Tác giả</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt dropdown">Biểu đồ</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="container-fluid">
+                                <ul class="mega-menu-subs">
+                                    <li class="mega-menu-item">
+                                        <a>Ngày</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Tháng</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Quý</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__bar-fixed-header">
+                        Quyền
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt">Phân quyền</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--End Side Bar Menu-->
+
+        <!--Content Container-->
+        <div id="page-wrapper" class="page__content-wrapper">
+            <div class="page__content-container">
+                <div class="container-fluid">
+                    <!--Top nav-->
+                    <nav class="nav__bar-expand">
+                        <div id="nav_fixed-toggle" class="nav__bar-bt-collapsed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="nav__bar-expand-list">
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/bell.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/mail.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <div class="admin-info">
+                                        <p>Hua Hoang Thanh Bao</p>
+                                        <div class="admin-image">
+                                            <img src="./images/boy.svg">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--End top nav-->
+
+
+
+                    <div class="header-title">
+                        <h1>Quản lý truyện</h1>
+                        <button id="add-btn" class="download-report-btn">
+                            <img src="./images/plus.svg">
+                            Thêm mới
+                        </button>
+                    </div>
+                    <!--Table Container-->
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <div class="table-header">
+                                <div class="table-h-col">
+                                    <h5>Danh Sách Truyện</h5>
+                                </div>
+                                <div class="table-h-col">
+                                    <p>Tìm kiếm:</p>
+                                    <input placeholder="Tìm kiếm">
+                                </div>
+                            </div>
+                            <div class="table-area">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Ảnh</th>
+                                            <th>Tên Truyện</th>
+                                            <th>Tác giả</th>
+                                            <th>Sửa</th>
+                                            <th>QL Nội Dung</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline st-image">
+                                                        <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>Lam Sương</td>
+                                            <td>
+                                                <button class="update-btn">Sửa</button>
+                                            </td>
+                                            <td>
+                                                <button class="control-btn">QL Nội Dung</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline st-image">
+                                                        <img src="./images/truyen/lua-boss-lam-ba-mai.jpg">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>Lam Sương</td>
+                                            <td>
+                                                <button class="update-btn">Sửa</button>
+                                            </td>
+                                            <td>
+                                                <button class="control-btn">QL Nội Dung</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline st-image">
+                                                        <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>Lam Sương</td>
+                                            <td>
+                                                <button class="update-btn">Sửa</button>
+                                            </td>
+                                            <td>
+                                                <button class="control-btn">QL Nội Dung</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline st-image">
+                                                        <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>Lam Sương</td>
+                                            <td>
+                                                <button class="update-btn">Sửa</button>
+                                            </td>
+                                            <td>
+                                                <button class="control-btn">QL Nội Dung</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="image-box">
+                                                    <div class="image-outline st-image">
+                                                        <img src="./images/truyen/doujima-kun-wa-doujinai.jpg">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Kiem hiep truong nghia</td>
+                                            <td>Lam Sương</td>
+                                            <td>
+                                                <button class="update-btn">Sửa</button>
+                                            </td>
+                                            <td>
+                                                <button class="control-btn">QL Nội Dung</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Table Container-->
+                </div>
+            </div>
+        </div>
+        <!--End Content Container-->
+
+
+        <!--Truyện Update Modal Container-->
+        <div id="modal-update" class="modal-container">
+            <div class="modal-wrapper">
+                <div class="modal-outline">
+                    <div class="close-box">
+                        <button id="closeBtnUpdate" class="close-btn">X</button>
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-col">
+                                    <img class="modal-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
+                                </div>
+                                <div class="modal-col height-auto">
+                                    <h3>Chọn ảnh thay thế</h3>
+                                    <br>
+                                   <input id="replace-img" type="file">
+                                </div>
+                            </div>
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tác giả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <select>
+                                            <option value="Albanda John">Albanda John</option>
+                                            <option value="Albanda John1">Albanda John1</option>
+                                            <option value="Albanda John2">Albanda John2</option>
+                                            <option value="Albanda John3">Albanda John3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Lượt xem:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="14.000.000"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tình trạng:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="Chờ duyệt"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Mô tả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input
+                                            value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info disable-height">
+                                    <div class="info-col align-top">
+                                        <p>Phụ lục:</p>
+                                    </div>
+                                    <div class="info-col-group">
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Action">
+                                            <label>Action</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Phiêu lưu">
+                                            <label>Phiêu lưu</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Kiếm hiệp">
+                                            <label>Kiếm hiệp</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-update" value="Tình cảm">
+                                            <label>Tình cảm</label><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Cập nhật</button>
+                                <button class="btn-func bg-red">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Truyện Update Modal Container-->
+
+        <!--Truyện Add Modal Container-->
+        <div id="modal-add" class="modal-container">
+            <div class="modal-wrapper">
+                <div class="modal-outline">
+                    <div class="close-box">
+                        <button id="closeBtnAdd" class="close-btn">X</button>
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-col">
+                                    <input type="file" id="default-file" hidden="hidden" />
+                                    <div class="preview_holder">
+                                        <div id="preview" class="preview">
+                                            <img src="" id="preview_img" class="preview_img" />
+                                            <span id="preview_text" class="preview_text">Image Preview</span>
+                                        </div>
+                                        <div class="upload-btn-box">
+                                            <span id="custom-space" class="file-name">Chưa có file</span>
+                                            <button id="custom-btn" type="button" class="custom-btn">Chọn file</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tác giả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <select>
+                                            <option value="Albanda John">Albanda John</option>
+                                            <option value="Albanda John1">Albanda John1</option>
+                                            <option value="Albanda John2">Albanda John2</option>
+                                            <option value="Albanda John3">Albanda John3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Lượt xem:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="14.000.000"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tình trạng:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input value="Chờ duyệt"></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Mô tả:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input
+                                            value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info disable-height">
+                                    <div class="info-col">
+                                        <p>Phụ lục:</p>
+                                    </div>
+                                    <div class="info-col-group">
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Action">
+                                            <label>Action</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Phiêu lưu">
+                                            <label>Phiêu lưu</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Kiếm hiệp">
+                                            <label>Kiếm hiệp</label><br>
+                                        </div>
+                                        <div class="info-input-row">
+                                            <input class="info-input" type="checkbox" name="cat-add" value="Tình cảm">
+                                            <label>Tình cảm</label><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Truyện Add Modal Container-->
+
+        <!--Nội dung truyện Add Modal Container-->
+        <div id="modal-ndt-add" class="modal-container">
+            <div class="modal-wrapper">
+                <div class="modal-outline">
+                    <div class="close-box">
+                        <button id="closeBtnNDTAdd" class="close-btn">X</button>
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-col">
+                                    <input type="file" id="default-file" hidden="hidden" />
+                                    <img class="modal-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
+                                </div>
+                            </div>
+                            <div class="modal-row">
+                                <button class="add-chap-btn">Nhập mới Chap</button>
+                            </div>
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tên chap:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <input></input>
+                                    </div>
+                                </div>
+                                <div class="modal-info select">
+                                    <div class="info-col">
+                                        <p>List ảnh:</p>
+                                    </div>
+                                    <div class="info-col">
+                                        <div class="img-select-box">
+                                            <input class="img-select" type="file">
+                                            <input class="img-select" type="file">
+                                            <input class="img-select" type="file">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-row modal-table">
+                                <div class="table-container">
+                                    <div class="table-wrapper">
+                                        <div class="table-header">
+                                            <div class="table-h-col">
+                                                <h5>Danh Sách Chapter</h5>
+                                            </div>
+                                            <!-- <div class="table-h-col">
+                                                <p>Tìm kiếm:</p>
+                                                <input placeholder="Tìm kiếm">
+                                            </div> -->
+                                        </div>
+                                        <div class="table-area">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tên chap</th>
+                                                        <th>Thời gian cập nhật cuối</th>
+                                                        <th>Lượt xem</th>
+                                                        <th>Trạng thái</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                        <td>Chờ duyệt</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                        <td>Đã xuất bản</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                        <td>Đã xuất bản</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                        <td>Đã xuất bản</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chap 142</td>
+                                                        <td>24/02/2021</td>
+                                                        <td>14.000.000</td>
+                                                        <td>Đã xuất bản</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Nội dung truyện Add Modal Container-->
+    </div>
+
+    <script src="./js/admin.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/upload-img.js"></script>
+</body>
+
+</html>
