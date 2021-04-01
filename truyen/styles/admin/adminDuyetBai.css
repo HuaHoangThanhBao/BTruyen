@@ -1,0 +1,131 @@
+.list-item {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list-item .item_ls {
+  padding: 5px;
+}
+
+@media (max-width: 1920px) and (min-width: 1024px) {
+  .list-item .item_ls {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 360px) {
+  .list-item .item_ls {
+    width: 100%;
+  }
+}
+
+.list-item .item_ls .item_a:first-child {
+  width: 50%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.list-item .item_ls .item_a:first-child .table-image {
+  position: relative;
+  width: 50%;
+  height: 307px;
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  .list-item .item_ls .item_a:first-child .table-image {
+    width: 100%;
+    height: 236px;
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 540px) and (min-width: 280px) {
+  .list-item .item_ls .item_a:first-child .table-image {
+    width: 100%;
+    height: 236px;
+  }
+}
+
+.list-item .item_ls .item_a:first-child .table-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  border-radius: 5px;
+}
+
+.list-item .item_ls .item_a:nth-child(2) {
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-item .item_ls .item_a:nth-child(2) .table-info {
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+}
+
+.list-item .item_ls .item_a:nth-child(2) .table-info div {
+  padding-bottom: 5px;
+}
+
+.list-item .item_ls .item_a:nth-child(2) .table-info div label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.list-item .item_ls .item_a:nth-child(2) .table-info div span {
+  font-size: 18px;
+}
+
+.list-item .item_ls .item_a:nth-child(2) .table-info div span.status {
+  font-style: italic;
+  color: gray;
+}
+
+@media (max-width: 1920px) and (min-width: 1024px) {
+  .list-item .item_ls .item_a:nth-child(2) .table-info div button {
+    width: 23%;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 280px) {
+  .list-item .item_ls .item_a:nth-child(2) .table-info div button {
+    width: 45%;
+  }
+}
+
+.update-btn {
+  background-color: #64d075;
+  color: #ffffff;
+  width: 100px;
+  height: 35px;
+  border: none;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=adminDuyetBai.css.map */

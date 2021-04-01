@@ -1,0 +1,103 @@
+.list-item{
+    list-style: none;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    .item_ls{
+        @media (max-width:1920px) and (min-width:1024px) {
+            width: 50%;  
+        }
+        @media (max-width:1024px) and (min-width:360px) {
+            width: 100%; 
+        }
+         
+        padding: 5px;
+        .item_a:first-child {
+            .table-image{
+                position: relative;
+                width: 50%;
+                height: 307px;
+
+                @media (max-width:425px) and (min-width:320px) {
+                    width: 100%;
+                    height: 236px;
+                    margin-top: 48px;
+                }
+
+                @media (max-width:540px) and (min-width:280px) {
+                    width: 100%;
+                    height: 236px;
+                    //margin-top: 48px;
+                }
+
+                //115px
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    border-radius: 5px;
+                }
+            }
+            width: 50%;
+            float: left;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+    
+        .item_a:nth-child(2) {
+            width: 50%;
+            height: 100%;
+            float: left;
+            display: flex;
+            align-items: center;
+            .table-info {
+                width: 100%;
+                height: auto;
+                font-size: 14px;
+                div {
+                    padding-bottom: 5px;
+                    label {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    span{
+                        font-size: 18px;
+                        &.status{
+                            font-style: italic;
+                            color: gray;
+                        }
+                    }
+                    button{
+                        @media (max-width:1920px) and (min-width:1024px) {
+                            width: 23%;
+                        }
+
+                        @media (max-width:425px) and (min-width:280px) {
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+
+.update-btn {
+    background-color: #64d075;
+    color: #ffffff;
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+

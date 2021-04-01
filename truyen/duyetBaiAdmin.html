@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/admin/adminStyle.css">
+    <link rel="stylesheet" href="./styles/admin/adminDuyetBai.css" />
+    <title>Truyen Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Side Bar menu-->
+        <nav id="nav-sidebar-fixed" class="nav__sidebar-fixed">
+            <div class="nav__sidebar-container">
+                <a class="sidebar-brand" href="./admin.html">Story Dashboard</a>
+                <ul class="nav__bar-fixed-list">
+                    <li class="nav__bar-fixed-header">
+                        Danh mục
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./storyAdmin.html">Truyện</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./theLoaiAdmin.html">Thể loại</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt active">Tác giả</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt dropdown">Biểu đồ</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="container-fluid">
+                                <ul class="mega-menu-subs">
+                                    <li class="mega-menu-item">
+                                        <a>Ngày</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Tháng</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Quý</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__bar-fixed-header">
+                        Quyền
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt">Phân quyền</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--End Side Bar Menu-->
+
+        <!--Content Container-->
+        <div id="page-wrapper" class="page__content-wrapper">
+            <div class="page__content-container">
+                <div class="container-fluid">
+                    <!--Top nav-->
+                    <nav class="nav__bar-expand">
+                        <div id="nav_fixed-toggle" class="nav__bar-bt-collapsed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="nav__bar-expand-list">
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/bell.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/mail.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <div class="admin-info">
+                                        <p>Hua Hoang Thanh Bao</p>
+                                        <div class="admin-image">
+                                            <img src="./images/boy.svg">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--End top nav-->
+
+
+
+                    <div class="header-title">
+                        <h1>Quản lý duyệt bài</h1>
+                        <button id="add-btn" class="download-report-btn">
+                            <img src="./images/plus.svg">
+                            Thêm mới
+                        </button>
+                    </div>
+                    <!--Table Container-->
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <div class="table-header">
+                                <div class="table-h-col">
+                                    <h5>Danh Sách Duyệt Bài</h5>
+                                </div>
+                                <div class="table-h-col">
+                                    <p>Tìm kiếm:</p>
+                                    <input placeholder="Tìm kiếm">
+                                </div>
+                            </div>
+                            <ul class="list-item">
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item_ls">
+                                    <div class="item_a">
+                                        <div class="table-image">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg" />
+                                        </div> 
+                                    </div>
+                                    <div class="item_a">
+                                        <div class="table-info">
+                                            <div>
+                                                <label>Tên :</label>
+                                                <span>ABC</span>                                                     
+                                            </div> 
+                                        
+                                            <div>
+                                                <label>Mô Tả :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Editor :</label>
+                                                <span>ABCDEFGH</span>
+                                            </div>
+                                        
+                                            <div>
+                                                <label>Trạng thái :</label>
+                                                <span class="status">Chưa duyệt</span>
+                                            </div>
+                                            <div>
+                                                <button class="update-btn">Hủy</button> 
+                                                <button class="update-btn">Duyệt</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--End Table Container-->
+                </div>
+            </div>
+        </div>
+        <!--End Content Container-->
+    </div>
+
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>
