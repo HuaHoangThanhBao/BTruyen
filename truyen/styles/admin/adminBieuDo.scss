@@ -1,0 +1,75 @@
+h1 {
+	font: 24px sans-serif;
+}
+.bar {
+	fill: #d81c3f;
+	&:hover {
+		fill: darkgray;
+	}
+}
+.axis {
+	font: 10px sans-serif;
+	path {
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+	line {
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+}
+.x.axis {
+	path {
+		display: none;
+	}
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .graph .labels.x-labels {
+    text-anchor: middle;
+  }
+  
+  .graph .labels.y-labels {
+    text-anchor: end;
+  }
+  
+  
+  .graph {
+    height: 500px;
+    width: 800px;
+  }
+  
+  .graph .grid {
+    stroke: #ccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+  }
+  
+  .labels {
+    font-size: 13px;
+  }
+  
+  .label-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: black;
+  }
+  
+  .data {
+    fill: red;
+    stroke-width: 1; 
+  }
+
+
+  .page__content-wrapper .page__content-container .timeline-container .timeline-wrapper .timeline-box .timeline-area {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 551px;
+  }

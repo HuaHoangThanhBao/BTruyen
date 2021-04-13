@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/admin/adminStyle.css">
+    <link rel="stylesheet" href="./styles/admin/adminBieuDo.css">
+    <title>Truyen Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Side Bar menu-->
+        <nav id="nav-sidebar-fixed" class="nav__sidebar-fixed">
+            <div class="nav__sidebar-container">
+                <a class="sidebar-brand" href="./admin.html">Story Dashboard</a>
+                <ul class="nav__bar-fixed-list">
+                    <li class="nav__bar-fixed-header">
+                        Danh mục
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./storyAdmin.html">Truyện</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./theLoaiAdmin.html">Thể loại</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt" href="./tacGiaAdmin.html">Tác giả</a>
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt dropdown">Biểu đồ</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="container-fluid">
+                                <ul class="mega-menu-subs">
+                                    <li class="mega-menu-item">
+                                        <a>Ngày</a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a></a>
+                                    </li>
+                                    <li class="mega-menu-item">
+                                        <a>Quý</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__bar-fixed-header">
+                        Quyền
+                    </li>
+                    <li class="nav__bar-fixed-item">
+                        <a class="nav__bar-fixed-txt">Phân quyền</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--End Side Bar Menu-->
+
+        <!--Content Continer-->
+        <div id="page-wrapper" class="page__content-wrapper">
+            <div class="page__content-container">
+                <div class="container-fluid">
+                    <!--Top nav-->
+                    <nav class="nav__bar-expand">
+                        <div id="nav_fixed-toggle" class="nav__bar-bt-collapsed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="nav__bar-expand-list">
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/bell.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <img src="./images/mail.svg">
+                                </a>
+                            </li>
+                            <li class="nav__bar-expand-item">
+                                <a>
+                                    <div class="admin-info">
+                                        <p>Hua Hoang Thanh Bao</p>
+                                        <div class="admin-image">
+                                            <img src="./images/boy.svg">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--End top nav-->
+                    <div class="header-title">
+                        <h1>Biểu đồ thống kê</h1>
+                    </div>
+                    <!--Timeline Container-->
+                    <div class="timeline-container">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-box">
+                                    <div class="header-title">
+
+                                    </div>
+                                    <div class="percent-box">
+                                        <div style="height: 500px;width: 100%;"  id="containerChart"></div>
+                                    </div>
+                            </div>
+                            
+                            <div class="timeline-box">
+                                <div class="header-title">
+
+                                </div>
+                                <div class="percent-box">
+                                    <div style="height: 500px;width: 100%;" id="container"></div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="timeline-container">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-box">
+                                    <div class="header-title">
+
+                                    </div>
+                                    <div class="percent-box">
+                                        <div style="height: 500px;width: 100%;"  id="containerChart2"></div>
+                                    </div>
+                            </div>
+                            
+                            <div class="timeline-box">
+                                <div class="header-title">
+
+                                </div>
+                                <div class="percent-box">
+                                    <div style="height: 500px;width: 100%;" id="containerChart3"></div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--End Timeline Container-->
+                </div>
+            </div>
+        </div>
+        <!--End Content Continer-->
+    </div>
+
+    <script src="./js/admin.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+</body>
+
+</html>
+<script>
+  anychart.onDocumentReady(function () {
+
+// create data
+var data = [
+  ["John", 10000],
+  ["Jake", 12000],
+  ["Peter", 13000],
+  ["James", 10000],
+  ["Mary", 9000]
+];
+
+// create a chart
+var chart = anychart.column();
+
+// create a column series and set the data
+var series = chart.column(data);
+
+// set the chart title
+chart.title("Column Chart: Basic Sample");
+
+// set the titles of the axes
+chart.xAxis().title("Manager");
+chart.yAxis().title("Sales, $");
+
+// set the container id
+chart.container("containerChart");
+
+// initiate drawing the chart
+chart.draw();
+});
+</script>
+<script>
+    anychart.onDocumentReady(function () {
+
+// create a data set
+var data = anychart.data.set([
+  ["John", 10000, 12500],
+  ["Jake", 12000, 15000],
+  ["Peter", 13000, 16500],
+  ["James", 10000, 13000],
+  ["Mary", 9000, 11000]
+]);
+
+// map the data
+var seriesData_1 = data.mapAs({x: 0, value: 1});
+var seriesData_2 = data.mapAs({x: 0, value: 2});
+
+// create a chart
+var chart = anychart.bar();
+
+// create the first series, set the data and name
+var series1 = chart.bar(seriesData_1);
+series1.name("Sales in 2015");
+
+// create the second series, set the data and name
+var series2 = chart.bar(seriesData_2);
+series2.name("Sales in 2016");
+
+// set the padding between bars
+chart.barsPadding(-0.5);
+
+// set the padding between bar groups
+chart.barGroupsPadding(2);
+
+// set the chart title
+chart.title("Bar Chart: Padding (Multiple Series)");
+
+// set the titles of the axes
+chart.xAxis().title("Manager");
+chart.yAxis().title("Sales, $");
+
+// set the container id
+chart.container("container");
+
+// initiate drawing the chart
+chart.draw();
+});
+</script>
+<script>
+    anychart.onDocumentReady(function () {
+
+// create data
+var data = [
+  {x: "A", value: 637166},
+  {x: "B", value: 721630},
+  {x: "C", value: 148662},
+  {x: "D", value: 78662},
+  {x: "E", value: 90000}
+];
+
+// create a pie chart and set the data
+var chart = anychart.pie(data);
+
+/* set the inner radius
+(to turn the pie chart into a doughnut chart)*/
+chart.innerRadius("30%");
+
+// set the position of labels
+chart.labels().position("outside");
+
+// configure connectors
+chart.connectorStroke({color: "#595959", thickness: 2, dash:"2 2"});
+
+// disable the legend
+chart.legend(false);
+
+// set the chart title
+chart.title("Doughnut Chart: Outer Labels");
+
+// set the container id
+chart.container("containerChart2");
+
+// initiate drawing the chart
+chart.draw();
+});
+</script>
+<script>
+    anychart.onDocumentReady(function () {
+    var chart = anychart.pie([
+        {x: "Cycling", value: 10},
+        {x: "Swimming", value: 12},
+        {x: "Run", value: 18},
+        {x: "Hiking", value: 11},
+        {x: "Alpinism", value: 9}
+    ]);
+
+    chart.innerRadius("25%");
+
+    var label = anychart.standalones.label();
+    label.text("Activities");
+    label.width("100%");
+    label.height("100%");
+    label.adjustFontSize(true);
+    label.fontColor("#60727b");
+    label.hAlign("center");
+    label.vAlign("middle");
+
+    // set the label as the center content
+    chart.center().content(label);
+
+    chart.title("Donut Chart: Label in the center");
+    chart.container("containerChart3");
+    chart.draw();
+});
+</script>
