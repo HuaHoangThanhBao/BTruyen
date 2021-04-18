@@ -1,5 +1,7 @@
+@import "./func.scss";
+
 @mixin flexCenter($direction) {
-    display: flex;
+    @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
     justify-content: center;
     align-items: center;
     flex-direction: $direction;

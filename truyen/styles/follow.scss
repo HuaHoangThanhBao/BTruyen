@@ -9,20 +9,22 @@
         bottom: 0;
         left: 0;
         right: 0;
-        display: flex;
+        @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
         align-items: center;
-        height: 35px;
+        @include SetWidthHeight(35px,auto);
         background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.541));
         color: $white;
         .image-viewnum{
             padding-left: 7px;
-            color: hotpink;
+            color: $white;
+            opacity: $opacity;
         }
         .image-commentnum{
             position: absolute;
             padding-right: 7px;
             right: 0;
-            color: greenyellow;   
+            color: $white;   
+            opacity: $opacity;
         }
     }
 }
@@ -37,7 +39,7 @@
     }
     
     .list-btn-2{
-        color: green;
+        color: $green;
         font-size: 13px;        
     }
     
