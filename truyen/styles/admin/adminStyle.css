@@ -60,6 +60,7 @@ body {
 
 .header .nav .nav__list .nav__item .nav__link {
   width: 100%;
+  height: auto;
   padding-bottom: 15px;
   font-size: 1rem;
   cursor: pointer;
@@ -250,10 +251,10 @@ body {
 /*Main Container*/
 .main-container .body-container {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -620,7 +621,7 @@ footer .footer__container .footer-side .footer-content .f-description {
 }
 
 .btn-detail-group .btn-reading:hover {
-  background-color: #eea236;
+  background-color: #f0ad4e;
   color: #ffffff;
 }
 
@@ -860,53 +861,11 @@ a {
   color: #ffffff;
 }
 
-.nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .nav__bar-fixed-txt.dropdown::after {
-  content: "\2193";
-  font-size: 20px;
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-
 .nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .nav__bar-fixed-txt.active {
   color: #e9ecef;
   background: -webkit-gradient(linear, left top, right top, from(rgba(59, 125, 221, 0.1)), color-stop(50%, rgba(59, 125, 221, 0.0875)), to(transparent));
   background: linear-gradient(90deg, rgba(59, 125, 221, 0.1), rgba(59, 125, 221, 0.0875) 50%, transparent);
   border-left: 4px solid #3b7ddd;
-}
-
-.nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .mega-menu-dropdown {
-  max-height: 0px;
-  overflow-y: hidden;
-  -webkit-transition: max-height 0.2s ease;
-  transition: max-height 0.2s ease;
-}
-
-.nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .mega-menu-dropdown.enable {
-  position: relative;
-  overflow: hidden;
-  max-height: 250px;
-  -webkit-transition: max-height 0.2s ease;
-  transition: max-height 0.2s ease;
-  color: #ffffff;
-}
-
-.nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .mega-menu-dropdown .mega-menu-subs {
-  width: 100%;
-  height: 100%;
-  list-style: none;
-}
-
-.nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .mega-menu-dropdown .mega-menu-subs .mega-menu-item {
-  position: relative;
-  display: block;
-  height: auto;
-  width: 100%;
-  padding: 20px 20px 20px 40px;
-}
-
-.nav__sidebar-fixed .nav__sidebar-container .nav__bar-fixed-list .nav__bar-fixed-item .mega-menu-dropdown .mega-menu-subs .mega-menu-item::before {
-  content: ".";
 }
 
 @media (min-width: 992px) {

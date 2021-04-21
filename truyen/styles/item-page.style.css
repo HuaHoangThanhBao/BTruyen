@@ -83,6 +83,7 @@ body {
 
 .header .nav .nav__list .nav__item .nav__link {
   width: 100%;
+  height: auto;
   padding-bottom: 15px;
   font-size: 1rem;
   cursor: pointer;
@@ -273,10 +274,10 @@ body {
 /*Main Container*/
 .main-container .body-container {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -643,7 +644,7 @@ footer .footer__container .footer-side .footer-content .f-description {
 }
 
 .btn-detail-group .btn-reading:hover {
-  background-color: #eea236;
+  background-color: #f0ad4e;
   color: #ffffff;
 }
 
