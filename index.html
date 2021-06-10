@@ -2,1040 +2,1122 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Story Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/slideshow.css">
-    <link rel="stylesheet" href="styles/splide-css/splide.min.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#slider', {
-                fixedWidth: 230,
-                height: 250,
-                gap: 20,
-                rewind: true,
-                cover: true,
-                pagination: false
-            }).mount();
-        });
-    </script>
+    <meta charset="UTF-8">
+    <title>Web Truyen</title>
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./spilde-dist/css/splide.min.css">
+    <script src="./spilde-dist/js/splide.min.js"></script>
 </head>
 
 <body>
+    <!--Header Menu-->
+    
+    <header class="header container-fluid">
+        <nav class="nav">
+            <ul id="top__nav" class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link logo">
+                        <img src="./images/logo.png"
+                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a id="catagory-dropdown" class="nav__link">
+                        <div class="toggle__button">
+                            <img src="./images/menu-bar.png"
+                                alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                        </div>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link n-highL">
+                        Danh mục
+                    </a>
+                    <div class="catagory-content">
+                        <ul class="catagory-list">
+                            <li class="catagory-item"><a href="#">Action</a></li>
+                            <li class="catagory-item"><a href="#">Adult</a></li>
+                            <li class="catagory-item"><a href="#">Adventure</a></li>
+                            <li class="catagory-item"><a href="#">Comedy</a></li>
+                            <li class="catagory-item"><a href="#">Doujinshi</a></li>
+                            <li class="catagory-item"><a href="#">Cooking</a></li>
+                            <li class="catagory-item"><a href="#">Cổ Đại</a></li>
+                            <li class="catagory-item"><a href="#">Drama</a></li>
+                            <li class="catagory-item"><a href="#">Đam Mỹ</a></li>
+                            <li class="catagory-item"><a href="#">Ecchi</a></li>
+                            <li class="catagory-item"><a href="#">Gender Bender</a></li>
+                            <li class="catagory-item"><a href="#">Harem</a></li>
+                            <li class="catagory-item"><a href="#">Historical</a></li>
+                            <li class="catagory-item"><a href="#">Live action</a></li>
+                            <li class="catagory-item"><a href="#">Manga</a></li>
+                            <li class="catagory-item"><a href="#">Manhua</a></li>
+                            <li class="catagory-item"><a href="#">Mature</a></li>
+                            <li class="catagory-item"><a href="#">Ngôn Tình</a></li>
+                            <li class="catagory-item"><a href="#">One shot</a></li>
+                            <li class="catagory-item"><a href="#">Romance</a></li>
+                            <li class="catagory-item"><a href="#">Psychological</a></li>
+                            <li class="catagory-item"><a href="#">Seinen</a></li>
+                            <li class="catagory-item"><a href="#">Shoujo</a></li>
+                            <li class="catagory-item"><a href="#">Shoujo</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item"><a class="nav__link n-highL">Theo Dõi</a></li>
+                <li class="nav__item"><a class="nav__link n-highL">Lịch sử</a></li>
+                <li class="nav__item"><a class="nav__link n-highL">Đăng nhập</a></li>
+                <li class="nav__item">
+                    <form class="search__box">
+                        <div class="search__box-input border_bottom">
+                            <input type="text" placeholder="Tìm kiếm...">
+                        </div>
+                        <div class="icon border_bottom">
+                            <img src="./images/loupe.svg" class="search-icon"
+                                alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--End Header Menu-->
+
     <main>
-        <div class="wrapper">
-            <!--Header-->
-            <header class="header">
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link">
-                                <p>BBTruyen</p>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0)" class="nav__link">
-                                <div class="nav__search__group">
-                                    <form>
-                                        <input class="search" type="text" placeholder="Tìm kiếm...">
-                                        <i class="fa fa-search"></i>
-                                    </form>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0)" class="nav__link">
-                                Danh mục
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0)" class="nav__link">
-                                <label class="switch">
-                                    <input id="theme-toggle" type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="login.html" class="nav__link">
-                                Đăng nhập
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0);" class="nav__link">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            <!--End Header-->
-
-
-            <!--Body Container-->
-            <div class="container-fluid">
-                <!--Slide Show truyện-->
-                <div class="slide__show--container">
-                    <div class="list__grid--header">
-                        <div class="list__grid--title">
-                            <h1>Truyện đề cử</h1>
+        <div class="main-container container-fluid">
+            <div class="banner-container">
+                <div class="banner"></div>
+            </div>
+            <div class="body-container">
+                <div class="body-cover">
+                    <div class="body-box">
+                        <div class="title-header">
+                            <h2>Truyện đề cử</h2>
                         </div>
-                    </div>
-                    <div id="slider" class="splide" data-splide='{"type": "loop"}'>
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/lora.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/mark-finn.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/mike.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/chester-wade.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/fabien-bazanegue.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/julie.jpeg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/james.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/ryan.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/landing-page.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/profile-page.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/mike.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide--image">
-                                        <a href="javascript:void(0)">
-                                            <img src="./images/img-bg-header.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide--block">
-                                        <p>Tôi là ai?</p>
-                                        <div class="splide__slide--content">
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-eye"><span>Chapter 154</span></i>
-                                            </div>
-                                            <div class="splide__slide--des">
-                                                <i class="fa fa-clock-o"><span>10 giờ trước</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--End Slide Show truyện-->
-
-                <div class="container__cover">
-                    <!--Cột trái-->
-                    <div class="container__box">
-                        <!--Danh sách truyện-->
-                        <div class="list__grid">
-                            <div class="list__grid--header">
-                                <div class="list__grid--title">
-                                    <h1>Truyện mới cập nhật</h1>
-                                </div>
-                            </div>
-                            <ul class="cards">
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                        <div class="caro-body">
+                            <div id="splide" class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 1</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 2</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 3</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/doujima-kun-wa-doujinai.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 3</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 3</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/lua-boss-lam-ba-mai.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 3</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cards__item">
-                                    <div class="card">
-                                        <div class="card__image">
-                                            <a class="card__image--block" href="javascript:void(0)">
-                                                <img src="./images/chester-wade.jpg" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="./images/truyen/trong-sinh-khi-thieu-quy-lai.jpg">
+                                            <a class="caro-info">
+                                                <p class="caro-txt">Kenja No Deshi Wo Nanoru Kenja Isekai!</p>
                                             </a>
-                                            <div class="card__image--detail">
-                                                <i class="fa fa-eye"><span>10,151,555</span></i>
-                                            </div>
-                                        </div>
-                                        <div class="card__content">
-                                            <ul class="star__group">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="card__title">Flex 3</div>
-                                            <ul class="card__des">
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                                <li class="card__chap"><a>Chapter 125</a></li>
-                                                <li class="card__chap"><a>6 giờ trước</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <!--Redirect Pages Navigation-->
-                            <div class="pages__nav">
-                                <div class="pages__nav-container">
-                                    <ul>
-                                        <li><a><i class="fa fa-angle-double-left"></i></a></li>
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                        <li>5</li>
-                                        <li>6</li>
-                                        <li>7</li>
-                                        <li>8</li>
-                                        <li>9</li>
-                                        <li><a><i class="fa fa-angle-double-right"></i></a></li>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                            <!--End Menu Pages Navigation-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container">
+                <div class="body-cover">
+
+                    <!--Section bên trái-->
+                    <div class="body-left-side right-padding">
+                        <!--Danh sách truyện-->
+                        <div class="body-box">
+                            <div class="title-header">
+                                <h2>Truyện mới cập nhật</h2>
+                            </div>
+                            <div class="body__list-container">
+                                <div class="list-area">
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 1454</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/13a39b4a3f3367b560c88cee43789af1.jpg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="image-box">
+                                            <a class="image-link">
+                                                <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </a>
+                                        </div>
+                                        <div class="list_info">
+                                            <h3><a>Tu Tiên Trở Về Tại Vườn Trường</a></h3>
+                                            <div class="newest-chapters">
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                                <a>
+                                                    <span>Chap 145</span>
+                                                    <span>14 giờ trước</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Pagination-->
+                                <div class="pagination-container">
+                                    <div id="pagination" class="pagination">
+                                    </div>
+                                </div>
+                                <!--End Pagination-->
+                            </div>
                         </div>
                         <!--End Danh sách truyện-->
                     </div>
-                    <!--End Cội Trái-->
+                    <!--End Section bên trái-->
 
 
-                    <!--Cột phải => Side Bar-->
-                    <div class="container__box">
-                        <!--Side Bar-->
-                        <div class="side__bar">
-                            <div class="side__bar--block">
-                                <div class="side__bar--hist">
-                                    <div class="list__grid--header">
-                                        <div class="list__grid--title">
-                                            <h1>Lịch sử đọc truyện</h1>
+                    <!--Section bên phải (side-bar)-->
+                    <div class="body-right-side left-padding">
+                        <div class="body-box">
+                            <div class="title-header">
+                                <div class="btn-group">
+                                    <div class="gr-btn"><button class="btn active">Top Phổ Biến</button></div>
+                                    <div class="gr-btn"><button class="btn">Top Tuần</button></div>
+                                    <div class="gr-btn"><button class="btn">Top Ngày</button></div>
+                                </div>
+                            </div>
+                            <div class="story__ranking">
+                                <div class="story__ranking-panel">
+                                    <ul class="rank-list">
+                                        <li class="rank-item">
+                                            <div class="rank-b">
+                                                <p>01</p>
+                                            </div>
+                                            <div class="rank-b">
+                                                <a>
+                                                    <img src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg"
+                                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                                </a>
+                                            </div>
+                                            <div class="rank-b">
+                                                <div class="title-overflow pad-bot-25">
+                                                    <div class="title-overflow-content">
+                                                        <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                    </div>
+                                                </div>
+                                                <div class="rank-info">
+                                                    <a>Chap 142</a>
+                                                    <span>14 giây trước</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="rank-item">
+                                            <div class="rank-b">
+                                                <p>02</p>
+                                            </div>
+                                            <div class="rank-b">
+                                                <a>
+                                                    <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                                </a>
+                                            </div>
+                                            <div class="rank-b">
+                                                <div class="title-overflow pad-bot-25">
+                                                    <div class="title-overflow-content">
+                                                        <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                    </div>
+                                                </div>
+                                                <div class="rank-info">
+                                                    <a>Chap 142</a>
+                                                    <span>14 giây trước</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="rank-item">
+                                            <div class="rank-b">
+                                                <p>03</p>
+                                            </div>
+                                            <div class="rank-b">
+                                                <a>
+                                                    <img src="./images/truyen/31cc5d75e4c0ca59630587706d93296a.jpg"
+                                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                                </a>
+                                            </div>
+                                            <div class="rank-b">
+                                                <div class="title-overflow pad-bot-25">
+                                                    <div class="title-overflow-content">
+                                                        <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                    </div>
+                                                </div>
+                                                <div class="rank-info">
+                                                    <a>Chap 142</a>
+                                                    <span>14 giây trước</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="rank-item">
+                                            <div class="rank-b">
+                                                <p>04</p>
+                                            </div>
+                                            <div class="rank-b">
+                                                <a>
+                                                    <img src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg"
+                                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                                </a>
+                                            </div>
+                                            <div class="rank-b">
+                                                <div class="title-overflow pad-bot-25">
+                                                    <div class="title-overflow-content">
+                                                        <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                    </div>
+                                                </div>
+                                                <div class="rank-info">
+                                                    <a>Chap 142</a>
+                                                    <span>14 giây trước</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="rank-item">
+                                            <div class="rank-b">
+                                                <p>05</p>
+                                            </div>
+                                            <div class="rank-b">
+                                                <a>
+                                                    <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg"
+                                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                                </a>
+                                            </div>
+                                            <div class="rank-b">
+                                                <div class="title-overflow pad-bot-25">
+                                                    <div class="title-overflow-content">
+                                                        <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                    </div>
+                                                </div>
+                                                <div class="rank-info">
+                                                    <a>Chap 142</a>
+                                                    <span>14 giây trước</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Rank List-->
+
+                        <!--Comment-->
+                        <div class="body-box mar-top-20">
+                            <div class="title-header">
+                                <h2>Bình Luận Bạn Đọc (5)</h2>
+                            </div>
+                            <div class="chap__comment-panel">
+                                <ul class="comment-list">
+                                    <li class="comment-item">
+                                        <div class="comment-b">
+                                            <div class="title-overflow pad-bot-10">
+                                                <div class="title-overflow-content txt-italic">
+                                                    <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="side__bar--group">
-                                        <ul class="hist__list">
-                                            <li class="hist__item">
-                                                <div class="hist__block">
-                                                    <div class="hist__inside">
-                                                        <a class="hist__image--block" href="javascript:void(0)">
-                                                            <img src="./images/chester-wade.jpg" alt="">
-                                                        </a>
+                                        <div class="comment-b">
+                                            <a>Chap 142</a>
+                                            <span>14 giây trước</span>
+                                        </div>
+                                        <div class="comment-b">
+                                            <div class="comment-u-img">
+                                                <img src="./images/user.png"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </div>
+                                            <div class="comment-des">
+                                                <div class="comment-des-container">
+                                                    <div class="comment-des-title">
+                                                        <p class="comment-name">Le Ngoc Thao Vy Thai Hoang Ha</p>
                                                     </div>
-                                                    <div class="hist__inside">
-                                                        <div class="hist_block--inside">
-                                                            <div class="hist__block--title">
-                                                                <p>Tôi là thần y</p>
-                                                            </div>
-                                                            <div class="hist__block--des">
-                                                                <div class="hist__des--content">
-                                                                    <p>Đọc tiếp Chapter 154</p>
-                                                                </div>
-                                                                <div class="hist__des--content">
-                                                                    <i class="fa fa-remove"><span>Xóa</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="comment-des-content">
+                                                        <p>This is really great! I fully agree with what you wrote, and
+                                                            this is sure to help me out in the future. Thank you for
+                                                            posting this.</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="hist__item">
-                                                <div class="hist__block">
-                                                    <div class="hist__inside">
-                                                        <a class="hist__image--block" href="javascript:void(0)">
-                                                            <img src="./images/mike.jpg" alt="">
-                                                        </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="comment-item">
+                                        <div class="comment-b">
+                                            <div class="title-overflow pad-bot-10">
+                                                <div class="title-overflow-content txt-italic">
+                                                    <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-b">
+                                            <a>Chap 142</a>
+                                            <span>14 giây trước</span>
+                                        </div>
+                                        <div class="comment-b">
+                                            <div class="comment-u-img">
+                                                <img src="./images/user.png"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </div>
+                                            <div class="comment-des">
+                                                <div class="comment-des-container">
+                                                    <div class="comment-des-title">
+                                                        <p class="comment-name">Le Ngoc Thao Vy Thai Hoang Ha</p>
                                                     </div>
-                                                    <div class="hist__inside">
-                                                        <div class="hist_block--inside">
-                                                            <div class="hist__block--title">
-                                                                <p>Tôi là thần y</p>
-                                                            </div>
-                                                            <div class="hist__block--des">
-                                                                <div class="hist__des--content">
-                                                                    <p>Đọc tiếp Chapter 154</p>
-                                                                </div>
-                                                                <div class="hist__des--content">
-                                                                    <i class="fa fa-remove"><span>Xóa</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="comment-des-content">
+                                                        <p>This is really great! I fully agree with what you wrote, and
+                                                            this is sure to help me out in the future. Thank you for
+                                                            posting this.</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="hist__item">
-                                                <div class="hist__block">
-                                                    <div class="hist__inside">
-                                                        <a class="hist__image--block" href="javascript:void(0)">
-                                                            <img src="./images/mark-finn.jpg" alt="">
-                                                        </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="comment-item">
+                                        <div class="comment-b">
+                                            <div class="title-overflow pad-bot-10">
+                                                <div class="title-overflow-content txt-italic">
+                                                    <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-b">
+                                            <a>Chap 142</a>
+                                            <span>14 giây trước</span>
+                                        </div>
+                                        <div class="comment-b">
+                                            <div class="comment-u-img">
+                                                <img src="./images/user.png"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </div>
+                                            <div class="comment-des">
+                                                <div class="comment-des-container">
+                                                    <div class="comment-des-title">
+                                                        <p class="comment-name">Le Ngoc Thao Vy Thai Hoang Ha</p>
                                                     </div>
-                                                    <div class="hist__inside">
-                                                        <div class="hist_block--inside">
-                                                            <div class="hist__block--title">
-                                                                <p>Tôi là thần y</p>
-                                                            </div>
-                                                            <div class="hist__block--des">
-                                                                <div class="hist__des--content">
-                                                                    <p>Đọc tiếp Chapter 154</p>
-                                                                </div>
-                                                                <div class="hist__des--content">
-                                                                    <i class="fa fa-remove"><span>Xóa</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="comment-des-content">
+                                                        <p>This is really great! I fully agree with what you wrote, and
+                                                            this is sure to help me out in the future. Thank you for
+                                                            posting this.</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="side__bar--block">
-                                <div class="list__grid--header">
-                                    <div class="list__grid--title">
-                                        <h1>Xếp hạng</h1>
-                                    </div>
-                                </div>
-                                <div class="side__bar--group">
-                                    <div class="tabs">
-                                        <button class="tabs--link"><i class="fa fa-beer"><span>Top
-                                                    ngày</span></i></button>
-                                        <button class="tabs--link"><i class="fa fa-check"><span>Top
-                                                    tuần</span></i></button>
-                                        <button class="tabs--link"><i class="fa fa-book"><span>Top
-                                                    tháng</span></i></button>
-                                    </div>
-                                    <div class="tabs__group">
-                                        <ul class="tabs__list">
-                                            <li class="tab__item">
-                                                <div class="tab">
-                                                    <div class="tab__block">
-                                                        <div class="tab__des--center">
-                                                            <p>01</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="comment-item">
+                                        <div class="comment-b">
+                                            <div class="title-overflow pad-bot-10">
+                                                <div class="title-overflow-content txt-italic">
+                                                    <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-b">
+                                            <a>Chap 142</a>
+                                            <span>14 giây trước</span>
+                                        </div>
+                                        <div class="comment-b">
+                                            <div class="comment-u-img">
+                                                <img src="./images/user.png"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </div>
+                                            <div class="comment-des">
+                                                <div class="comment-des-container">
+                                                    <div class="comment-des-title">
+                                                        <p class="comment-name">Le Ngoc Thao Vy Thai Hoang Ha</p>
                                                     </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab__image">
-                                                            <a class="tab__image--block" href="javascript:void(0)">
-                                                                <img src="./images/chester-wade.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab_block--inside">
-                                                            <div class="tab__block--title">
-                                                                <p>Tôi là thần y</p>
-                                                            </div>
-                                                            <div class="tab__block--des">
-                                                                <div class="tab__des--content">
-                                                                    <p>Chapter 154</p>
-                                                                </div>
-                                                                <div class="tab__des--content">
-                                                                    <i class="fa fa-eye"><span>10,000,000</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="comment-des-content">
+                                                        <p>This is really great! I fully agree with what you wrote, and
+                                                            this is sure to help me out in the future. Thank you for
+                                                            posting this.</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="tab__item">
-                                                <div class="tab">
-                                                    <div class="tab__block">
-                                                        <div class="tab__des--center">
-                                                            <p>02</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="comment-item">
+                                        <div class="comment-b">
+                                            <div class="title-overflow pad-bot-10">
+                                                <div class="title-overflow-content txt-italic">
+                                                    <b>Kenja No Deshi Wo Nanoru Kenja Isekai!</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-b">
+                                            <a>Chap 142</a>
+                                            <span>14 giây trước</span>
+                                        </div>
+                                        <div class="comment-b">
+                                            <div class="comment-u-img">
+                                                <img src="./images/user.png"
+                                                    alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                            </div>
+                                            <div class="comment-des">
+                                                <div class="comment-des-container">
+                                                    <div class="comment-des-title">
+                                                        <p class="comment-name">Le Ngoc Thao Vy Thai Hoang Ha</p>
                                                     </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab__image">
-                                                            <a class="tab__image--block" href="javascript:void(0)">
-                                                                <img src="./images/julie.jpeg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab_block--inside">
-                                                            <div class="tab__block--title">
-                                                                <p>Tôi là thần y</p>
-                                                            </div>
-                                                            <div class="tab__block--des">
-                                                                <div class="tab__des--content">
-                                                                    <p>Chapter 154</p>
-                                                                </div>
-                                                                <div class="tab__des--content">
-                                                                    <i class="fa fa-eye"><span>10,000,000</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="comment-des-content">
+                                                        <p>This is really great! I fully agree with what you wrote, and
+                                                            this is sure to help me out in the future. Thank you for
+                                                            posting this.</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="tabs__group">
-                                        <ul class="tabs__list">
-                                            <li class="tab__item">
-                                                <div class="tab">
-                                                    <div class="tab__block">
-                                                        <div class="tab__des--center">
-                                                            <p>01</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab__image">
-                                                            <a class="tab__image--block" href="javascript:void(0)">
-                                                                <img src="./images/julie.jpeg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab_block--inside">
-                                                            <div class="tab__block--title">
-                                                                <p>Yêu anh</p>
-                                                            </div>
-                                                            <div class="tab__block--des">
-                                                                <div class="tab__des--content">
-                                                                    <p>Chapter 154</p>
-                                                                </div>
-                                                                <div class="tab__des--content">
-                                                                    <i class="fa fa-eye"><span>15,000,000</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="tab__item">
-                                                <div class="tab">
-                                                    <div class="tab__block">
-                                                        <div class="tab__des--center">
-                                                            <p>02</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab__image">
-                                                            <a class="tab__image--block" href="javascript:void(0)">
-                                                                <img src="./images/james.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab_block--inside">
-                                                            <div class="tab__block--title">
-                                                                <p>Nhớ</p>
-                                                            </div>
-                                                            <div class="tab__block--des">
-                                                                <div class="tab__des--content">
-                                                                    <p>Chapter 154</p>
-                                                                </div>
-                                                                <div class="tab__des--content">
-                                                                    <i class="fa fa-eye"><span>5,000,000</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="tabs__group">
-                                        <ul class="tabs__list">
-                                            <li class="tab__item">
-                                                <div class="tab">
-                                                    <div class="tab__block">
-                                                        <div class="tab__des--center">
-                                                            <p>01</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab__image">
-                                                            <a class="tab__image--block" href="javascript:void(0)">
-                                                                <img src="./images/lora.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab_block--inside">
-                                                            <div class="tab__block--title">
-                                                                <p>Người ơi</p>
-                                                            </div>
-                                                            <div class="tab__block--des">
-                                                                <div class="tab__des--content">
-                                                                    <p>Chapter 154</p>
-                                                                </div>
-                                                                <div class="tab__des--content">
-                                                                    <i class="fa fa-eye"><span>15,000,000</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="tab__item">
-                                                <div class="tab">
-                                                    <div class="tab__block">
-                                                        <div class="tab__des--center">
-                                                            <p>02</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab__image">
-                                                            <a class="tab__image--block" href="javascript:void(0)">
-                                                                <img src="./images/mike.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab__block">
-                                                        <div class="tab_block--inside">
-                                                            <div class="tab__block--title">
-                                                                <p>Mong</p>
-                                                            </div>
-                                                            <div class="tab__block--des">
-                                                                <div class="tab__des--content">
-                                                                    <p>Chapter 154</p>
-                                                                </div>
-                                                                <div class="tab__des--content">
-                                                                    <i class="fa fa-eye"><span>5,000,000</span></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <!--End Side Bar-->
+                        <!--End Comment-->
                     </div>
-                    <!--End Cột Phải-->
+                    <!--End Side-bar-->
                 </div>
             </div>
-            <!--End Body Container-->
-
-
-            <!--Side Area-->
-            <div class="side__container">
-                <!--Overlay Show Up Background-->
-                <div id="side__nav-overlay"></div>
-
-                <!--Side Menu Bar-->
-                <div id="side-nav" class="side__nav">
-                    <div class="side__header">
-                        <div class="side__form">
-                            <div class="side__header-block">
-                                <i class="fa fa-user">
-                                    <span>Hi, User Bao</span>
-                                </i>
-                            </div>
-                            <div class="side__header-block">
-                                <a href="javascript:void(0)" id="close_side_nav" class="close__btn">&times;</a>
-                            </div>
-                        </div>
-                        <div class="side__form">
-                            <div class="side__header-block">
-                                <a href="login.html" class="nav__link--login">
-                                    <i class="fa fa-arrow-right"><span> Đăng nhập</span></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="side__form">
-                            <a href="javascript:void(0)" class="nav__link">
-                                <div class="nav__search__group">
-                                    <form>
-                                        <input class="search" type="text" placeholder="Tìm kiếm...">
-                                        <i class="fa fa-search"></i>
-                                    </form>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="side__body">
-                        <ul>
-                            <li>
-                                <h1>Thể loại</h1>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Amazon Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Kindle Child Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Kindle Child Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Love Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Horror Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Detective Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="side_content_seperator"></li>
-                            <li>
-                                <h1>Xếp hạng</h1>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Truyện trong tuần</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Truyện trong tuần</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Top tháng</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Đọc nhiều</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Mới cập nhật</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--End Side Nav-->
-            </div>
-            <!--End Side Area-->
         </div>
     </main>
 
     <!--Footer-->
     <footer>
-        <div class="container-fluid">
-            <form>
-                <div class="container__footer">
-                    <div class="container__f--form">
-                        <div class="container__f--block">
-                            <div class="send-block">
-                                <h3>Đăng ký nhận thông báo truyện mới</h3>
+        <div class="footer__container">
+            <div class="footer-side">
+                <ul class="footer-info-list">
+                    <li class="footer-info-item">
+                        <a>
+                            <div class="icon-box">
+                                <div class="icon-item">
+                                    <img src="./images/phone-alt.svg"
+                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                </div>
+                                <div class="icon-item">
+                                    <span>Zalo: 0908 432 456</span>
+                                </div>
                             </div>
-                            <div class="send-block">
-                                <input placeholder="Email">
+                        </a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a>
+                            <div class="icon-box">
+                                <div class="icon-item">
+                                    <img src="./images/viber.svg"
+                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                </div>
+                                <div class="icon-item">
+                                    <span>Viber: 0908 432 456</span>
+                                </div>
                             </div>
-                            <div class="send-block">
-                                <button>Gửi</button>
+                        </a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a>
+                            <div class="icon-box">
+                                <div class="icon-item">
+                                    <img src="./images/mail-bulk.svg"
+                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                </div>
+                                <div class="icon-item">
+                                    <span>truyenindex@gmail.com</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-side">
+                <div class="footer-content">
+                    <h5>Truyen Index</h5>
+                </div>
+                <div class="footer-content">
+                    <div class="f-description">
+                        <p>Web truyện lớn nhất Việt Nam. Cập nhật truyện một cách nhanh nhất tới bạn đọc.</p>
+                        <p>Mong nhận được sự ủng hộ của bạn đọc.</p>
                     </div>
                 </div>
-            </form>
-            <div class="footer__copy--right">
-                <p>All of the things © 2020 BBTruyen. All Rights Reserved.</p>
+                <div class="social-gr-icon">
+                    <ul class="footer-info-list flex">
+                        <li class="footer-info-item">
+                            <a>
+                                <div class="icon-box">
+                                    <div class="icon-item">
+                                        <img src="./images/facebook-f.svg"
+                                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="footer-info-item">
+                            <a>
+                                <div class="icon-box">
+                                    <div class="icon-item">
+                                        <img src="./images/linkedin-in.svg"
+                                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="footer-info-item">
+                            <a>
+                                <div class="icon-box">
+                                    <div class="icon-item">
+                                        <img src="./images/instagram.svg"
+                                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
     <!--End Footer-->
 
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/tabs.js"></script>
-    <script src="./scripts/splide-js/splide.min.js"></script>
-    <script src="./scripts/change-theme.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script>
+        const catBut = document.getElementById('catagory-dropdown');
+        catBut.addEventListener('click', function () {
+            showMenuOnTablet();
+        });
+
+        function showMenuOnTablet() {
+            var x = document.getElementById("top__nav");
+            if (x.className === "nav__list") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav__list";
+            }
+        }
+    </script>
 </body>
 
 </html>

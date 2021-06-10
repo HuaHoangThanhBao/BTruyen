@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 
 <head>
@@ -8,285 +8,244 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/login.css">
 </head>
-
 <body>
+     <!--Header Menu-->
+    <header class="header container-fluid"> 
+        <nav class="nav">
+            <ul id="top__nav" class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link logo">
+                        <img src="./images/logo.png"
+                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a id="catagory-dropdown" class="nav__link">
+                        <div class="toggle__button">
+                            <img src="./images/menu-bar.png"
+                                alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                        </div>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link n-highL">
+                        Danh mục
+                    </a>
+                    <div class="catagory-content">
+                        <ul class="catagory-list">
+                            <li class="catagory-item"><a href="#">Action</a></li>
+                            <li class="catagory-item"><a href="#">Adult</a></li>
+                            <li class="catagory-item"><a href="#">Adventure</a></li>
+                            <li class="catagory-item"><a href="#">Comedy</a></li>
+                            <li class="catagory-item"><a href="#">Doujinshi</a></li>
+                            <li class="catagory-item"><a href="#">Cooking</a></li>
+                            <li class="catagory-item"><a href="#">Cổ Đại</a></li>
+                            <li class="catagory-item"><a href="#">Drama</a></li>
+                            <li class="catagory-item"><a href="#">Đam Mỹ</a></li>
+                            <li class="catagory-item"><a href="#">Ecchi</a></li>
+                            <li class="catagory-item"><a href="#">Gender Bender</a></li>
+                            <li class="catagory-item"><a href="#">Harem</a></li>
+                            <li class="catagory-item"><a href="#">Historical</a></li>
+                            <li class="catagory-item"><a href="#">Live action</a></li>
+                            <li class="catagory-item"><a href="#">Manga</a></li>
+                            <li class="catagory-item"><a href="#">Manhua</a></li>
+                            <li class="catagory-item"><a href="#">Mature</a></li>
+                            <li class="catagory-item"><a href="#">Ngôn Tình</a></li>
+                            <li class="catagory-item"><a href="#">One shot</a></li>
+                            <li class="catagory-item"><a href="#">Romance</a></li>
+                            <li class="catagory-item"><a href="#">Psychological</a></li>
+                            <li class="catagory-item"><a href="#">Seinen</a></li>
+                            <li class="catagory-item"><a href="#">Shoujo</a></li>
+                            <li class="catagory-item"><a href="#">Shoujo</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item"><a class="nav__link n-highL">Theo Dõi</a></li>
+                <li class="nav__item"><a class="nav__link n-highL">Lịch sử</a></li>
+                <li class="nav__item"><a class="nav__link n-highL">Đăng nhập</a></li>
+                <li class="nav__item">
+                    <form class="search__box">
+                        <div class="search__box-input border_bottom">
+                            <input type="text" placeholder="Tìm kiếm...">
+                        </div>
+                        <div class="icon border_bottom">
+                            <img src="./images/loupe.svg" class="search-icon"
+                                alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--End Header Menu-->
+
+   <!--Login Area-->
     <main>
-        <div class="wrapper">
-            <!--Header-->
-            <header class="header">
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link">
-                                <p>BBTruyen</p>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0)" class="nav__link">
-                                <div class="nav__search__group">
-                                    <form>
-                                        <input class="search" type="text" placeholder="Tìm kiếm...">
-                                        <i class="fa fa-search"></i>
-                                    </form>
+        <div class="main-container container-fluid">
+            <div class="banner-container">
+                <div class="banner"></div>
+            </div>
+            <div class="wrapper">
+                <div class="form-container">
+                        <div class="slide-controls">
+                            <input type="radio" name="slide" id="login" checked>
+                            <input type="radio" name="slide" id="signup">
+                            <label for="login" class="slide login">Đăng nhập</label>
+                            <label for="signup" class="slide signup">Đăng ký</label>
+                            <div class="slider-tab"></div>
+                        </div>
+                    <div class="form-inner">
+                        <form action="#" class="login">
+                            <div class="field">
+                                <input type="text" placeholder="Email của bạn..." required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Mật khẩu..." required>
+                        </div>
+                            <div class="pass-link">
+                                <a href="#">Quên mật khẩu?</a>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                            <input type="submit" value="Login"></div>
+                            <div class="signup-link">Chưa có tài khoản? <a href="">Đăng ký ngay</a></div>
+                        </form>
+                        <form action="#" class="signup">
+                            <div class="field">
+                                <input type="text" placeholder="Email của bạn..." required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Mật khẩu..." required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Xác nhận mật khẩu..." required>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Signup">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>     
+<!--End Login Area-->
+    <!--Footer-->
+    <footer>
+        <div class="footer__container">
+            <div class="footer-side">
+                <ul class="footer-info-list">
+                    <li class="footer-info-item">
+                        <a>
+                            <div class="icon-box">
+                                <div class="icon-item">
+                                    <img src="./images/phone-alt.svg"
+                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                </div>
+                                <div class="icon-item">
+                                    <span>Zalo: 0908 432 456</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a>
+                            <div class="icon-box">
+                                <div class="icon-item">
+                                    <img src="./images/viber.svg"
+                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                </div>
+                                <div class="icon-item">
+                                    <span>Viber: 0908 432 456</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a>
+                            <div class="icon-box">
+                                <div class="icon-item">
+                                    <img src="./images/mail-bulk.svg"
+                                        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                </div>
+                                <div class="icon-item">
+                                    <span>truyenindex@gmail.com</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-side">
+                <div class="footer-content">
+                    <h5>Truyen Index</h5>
+                </div>
+                <div class="footer-content">
+                    <div class="f-description">
+                        <p>Web truyện lớn nhất Việt Nam. Cập nhật truyện một cách nhanh nhất tới bạn đọc.</p>
+                        <p>Mong nhận được sự ủng hộ của bạn đọc.</p>
+                    </div>
+                </div>
+                <div class="social-gr-icon">
+                    <ul class="footer-info-list flex">
+                        <li class="footer-info-item">
+                            <a>
+                                <div class="icon-box">
+                                    <div class="icon-item">
+                                        <img src="./images/facebook-f.svg"
+                                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                    </div>
                                 </div>
                             </a>
                         </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0)" class="nav__link">
-                                Danh mục
+                        <li class="footer-info-item">
+                            <a>
+                                <div class="icon-box">
+                                    <div class="icon-item">
+                                        <img src="./images/linkedin-in.svg"
+                                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                    </div>
+                                </div>
                             </a>
                         </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0)" class="nav__link">
-                                <label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="login.html" class="nav__link">
-                                Đăng nhập
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="javascript:void(0);" class="nav__link">
-                                <i class="fa fa-bars"></i>
+                        <li class="footer-info-item">
+                            <a>
+                                <div class="icon-box">
+                                    <div class="icon-item">
+                                        <img src="./images/instagram.svg"
+                                            alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human">
+                                    </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
-                </nav>
-            </header>
-            <!--End Header-->
-
-            <!--Login Area-->
-            <div class="container-fluid">
-                <div class="containner__login">
-                    <div class="container__cover">
-                        <div class="container__cover--block">
-                            <div class="container__side">
-                                <div class="form__content">
-                                    <h1>Đăng nhập</h1>
-                                </div>
-                                <div class="form__content">
-                                    <p>Đăng nhập để xem thỏa thích!!</p>
-                                </div>
-                                <div class="form__social--group">
-                                    <ul>
-                                        <li>
-                                            <button><i class="fa fa-facebook"></i></button>
-                                        </li>
-                                        <li>
-                                            <button><i class="fa fa-google"></i></button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form__input--group">
-                                    <div class="form__input">
-                                        <input placeholder="Email">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Mật khẩu">
-                                    </div>
-                                    <div class="form__input">
-                                        <button class="orange" type="submit">Đăng nhập</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container__side">
-                                <div class="form__content">
-                                    <h1>Tạo tài khoản</h1>
-                                </div>
-                                <div class="form__content">
-                                    <p>Đăng ký nhanh nào các bạn ơi!!</p>
-                                </div>
-                                <div class="form__social--group">
-                                    <ul>
-                                        <li>
-                                            <button><i class="fa fa-facebook"></i></button>
-                                        </li>
-                                        <li>
-                                            <button><i class="fa fa-google"></i></button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form__input--group">
-                                    <div class="form__input">
-                                        <input placeholder="Họ">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Tên">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Email">
-                                    </div>
-                                    <div class="form__input">
-                                        <input placeholder="Mật khẩu">
-                                    </div>
-                                    <div class="form__input">
-                                        <button type="submit">Đăng ký</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!--End Login Area-->
-
-            
-            <!--Side Area-->
-            <div class="side__container">
-                <!--Overlay Show Up Background-->
-                <div id="side__nav-overlay"></div>
-
-                <!--Side Menu Bar-->
-                <div id="side-nav" class="side__nav">
-                    <div class="side__header">
-                        <div class="side__form">
-                            <div class="side__header-block">
-                                <i class="fa fa-user">
-                                    <span>Hi, User Bao</span>
-                                </i>
-                            </div>
-                            <div class="side__header-block">
-                                <a href="javascript:void(0)" id="close_side_nav" class="close__btn">&times;</a>
-                            </div>
-                        </div>
-                        <div class="side__form">
-                            <div class="side__header-block">
-                                <a href="login.html" class="nav__link--login">
-                                    <i class="fa fa-arrow-right"><span> Đăng nhập</span></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="side__form">
-                            <a href="javascript:void(0)" class="nav__link">
-                                <div class="nav__search__group">
-                                    <form>
-                                        <input class="search" type="text" placeholder="Tìm kiếm...">
-                                        <i class="fa fa-search"></i>
-                                    </form>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="side__body">
-                        <ul>
-                            <li>
-                                <h1>Thể loại</h1>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Amazon Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Kindle Child Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Kindle Child Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Love Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Horror Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Detective Music</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li class="side_content_seperator"></li>
-                            <li>
-                                <h1>Xếp hạng</h1>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Truyện trong tuần</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Truyện trong tuần</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Top tháng</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Đọc nhiều</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>Mới cập nhật</div>
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--End Side Nav-->
-            </div>
-            <!--End Side Area-->
-        </div>
-    </main>
-
-    <!--Footer-->
-    <footer>
-        <div class="container-fluid">
-            <form>
-                <div class="container__footer">
-                    <div class="container__f--form">
-                        <div class="container__f--block">
-                            <div class="send-block">
-                                <h3>Đăng ký nhận thông báo truyện mới</h3>
-                            </div>
-                            <div class="send-block">
-                                <input placeholder="Email">
-                            </div>
-                            <div class="send-block">
-                                <button>Gửi</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="footer__copy--right">
-                <p>All of the things © 2020 BBTruyen. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
     <!--End Footer-->
-
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/change-theme.js"></script>
 </body>
 
-</html>
+<script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    signupBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "-50%";
+      loginText.style.marginLeft = "-50%";
+    });
+    loginBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "0%";
+      loginText.style.marginLeft = "0%";
+    });
+    signupLink.onclick = (()=>{
+      signupBtn.click();
+      return false;
+    });
+  </script>
+ 
