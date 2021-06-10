@@ -63,8 +63,8 @@ function Init(json, buttonPropertyJson) {
     const ndt_update_btns = document.getElementsByClassName('control-btn');
 
     update_btns.addEventListener('click', function(){
-
-    })
+		LoadModalyBObj(json,buttonPropertyJson.btnAdd)
+    });
 
     function LoadModalByObj(act, name) {
 
