@@ -149,7 +149,8 @@
                                             <td>
                                                 <div class="image-box">
                                                     <div class="image-outline st-image">
-                                                        <img src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg">
+                                                        <img
+                                                            src="./images/truyen/52057a5f98307805a83ba47f2c149cb2.jpeg">
                                                     </div>
                                                 </div>
                                             </td>
@@ -224,7 +225,7 @@
                                 <div class="modal-col height-auto">
                                     <h3>Chọn ảnh thay thế</h3>
                                     <br>
-                                   <input id="replace-img" type="file">
+                                    <input id="replace-img" type="file">
                                 </div>
                             </div>
                             <div class="modal-row">
@@ -232,68 +233,34 @@
                                     <div class="info-col">
                                         <p>Tác giả:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <select>
-                                            <option value="Albanda John">Albanda John</option>
-                                            <option value="Albanda John1">Albanda John1</option>
-                                            <option value="Albanda John2">Albanda John2</option>
-                                            <option value="Albanda John3">Albanda John3</option>
-                                        </select>
-                                    </div>
+                                    <div id="edt-input-author" class="info-col"></div>
                                 </div>
                                 <div class="modal-info">
                                     <div class="info-col">
                                         <p>Lượt xem:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <input value="14.000.000"></input>
-                                    </div>
+                                    <div id="edt-input-view-amount" class="info-col"></div>
                                 </div>
                                 <div class="modal-info">
                                     <div class="info-col">
                                         <p>Tình trạng:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <input value="Chờ duyệt"></input>
-                                    </div>
+                                    <div id="edt-input-status" class="info-col"></div>
                                 </div>
                                 <div class="modal-info">
                                     <div class="info-col">
                                         <p>Mô tả:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <input
-                                            value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
-                                    </div>
+                                    <div id="edt-input-describ" class="info-col"></div>
                                 </div>
                                 <div class="modal-info disable-height">
                                     <div class="info-col align-top">
                                         <p>Phụ lục:</p>
                                     </div>
-                                    <div class="info-col-group">
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-update" value="Action">
-                                            <label>Action</label><br>
-                                        </div>
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-update" value="Phiêu lưu">
-                                            <label>Phiêu lưu</label><br>
-                                        </div>
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-update" value="Kiếm hiệp">
-                                            <label>Kiếm hiệp</label><br>
-                                        </div>
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-update" value="Tình cảm">
-                                            <label>Tình cảm</label><br>
-                                        </div>
-                                    </div>
+                                    <div id="edt-checkbox-form" class="info-col-group"></div>
                                 </div>
                             </div>
-                            <div class="modal-row btn-func-group">
-                                <button class="btn-func bg-blue">Cập nhật</button>
-                                <button class="btn-func bg-red">Xóa</button>
-                            </div>
+                            <div id="edt-button-form" class="modal-row btn-func-group"></div>
                         </div>
                     </div>
                 </div>
@@ -330,67 +297,34 @@
                                     <div class="info-col">
                                         <p>Tác giả:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <select>
-                                            <option value="Albanda John">Albanda John</option>
-                                            <option value="Albanda John1">Albanda John1</option>
-                                            <option value="Albanda John2">Albanda John2</option>
-                                            <option value="Albanda John3">Albanda John3</option>
-                                        </select>
-                                    </div>
+                                    <div id="add-input-author" class="info-col"></div>
                                 </div>
                                 <div class="modal-info">
                                     <div class="info-col">
                                         <p>Lượt xem:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <input value="14.000.000"></input>
-                                    </div>
+                                    <div id="add-input-view-amount" class="info-col"></div>
                                 </div>
                                 <div class="modal-info">
                                     <div class="info-col">
                                         <p>Tình trạng:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <input value="Chờ duyệt"></input>
-                                    </div>
+                                    <div id="add-input-status" class="info-col"></div>
                                 </div>
                                 <div class="modal-info">
                                     <div class="info-col">
                                         <p>Mô tả:</p>
                                     </div>
-                                    <div class="info-col">
-                                        <input
-                                            value="Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó cũng chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về một tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích."></input>
-                                    </div>
+                                    <div id="add-input-describ" class="info-col"></div>
                                 </div>
                                 <div class="modal-info disable-height">
                                     <div class="info-col">
                                         <p>Phụ lục:</p>
                                     </div>
-                                    <div class="info-col-group">
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-add" value="Action">
-                                            <label>Action</label><br>
-                                        </div>
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-add" value="Phiêu lưu">
-                                            <label>Phiêu lưu</label><br>
-                                        </div>
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-add" value="Kiếm hiệp">
-                                            <label>Kiếm hiệp</label><br>
-                                        </div>
-                                        <div class="info-input-row">
-                                            <input class="info-input" type="checkbox" name="cat-add" value="Tình cảm">
-                                            <label>Tình cảm</label><br>
-                                        </div>
-                                    </div>
+                                    <div id="add-checkbox-form" class="info-col-group"></div>
                                 </div>
                             </div>
-                            <div class="modal-row btn-func-group">
-                                <button class="btn-func bg-blue">Lưu</button>
-                            </div>
+                            <div id="add-button-form" class="modal-row btn-func-group"></div>
                         </div>
                     </div>
                 </div>
@@ -511,6 +445,16 @@
     <script src="./js/admin.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/upload-img.js"></script>
+    <script>
+        
+        const buttonPropertyJson = {
+            "btnAdd": "add-input-author"
+        }
+
+        var getDataFromAPI = getAPIData(buttonPropertyJson);
+
+        Init(getDataFromAPI.json, getDataFromAPI.buttonPropertyJson)
+    </script>
 </body>
 
 </html>

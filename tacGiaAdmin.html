@@ -148,57 +148,71 @@
             </div>
         </div>
         <!--End Content Container-->
-
-
-        <!--Modal Container-->
-        <div id="modal" class="modal-container">
+        <!--Modal Add Tác giả Container-->
+        <div id="modal-add" class="modal-container">
             <div class="modal-wrapper">
-                <div class="modal-box">
-                    <div class="modal-header">
-                        <h3>Kiem hiep truong nghia</h3>
-                    </div>
+                <div class="modal-outline">
                     <div class="close-box">
-                        <button id="closeBtn" class="close-btn">X</button>
+                        <button id="closeBtnAdd" class="close-btn">X</button>
                     </div>
-                    <div class="modal-body">
-                        <div class="modal-cover">
-                            <div class="modal-side">
-                                <img class="st-img" src="./images/truyen/ef229b9c2c881d57e3d48a305f8817dc.jpg">
-                                <div class="ref-btn-group">
-                                    <button class="ref-btn">Edit</button>
-                                    <button class="ref-btn">Delete</button>
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                    <div id="add-author" class="info-col"></div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Trạng thái</p>
+                                    </div>
+                                    <div id="add-status" class="info-col"></div>
                                 </div>
                             </div>
-                            <div class="modal-side">
-                                <div class="modal-side-col">
-                                    <p>Tác giả:</p>
-                                    <p>Lượt xem:</p>
-                                    <p>Tình trạng:</p>
-                                    <p>Mô tả:</p>
-                                </div>
-                                <div class="modal-side-col">
-                                    <p>Albanda John</p>
-                                    <p>14.000.000</p>
-                                    <p>Chờ duyệt</p>
-                                    <p>Hầm mộ của những vị thân xuất hiện ở khắp nơi trên thế giới, và ở những nơi đó
-                                        cũng
-                                        chôn cất rất nhiều thánh tích mang sức mạnh của những vị thần. Câu chuyện kể về
-                                        một
-                                        tên trộm với tài năng dị biệt muốn thu thập tất cả các thánh tích.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="replace-img-container">
-                            <div class="image-upload">
-                                <input type="file">
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Lưu</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Modal Container-->
+        <!--End Modal Add Tác giả Container-->
+        <!--Tác giả Update Modal Container-->
+        <div id="modal-update" class="modal-container">
+            <div class="modal-wrapper">
+                <div class="modal-outline">
+                    <div class="close-box">
+                        <button id="closeBtnUpdate" class="close-btn">X</button>
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-body">
+                            <div class="modal-row">
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                    <div id="edt-author" class="info-col"></div>
+                                </div>
+                                <div class="modal-info">
+                                    <div class="info-col">
+                                        <p>Trạng thái:</p>
+                                    </div>
+                                    <div id="edt-status" class="info-col"></div>
+                                </div>
+                            </div>
+                            <div class="modal-row btn-func-group">
+                                <button class="btn-func bg-blue">Cập nhật</button>
+                                <button class="btn-func bg-red">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!--End Tác giả Update Modal Container-->
     </div>
 
     <script src="./js/admin.js"></script>
