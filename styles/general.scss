@@ -15,6 +15,10 @@ body {
   line-height: 1;
   font-weight: 400;
   background-color: $primaryColor;
+  @include theme() {
+    //color: theme-get('text-color');
+    background-color: theme-get('bg-dark');
+  }
 }
 
 /*Header && Navigation Bar*/
@@ -224,6 +228,22 @@ body {
     display: flex;
     justify-content: center;
   }
+  
+  .body-cover {
+    max-width: $max-scale-width;
+    @include SetWidthHeight(100%, 100%);
+    @include Flex($isHorizontally: false, $isVertically: false, $isWrap: true);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    @media (max-width: 399px) {
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+    }
+  }
 
   .banner-container {
     width: 100%;
@@ -233,7 +253,7 @@ body {
       margin-top: 75px;
       width: 100%;
       height: 100%;
-      background-image: url(../images/banner.png);
+      background-image: url(../../images/banner.png);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -325,6 +345,10 @@ body {
                 border-width: 1px 1px 0px 1px;
                 padding: 10px 5px 10px 10px;
                 background-color: #f5f5f5;
+                @include theme() {
+                  //color: theme-get('text-color');
+                  background-color: theme-get('bg-dark');
+                }
 
                 .comment-name {
                   line-height: 1.2;
@@ -405,10 +429,10 @@ footer {
     color: #66686d;
     @include Flex($isHorizontally: false, $isVertically: false, $isWrap: false);
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 25px;
 
     @media (max-width: 799px) {
-      padding: 20px 10px 20px 10px;
+      padding: 25px;
     }
 
     .footer-side {
@@ -500,18 +524,19 @@ footer {
 }
 /*End Chữ tràn*/
 
-.sticky {
+.nav-sticky {
   position: fixed;
   display: block;
   top: 75px;
   left: 0;
   right: 0;
   width: 100%;
-  background-image: linear-gradient(
-    to top right,
-    rgb(211, 197, 197),
-    rgb(173, 157, 157)
-  );
+  background-color: $white;
+  @include theme() {
+    color: theme-get('text-color');
+    background-color: theme-get('bg-light-dark');
+  }
+  box-shadow: 0 5px 5px rgba(85, 85, 85, 0.288);
   z-index: 2;
   padding: 10px;
 }
@@ -715,3 +740,68 @@ a {
   background-color: #8950FC;
 }
 /*End Background color*/
+
+
+
+/*Dark mode button*/
+
+.theme-switch-area{
+  z-index: 999;
+  position: fixed;
+  right: 5px;
+  bottom: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.theme-icon-container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+
+
+  .theme-btn{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: inherit;
+  }
+
+  &.dark-mode{
+    background-color: #424242;
+
+    .theme-btn::after{
+      content: '';
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      background-image: url('../../images/moon.svg');
+    }
+  }
+
+  &.light-mode{
+    background-color: $white;
+
+    .theme-btn::after{
+      content: '';
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      background-image: url('../../images/sun.svg');
+    }
+  }
+}
+/*End Dark mode button*/

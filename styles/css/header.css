@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+header button {
+  background-color: black;
+}
+
+header button:hover {
+  background-color: blue;
+}
+/*# sourceMappingURL=header.css.map */

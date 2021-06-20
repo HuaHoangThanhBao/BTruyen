@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/login.css">
 </head>
+
 <body>
-     <!--Header Menu-->
-    <header class="header container-fluid"> 
+    <!--Header Menu-->
+    <header class="header container-fluid">
         <nav class="nav">
             <ul id="top__nav" class="nav__list">
                 <li class="nav__item">
@@ -81,7 +82,7 @@
     </header>
     <!--End Header Menu-->
 
-   <!--Login Area-->
+    <!--Login Area-->
     <main>
         <div class="main-container container-fluid">
             <div class="banner-container">
@@ -89,13 +90,13 @@
             </div>
             <div class="wrapper">
                 <div class="form-container">
-                        <div class="slide-controls">
-                            <input type="radio" name="slide" id="login" checked>
-                            <input type="radio" name="slide" id="signup">
-                            <label for="login" class="slide login">Đăng nhập</label>
-                            <label for="signup" class="slide signup">Đăng ký</label>
-                            <div class="slider-tab"></div>
-                        </div>
+                    <div class="slide-controls">
+                        <input type="radio" name="slide" id="login" checked>
+                        <input type="radio" name="slide" id="signup">
+                        <label for="login" class="slide login">Đăng nhập</label>
+                        <label for="signup" class="slide signup">Đăng ký</label>
+                        <div class="slider-tab"></div>
+                    </div>
                     <div class="form-inner">
                         <form action="#" class="login">
                             <div class="field">
@@ -103,13 +104,14 @@
                             </div>
                             <div class="field">
                                 <input type="password" placeholder="Mật khẩu..." required>
-                        </div>
+                            </div>
                             <div class="pass-link">
                                 <a href="#">Quên mật khẩu?</a>
                             </div>
                             <div class="field btn">
                                 <div class="btn-layer"></div>
-                            <input type="submit" value="Login"></div>
+                                <input type="submit" value="Login">
+                            </div>
                             <div class="signup-link">Chưa có tài khoản? <a href="">Đăng ký ngay</a></div>
                         </form>
                         <form action="#" class="signup">
@@ -131,8 +133,17 @@
                 </div>
             </div>
         </div>
-    </main>     
-<!--End Login Area-->
+
+        <!--Dark mode button-->
+        <div class="theme-switch-area">
+            <div class="theme-icon-container dark-mode">
+                <button id="theme-switch-btn" class="theme-btn"></button>
+            </div>
+        </div>
+        <!--End dark mode button-->
+    </main>
+    <!--End Login Area-->
+
     <!--Footer-->
     <footer>
         <div class="footer__container">
@@ -227,25 +238,28 @@
         </div>
     </footer>
     <!--End Footer-->
+
+
+    <script src="./js/darkMode.js"></script>
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        const loginForm = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector("form .signup-link a");
+        signupBtn.onclick = (() => {
+            loginForm.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+        });
+        loginBtn.onclick = (() => {
+            loginForm.style.marginLeft = "0%";
+            loginText.style.marginLeft = "0%";
+        });
+        signupLink.onclick = (() => {
+            signupBtn.click();
+            return false;
+        });
+    </script>
 </body>
 
-<script>
-    const loginText = document.querySelector(".title-text .login");
-    const loginForm = document.querySelector("form.login");
-    const loginBtn = document.querySelector("label.login");
-    const signupBtn = document.querySelector("label.signup");
-    const signupLink = document.querySelector("form .signup-link a");
-    signupBtn.onclick = (()=>{
-      loginForm.style.marginLeft = "-50%";
-      loginText.style.marginLeft = "-50%";
-    });
-    loginBtn.onclick = (()=>{
-      loginForm.style.marginLeft = "0%";
-      loginText.style.marginLeft = "0%";
-    });
-    signupLink.onclick = (()=>{
-      signupBtn.click();
-      return false;
-    });
-  </script>
- 
+</html>

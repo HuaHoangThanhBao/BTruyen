@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Web Truyen</title>
     <meta name="view-port" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/item-page.style.css">
+    <link rel="stylesheet" href="./styles/css/item-page.css">
 </head>
 
 <body>
@@ -85,7 +85,7 @@
                 <div class="banner img-fade"></div>
             </div>
             <div class="body-container">
-                <div class="body-cover pad-bot-10">
+                <div class="body-cover">
                     <div class="overlay__panel">
                         <div class="overlay__panel-container">
 
@@ -479,6 +479,13 @@
                 </div>
             </div>
         </div>
+        <!--Dark mode button-->
+        <div class="theme-switch-area">
+            <div class="theme-icon-container dark-mode">
+                <button id="theme-switch-btn" class="theme-btn"></button>
+            </div>
+        </div>
+        <!--End dark mode button-->
     </main>
 
 
@@ -578,6 +585,7 @@
     <!--End Footer-->
 
 
+    <script src="./js/darkMode.js"></script>
     <script>
         const Utils = {
 

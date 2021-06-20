@@ -1,0 +1,297 @@
+@import "./icon.scss";
+@import "./func.scss";
+@import "./general.scss";
+
+.body-cover {
+  .overlay__panel {
+    @include SetWidthHeight(100%, 100%);
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+
+    @media (max-width: 599px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .overlay__panel-container {
+      @include SetWidthHeight(100%, 100%);
+      background-color: $white;
+      @include theme() {
+        color: theme-get('text-color');
+        background-color: theme-get('bg-light-dark');
+      }
+      border-radius: 20px;
+      z-index: 2;
+      margin-top: -450px;
+
+      .box-container {
+        @include SetWidthHeight(100%, auto);
+        @include Flex(
+          $isHorizontally: false,
+          $isVertically: false,
+          $isWrap: true
+        );
+        padding-bottom: 20px;
+
+        .panel-side:first-child {
+          @include SetWidthHeight(250px, auto);
+
+          @media (max-width: 799px) {
+            @include SetWidthHeight(100%, auto);
+            display: block;
+          }
+
+          .image-outer {
+            @include SetWidthHeight(100%, 100%);
+            padding-left: 20px;
+            padding-right: 20px;
+
+            img {
+              @include SetWidthHeight(100%, 300px);
+              border-radius: 10px;
+              object-fit: cover;
+              margin-top: -40px;
+              box-shadow: 10px 10px 25px rgba(black, .20);
+
+              @media (max-width: 799px) {
+                @include SetWidthHeight(250px, auto);
+              }
+            }
+          }
+        }
+
+        .panel-side:nth-child(2) {
+          width: calc(100% - 250px);
+
+          @media (max-width: 799px) {
+            display: block;
+            @include SetWidthHeight(100%, auto);
+          }
+
+          .truyen__detail-container {
+            @include SetWidthHeight(100%, auto);
+            padding: 20px;
+
+            .truyen__detail-title {
+              margin-bottom: 20px;
+            }
+
+            .truyen__detail-box {
+              position: relative;
+              @include Flex(
+                $isHorizontally: false,
+                $isVertically: false,
+                $isWrap: true
+              );
+              margin-top: 20px;
+
+              .truyen__detail-txt {
+                @include SetWidthHeight(50%, auto);
+                font-size: 15px;
+                line-height: 1.5;
+
+                @media (max-width: 599px) {
+                  @include SetWidthHeight(100%, auto);
+                }
+
+                &:nth-child(even) {
+                  padding-left: 10px;
+
+                  @media (max-width: 599px) {
+                    padding-left: 0;
+                    padding-top: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .story-content-panel {
+          width: 100%;
+          padding-left: 20px;
+          padding-top: 20px;
+          padding-right: 20px;
+
+          .story-content-header {
+            padding-bottom: 10px;
+          }
+
+          /*Nút read more cho nội dung*/
+          .box__detail--content {
+            .content {
+              margin: 0;
+              padding: 0;
+              padding-bottom: 1rem;
+              position: relative;
+              padding-top: 20px;
+              line-height: 1.2;
+
+              .js-excerpt::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 30px;
+                background: linear-gradient(rgba(255, 255, 255, 0), white);
+                @include theme() {
+                  background: linear-gradient(rgba(255, 255, 255, 0), theme-get('bg-light-dark'));
+                }
+              }
+            }
+          }
+
+          .js-show-more {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 15px;
+            text-decoration: none;
+            @include theme() {
+              color: theme-get('text-color');
+            }
+
+            &:hover {
+              color: tomato;
+              text-decoration: underline;
+            }
+          }
+
+          .excerpt-hidden {
+            height: 3.5rem;
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              @include SetWidthHeight(100%, 64px);
+              // width: 100%;
+              // height: 64px;
+            }
+          }
+
+          .excerpt-visible {
+            height: auto;
+            overflow: auto;
+          }
+          /*End nút read more*/
+        }
+
+        /*Danh sách chương*/
+        .chap__list-container {
+          @include SetWidthHeight(100%, auto);
+          //width: 100%;
+
+          .chap__list-header {
+            @include SetWidthHeight(100%, auto);
+            @include Flex(
+              $isHorizontally: false,
+              $isVertically: false,
+              $isWrap: false
+            );
+            padding-top: 20px;
+            padding-bottom: 15px;
+            border: 1px dashed lightgrey;
+            border-width: 0px 0px 1px 0px;
+
+            .chap__list-heading {
+              @include SetWidthHeight(50%, auto);
+              padding-right: 5px;
+              font-weight: bold;
+
+              @media (max-width: 400px) {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .chap__list-box {
+            @include SetWidthHeight(100%, auto);
+
+            ul {
+              @include SetWidthHeight(100%, auto);
+              display: block;
+              list-style: none;
+              margin-top: 15px;
+              position: relative;
+              max-height: 270px;
+              overflow: hidden;
+
+              li {
+                @include Flex(
+                  $isHorizontally: false,
+                  $isVertically: false,
+                  $isWrap: false
+                );
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border: 1px dashed lightgrey;
+                border-width: 0px 0px 1px 0px;
+
+                &:last-child {
+                  border-width: 0px;
+                  margin-bottom: 0px;
+                }
+
+                p {
+                  @include SetWidthHeight(33.33333%, auto);
+                  padding-right: 5px;
+
+                  &:first-child:hover {
+                    color: $green;
+                  }
+
+                  @media (max-width: 400px) {
+                    line-height: 1.4;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+
+            .expand-bottom {
+              @include SetWidthHeight(100%, 2.5rem);
+              display: block !important;
+              position: relative;
+
+              &.active::before {
+                height: 0;
+                top: 0;
+              }
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: -50px;
+                height: 50px;
+                background: linear-gradient(rgba(255, 255, 255, 0.322), white);
+                @include theme() {
+                  background: linear-gradient(#42424271, theme-get('bg-light-dark'));
+                }
+              }
+
+              button {
+                @include SetWidthHeight(100%, 100%);
+                @include noneOutLine($isNoneOutLine: true, $isNoneBorder: true);
+                border-radius: 0.15rem;
+
+                &:hover {
+                  background-color: rgb(221, 221, 221);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

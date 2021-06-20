@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Web Truyen</title>
     <meta name="view-port" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/item-reading.style.css">
+    <link rel="stylesheet" href="./styles/css/item-reading.css">
 </head>
 
 <body>
@@ -418,6 +418,13 @@
                 </div>
             </div>
         </div>
+        <!--Dark mode button-->
+        <div class="theme-switch-area">
+            <div class="theme-icon-container dark-mode">
+                <button id="theme-switch-btn" class="theme-btn"></button>
+            </div>
+        </div>
+        <!--End dark mode button-->
     </main>
 
 
@@ -517,6 +524,7 @@
     <!--End Footer-->
 
 
+    <script src="./js/darkMode.js"></script>
     <script>
         window.onscroll = function () { fixedOnScroll() };
 
@@ -526,9 +534,9 @@
 
         function fixedOnScroll() {
             if (window.pageYOffset > sticky) {
-                nav_header.classList.add("sticky");
+                nav_header.classList.add("nav-sticky");
             } else {
-                nav_header.classList.remove("sticky");
+                nav_header.classList.remove("nav-sticky");
             }
         }
 

@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <title>Web Truyen</title>
     <meta name="view-port" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./spilde-dist/css/splide.min.css">
-    <script src="./spilde-dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="./styles/css/style.css">
 </head>
 
 <body>
@@ -939,6 +937,14 @@
                 </div>
             </div>
         </div>
+        
+        <!--Dark mode button-->
+        <div class="theme-switch-area">
+            <div class="theme-icon-container dark-mode">
+                <button id="theme-switch-btn" class="theme-btn"></button>
+            </div>
+        </div>
+        <!--End dark mode button-->
     </main>
 
     <!--Footer-->
@@ -1036,8 +1042,8 @@
     </footer>
     <!--End Footer-->
 
-    <script src="./js/carousel.js"></script>
     <script src="./js/pagination.js"></script>
+    <script src="./js/darkMode.js"></script>
     <script>
         const catBut = document.getElementById('catagory-dropdown');
         catBut.addEventListener('click', function () {

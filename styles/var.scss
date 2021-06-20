@@ -7,6 +7,18 @@ $orange: #f0ad4e;
 
 $bold_style: bold;
 
+$themes: (
+  darkTheme: (
+    'text-color': white,
+    'bg-light-dark': #424242,
+    'bg-dark': #1A1C1E,
+  ),
+  lightTheme: (
+    'text-color': black,
+    'bg-white': #f4f4f4,
+  )
+);
+
 //Main
 $menu_text_size: 1rem;
 $title_header_size: 1.2rem;
